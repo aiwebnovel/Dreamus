@@ -9,7 +9,9 @@ function Layout({ children }: LayoutProps) {
   return (
     <>
       <Header />
-      {children}
+      <main>
+        <div>{children}</div>
+      </main>
       <Footer />
     </>
   )
