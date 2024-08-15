@@ -1,0 +1,13 @@
+// 브라우저 css 초기화
+@import '@styles/reset.scss';
+
+// css 변수
+@import '@styles/variables.scss';
+
+// mixin
+@import '@styles/mixins.scss';
+
+#root {
+  width: 100%;
+  height: 100%;
+}

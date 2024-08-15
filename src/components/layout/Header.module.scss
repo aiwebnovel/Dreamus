@@ -1,0 +1,49 @@
+.header {
+  // background-color: orange;
+  padding: 1rem 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    &__link {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    &__icon {
+      width: 50px;
+      height: 50px;
+      transform: rotate(-10deg);
+    }
+
+    &__text {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    // h2 요소에 hover 하면 svg에 약간에 애니메이션
+    &:hover {
+      &__text {
+        color: red;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
