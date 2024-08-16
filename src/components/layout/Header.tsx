@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-import styles from '@components/layout/Header.module.scss'
 import ListItem from '@components/common/ListItem'
 
 import Logo from '@assets/icon/logo.svg?react'
@@ -15,6 +14,8 @@ import Piano from '@assets/icon/piano.svg?react'
 import Mom from '@assets/icon/mom.svg?react'
 import Drum from '@assets/icon/drum.svg?react'
 import Music from '@assets/icon/music.svg?react'
+
+import styles from '@components/layout/Header.module.scss'
 
 const item = {
   hidden: { scale: 0, opacity: 0, y: -20 },
