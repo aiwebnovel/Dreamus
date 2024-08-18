@@ -88,7 +88,7 @@ function Header() {
                   <ListItem
                     title="CEO 인사"
                     desc="Dreamus CEO 인사드립니다."
-                    path="/dreamus/ceo"
+                    path="/dreamus/ceomessage"
                   >
                     <Ceo className={styles.header__nav__icon} />
                   </ListItem>

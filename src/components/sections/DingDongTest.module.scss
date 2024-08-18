@@ -1,0 +1,52 @@
+.test {
+  background: #f0f0f0;
+
+  &__inner {
+    padding: 100px 0px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__desc {
+    font-size: 36px;
+    line-height: 1.4;
+    font-weight: bold;
+    color: #ffb2b2;
+  }
+
+  &__btnContainer {
+    margin-top: 30px;
+
+    &__btn {
+      padding: 15px 10px;
+      border: none;
+      outline: none;
+      border-radius: 15px;
+      background: whie;
+      background: white;
+      color: black;
+      font-weight: bold;
+    }
+  }
+}
