@@ -1,5 +1,13 @@
+import Layout from '@components/layout/Layout'
+
+import Introduce from '@components/sections/dreamus/Introduce'
+
 function Introduction() {
-  return <div>Introduction</div>
+  return (
+    <Layout>
+      <Introduce />
+    </Layout>
+  )
 }
 
 export default Introduction

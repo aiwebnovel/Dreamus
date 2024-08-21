@@ -1,0 +1,11 @@
+.program {
+    margin-top: 50px;
+
+    &__title {
+        font-size: 26px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+}
