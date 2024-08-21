@@ -1,7 +1,12 @@
-import Layout from '@/components/layout/Layout'
+import Layout from '@components/layout/Layout'
+import CeoGreeting from '@components/sections/dreamus/CeoGreeting'
 
 function CeoMessage() {
-  return <Layout>fwfewf</Layout>
+  return (
+    <Layout>
+      <CeoGreeting />
+    </Layout>
+  )
 }
 
 export default CeoMessage

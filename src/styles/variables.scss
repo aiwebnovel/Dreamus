@@ -1,0 +1,29 @@
+// styles/variable.scss
+$breakpoint-mobile: 360px;
+$breakpoint-tabletToMobile: 768px;
+$breakpoint-laptopToDesktop: 1280px;
+$breakpoint-desktop: 1440px;
+
+@mixin mobile {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width:#{$breakpoint-tabletToMobile - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tabletToMobile}) and (max-width:#{$breakpoint-laptopToDesktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$breakpoint-laptopToDesktop}) and (max-width:#{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}

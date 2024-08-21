@@ -1,7 +1,7 @@
 .header {
   // background-color: orange;
   background: white;
-  padding: 0.5rem;
+  padding: 10px 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   position: sticky;
   top: 0;
@@ -30,11 +30,20 @@
       width: 50px;
       height: 50px;
       transform: rotate(-10deg);
+
+      @include mobile {
+        width: 35px;
+        height: 35px;
+      }
     }
 
     &__text {
       font-size: 36px;
       font-weight: bold;
+
+      @include mobile {
+        font-size: 24px;
+      }
     }
 
     // h2 요소에 hover 하면 svg에 약간에 애니메이션
@@ -117,5 +126,16 @@
   &__arrow {
     width: 25px;
     height: 25px;
+  }
+
+
+  &__mobile {
+    display: none;
+
+    @include mobile {
+      display: block;
+      width: 25px;
+      height: 25px;
+    }
   }
 }

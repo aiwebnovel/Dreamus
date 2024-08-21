@@ -14,6 +14,7 @@ import Piano from '@assets/icon/piano.svg?react'
 import Mom from '@assets/icon/mom.svg?react'
 import Drum from '@assets/icon/drum.svg?react'
 import Music from '@assets/icon/music.svg?react'
+import Hamburger from '@assets/icon/hamburger.svg?react'
 
 import styles from '@components/layout/Header.module.scss'
 
@@ -57,6 +58,8 @@ function Header() {
         </h2>
 
         {/* 메뉴 */}
+        <Hamburger className={styles.header__mobile} />
+
         <nav>
           <ul className={styles.header__nav}>
             <li className={styles.header__nav__item}>

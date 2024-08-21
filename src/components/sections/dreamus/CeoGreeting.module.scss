@@ -1,0 +1,40 @@
+.greeting {
+    &__inner {
+        padding: 100px 0px;
+        max-width: 1280px;
+        min-height: 100vh;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 1.4;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &__line {
+        width: 40px;
+        height: 2px;
+        background: #000;
+        outline: none;
+        border: none;
+        margin-bottom: 30px;
+    }
+
+    &__quote {
+        padding: 25px 10px;
+        text-align: center;
+        font-size: 26px;
+        color: gray;
+        font-style: italic;
+        margin-bottom: 30px;
+    }
+
+    &__speak {
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 1.2;
+    }
+}
