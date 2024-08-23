@@ -8,10 +8,10 @@ function BrandIdentity() {
   return (
     <section className={styles.identity}>
       <div className={styles.identity__inner}>
-        <div>
-          <div>
+        <div className={styles.identity__textContainer}>
+          <div className={styles.identity__textContainer__box}>
             <h1 className={styles.identity__title}>Brand Identity</h1>
-            <p className={styles.indentity__desc}>
+            <p className={styles.identity__desc}>
               Dreamus는 아이들의 음악적 재능과 창의성을 키우는 특별한 유아
               음악교육 프로그램을 제공합니다.
               <br />
@@ -21,6 +21,7 @@ function BrandIdentity() {
             </p>
           </div>
         </div>
+        <hr className={styles.identity__line} />
         <div>
           {brandItems.map((item, index) => (
             <BrandItem
