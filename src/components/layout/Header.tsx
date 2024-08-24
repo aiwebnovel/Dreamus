@@ -49,7 +49,6 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.header__inner}>
-        {/* 로고 */}
         <h2 className={styles.header__logo}>
           <Link className={styles.header__logo__link} to="/">
             <Logo className={styles.header__logo__icon} />
@@ -57,7 +56,6 @@ function Header() {
           </Link>
         </h2>
 
-        {/* 메뉴 */}
         <Hamburger className={styles.header__mobile} />
 
         <nav>

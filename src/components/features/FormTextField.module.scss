@@ -1,0 +1,42 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  flex-wrap: nowrap;
+  align-items: start;
+  gap: 10px;
+  padding: 10px 15px;
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    flex: 1;
+  }
+
+  &__title {
+    color: #0e141b;
+    font-weight: 500;
+    padding-bottom: 8px;
+    line-height: normal;
+    font-size: 16px;
+  }
+
+  &__input {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    flex: 1;
+    resize: none;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    color: #0e141b;
+    border: 1px solid #d0dbe7;
+    background-color: #f8fafc;
+    height: 3.5rem;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
