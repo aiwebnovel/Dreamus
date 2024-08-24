@@ -36,18 +36,6 @@
   }
 
   &__curriculum {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 100px;
-
-    &__week {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 200px;
-    }
-
     &__title {
       font-size: 36px;
       font-weight: bold;
@@ -56,6 +44,7 @@
       width: 100%;
       background: #facc77;
       border-radius: 15px;
+      margin-bottom: 100px;
     }
   }
 }

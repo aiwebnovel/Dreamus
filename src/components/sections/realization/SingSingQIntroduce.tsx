@@ -1,10 +1,19 @@
-import MusicGrid from '@components/features/MusicGrid'
+// import MusicGrid from '@components/features/MusicGrid'
 
-import thinkingData from '@data/thinkingData'
+// import thinkingData from '@data/thinkingData'
 
 import Music from '@assets/icon/music.svg?react'
 
 import styles from '@components/sections/realization/SingSingQIntroduce.module.scss'
+
+import uridMix from '@assets/image/umix.png'
+
+import children1 from '@assets/image/children1.jpg'
+import children2 from '@assets/image/children2.jpg'
+import children3 from '@assets/image/children3.jpg'
+import children4 from '@assets/image/children4.jpg'
+import MusicFlex from '@components/features/MusicFlex'
+import thinkingData from '@data/thinkingData'
 
 function SingSingQIntroduce() {
   return (
@@ -31,7 +40,7 @@ function SingSingQIntroduce() {
             </h2>
             <div className={styles.singsingq__curriculum__week}>
               {thinkingData.map((item, index) => (
-                <MusicGrid
+                <MusicFlex
                   key={index}
                   logoUrl={item.logoUrl}
                   title={item.title}
@@ -40,6 +49,16 @@ function SingSingQIntroduce() {
                   img={item.img}
                 />
               ))}
+              {/* {thinkingData.map((item, index) => (
+                <MusicGrid
+                  key={index}
+                  logoUrl={item.logoUrl}
+                  title={item.title}
+                  firstDesc={item.firstDesc}
+                  secondDesc={item.secondDesc}
+                  img={item.img}
+                />
+              ))} */}
             </div>
           </div>
         </div>
@@ -49,3 +68,35 @@ function SingSingQIntroduce() {
 }
 
 export default SingSingQIntroduce
+
+{
+  /* <div>
+<div>
+  <div>
+    <img src={uridMix} />
+  </div>
+  <div>
+    <div>
+      <h2>1주차: 유리드믹스</h2>
+      <p>약 300여종의 다양한 악기와 교구를 이용한 플레이뮤직</p>
+    </div>
+  </div>
+</div>
+<div>
+  <div>
+    <div>
+      <p>유리드믹스</p>
+      <p>아이들의 소리와 움직임으로</p>
+      <p>음악의 즐거움을 발견하고</p>
+      <p>전인적 발달을 돕습니다.</p>
+    </div>
+  </div>
+  <div>
+    <img src={children1} />
+    <img src={children2} />
+    <img src={children3} />
+    <img src={children4} />
+  </div>
+</div>
+</div> */
+}
