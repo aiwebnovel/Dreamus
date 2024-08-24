@@ -54,6 +54,21 @@
     }
   }
 
+  &__navigation {
+    @include mobile {
+      position: fixed;
+      top: 0;
+      right: -80%;
+      bottom: 0;
+      width: 80%;
+      max-width: 300px;
+      background-color: white;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
+      transition: right 0.3s ease-in-out;
+    }
+  }
+
   &__nav {
     display: flex;
     align-items: center;
@@ -127,7 +142,6 @@
     width: 25px;
     height: 25px;
   }
-
 
   &__mobile {
     display: none;

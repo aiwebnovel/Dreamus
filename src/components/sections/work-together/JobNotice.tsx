@@ -112,7 +112,9 @@ function JobNotice() {
                   />
 
                   <div>
-                    <button type="submit">지원하기</button>
+                    <button className={styles.job__apply__btn} type="submit">
+                      지원하기
+                    </button>
                   </div>
                 </form>
               </div>

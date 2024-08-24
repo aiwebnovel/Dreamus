@@ -58,7 +58,7 @@ function Header() {
 
         <Hamburger className={styles.header__mobile} />
 
-        <nav>
+        <nav className={styles.header__navigation}>
           <ul className={styles.header__nav}>
             <li className={styles.header__nav__item}>
               <h3
@@ -73,11 +73,12 @@ function Header() {
                 )}
               </h3>
               {showFirstMenu && (
-                <motion.ul
+                // motion 추가
+                <ul
                   className={styles.header__nav__list}
-                  initial="hidden"
-                  animate="visible"
-                  variants={item}
+                  // initial="hidden"
+                  // animate="visible"
+                  // variants={item}
                 >
                   <ListItem
                     title="Dreamus 소개"
@@ -93,7 +94,7 @@ function Header() {
                   >
                     <Ceo className={styles.header__nav__icon} />
                   </ListItem>
-                </motion.ul>
+                </ul>
               )}
             </li>
             <ListItem title="BI" path="/bi" />
