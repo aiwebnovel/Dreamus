@@ -1,41 +1,115 @@
 .listItem {
-    // border: 1px solid;
-    // border-radius: 10px;
+    cursor: pointer;
 
-    &__link {
+    @include mobile {
+        width: 100%;
+    }
+
+    &__menu {
         display: flex;
         align-items: center;
-        gap: 10px;
+        padding: 5px;
 
-        &:hover {
-            .listItem__desc {
-                color: black;
-            }
+        @include mobile {
+            justify-content: space-between;
+        }
 
-            svg {
-                fill: #000; // SVG 색상 변경
-            }
+        &__title {
+            font-size: 16px;
+            font-weight: 500;
         }
     }
 
-    &__content {
+    &__wrapper {
+        position: relative;
+      }
+    
+
+    &__icon {
+        width: 25px;
+        height: 25px;
+        
+    }
+
+    &__link {
+        padding: 5px;
+
+        @include mobile {
+            display: block;
+            width: 100%;
+        }
+
+        &__title {
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+    &__subList {
+        position: absolute;
+        top: 120%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        gap: 20px;
+        padding: 10px;
+        border-radius: 15px;
+        background: #f6f6f6;
+        border: 1px solid #dddddd;
+
+        @include mobile {
+            position: static;
+            border-radius: 0;
+            border: none;
+        }
     }
 
-    &__title {
-        font-size: 16px;
-        font-weight: bold;
-    }
+    &__subItem {
+        max-width: 300px;
+        width: 300px;
 
-    &__desc {
-        font-size: 14px;
-        color: gray;
-        line-height: 1.2;
-    }
+        @include mobile {
+            width: 100%;
+            max-width: 100%;
+        }
 
-    &:hover.desc {
-        color: black;
+        &__link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            &:hover {
+                .listItem__subItem__icon {
+                    fill: black;
+                    border-color: black;
+                }
+
+                .listItem__subItem__desc {
+                    color: black;
+                }
+            }
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+        }
+
+        &__icon {
+            width: 30px;
+            height: 30px;
+            padding: 5px;
+            border: 1px solid #e0dede;
+            border-radius: 5px;
+            fill: gray;
+            transition: all 0.2s ease-in-out;
+        }
+
+        &__desc {
+            font-size: 12px;
+            color: gray;
+        }
     }
 }
