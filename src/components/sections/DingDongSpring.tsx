@@ -15,8 +15,8 @@ const item = {
 
 function DingDongSpring() {
   return (
-    <section>
-      <div className={styles.spring}>
+    <section className={styles.spring}>
+      <div className={styles.spring__inner}>
         <motion.div
           initial="hideen"
           animate="visible"

@@ -5,8 +5,8 @@ import Text from '@assets/icon/text.svg?react'
 
 function DingDongIntroduce() {
   return (
-    <section className={styles.introduce__section}>
-      <div className={styles.introduce}>
+    <section className={styles.introduce}>
+      <div className={styles.introduce__inner}>
         <div className={styles.introduce__container}>
           <div className={styles.introduce__text}>
             <p className={styles.introduce__text__main}>

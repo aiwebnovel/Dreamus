@@ -15,13 +15,13 @@ import styles from '@components/layout/Header.module.scss'
 function Header() {
   const [openMenu, setOpenMenu] = useState<string | null>(null)
   const [isNavOpen, setIsNavOpen] = useState(false)
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767)
   const headerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768)
-      if (window.innerWidth > 768) {
+      setIsMobile(window.innerWidth <= 767)
+      if (window.innerWidth > 767) {
         setIsNavOpen(false)
       }
     }

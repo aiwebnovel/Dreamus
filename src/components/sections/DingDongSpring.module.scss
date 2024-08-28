@@ -1,32 +1,27 @@
 .spring {
-  max-width: 1280px;
-  min-height: 100vh;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  &__inner {
+    max-width: 1280px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      max-width: 767px;
+    }
+  }
 
   &__container {
     display: flex;
     align-items: center;
     gap: 50px;
-  }
 
-  &__text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
 
-    &__main {
-      font-size: 40px;
-      font-weight: bold;
-      line-height: 1.4;
-    }
-
-    &__sub {
-      color: #ff7c7c;
+    @include mobile {
+      flex-direction: column;
+      gap: 100px;
+      justify-self: center;
     }
   }
 
@@ -36,6 +31,10 @@
     align-items: center;
     justify-content: center;
     gap: 50px;
+
+    @include mobile {
+      gap: 20px;
+    }
 
     &__box {
       display: flex;
@@ -49,16 +48,121 @@
       border-radius: 15px;
       padding: 15px 5px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+
+      @include mobile {
+        width: 150px;
+        height: 150px;
+      }
     }
 
     &__springIn {
       color: red;
       font-size: 14px;
+
+      @include mobile {
+        font-size: 12px;
+      }
     }
 
     &__springOut {
       color: blue;
       font-size: 14px;
+
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    @include mobile {
+      align-items: center;
+    }
+
+    &__main {
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 1.4;
+
+      @include mobile {
+        font-size: 30px;
+      }
+    }
+
+    &__sub {
+      color: #ff7c7c;
     }
   }
 }
+
+
+// .spring {
+//   max-width: 1280px;
+//   min-height: 100vh;
+//   margin: 0 auto;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+  // &__container {
+  //   display: flex;
+  //   align-items: center;
+  //   gap: 50px;
+  // }
+
+  // &__text {
+  //   flex: 1;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: flex-start;
+  //   justify-content: center;
+
+  //   &__main {
+  //     font-size: 40px;
+  //     font-weight: bold;
+  //     line-height: 1.4;
+  //   }
+
+  //   &__sub {
+  //     color: #ff7c7c;
+  //   }
+  // }
+
+  // &__img {
+  //   flex: 1;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   gap: 50px;
+
+  //   &__box {
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: center;
+  //     gap: 15px;
+  //   }
+
+  //   &__spring {
+  //     width: 250px;
+  //     border-radius: 15px;
+  //     padding: 15px 5px;
+  //     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  //   }
+
+  //   &__springIn {
+  //     color: red;
+  //     font-size: 14px;
+  //   }
+
+  //   &__springOut {
+  //     color: blue;
+  //     font-size: 14px;
+  //   }
+  // }
+// }
