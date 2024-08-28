@@ -21,6 +21,8 @@
     @include mobile {
       align-items: center;
       gap: 150px;
+      box-sizing: border-box;
+      padding: 10px;
     }
   }
 

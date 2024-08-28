@@ -6,8 +6,8 @@ import styles from '@components/sections/DingdongGrid.module.scss'
 
 function DingdongGrid() {
   return (
-    <section>
-      <div className={styles.grid}>
+    <section className={styles.grid}>
+      <div className={styles.grid__inner}>
         <div className={styles.grid__container}>
           <div className={styles.grid__container__text}>
             <p className={styles.grid__container__text__desc}>
@@ -21,7 +21,11 @@ function DingdongGrid() {
             </p>
           </div>
           <div className={styles.grid__container__imgBox}>
-            <img alt="티티 선생님과 아이들" src={titi} />
+            <img
+              className={styles.grid__container__imgBox__img}
+              alt="티티 선생님과 아이들"
+              src={titi}
+            />
           </div>
           <div className={styles.grid__container__imgs}>
             <img
