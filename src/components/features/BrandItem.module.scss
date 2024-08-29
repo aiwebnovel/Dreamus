@@ -7,6 +7,18 @@
 
   &.reverse {
     flex-direction: row-reverse;
+
+    @include mobile {
+      justify-content: center;
+      flex-direction: column;
+      gap: 100px;
+    }
+  }
+
+  @include mobile {
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
   }
 
   &__icon {
@@ -15,6 +27,12 @@
     padding: 10px;
     border-radius: 15px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+
+    @include mobile {
+      max-width: 200px;
+      width: 180px;
+      height: auto;
+    }
   }
 
   &__textContainer {
@@ -28,11 +46,20 @@
     font-size: 40px;
     font-weight: bold;
     line-height: 1.4;
+
+    @include mobile {
+      font-size: 24px;
+    }
   }
 
   &__desc {
     white-space: pre-line;
     font-size: 16px;
     line-height: 1.3;
+
+    @include mobile {
+      font-size: 16px;
+      word-break: keep-all;
+    }
   }
 }
