@@ -31,7 +31,8 @@ function DingDongSpring() {
                 src={springin}
               />
               <span className={styles.spring__img__springIn}>
-                용수철안에 갖혀 우울한 우리아이
+                {`용수철안에 갖혀
+                우울한 우리아이`}
               </span>
             </div>
             <div className={styles.spring__img__box}>
@@ -41,7 +42,8 @@ function DingDongSpring() {
                 src={springOut}
               />
               <span className={styles.spring__img__springOut}>
-                용수철을 밟고 점프하는 우리아이
+                {`용수철을 밟고
+                점프하는 우리아이`}
               </span>
             </div>
           </div>

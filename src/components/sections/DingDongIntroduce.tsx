@@ -11,10 +11,11 @@ function DingDongIntroduce() {
           <div className={styles.introduce__text}>
             <p className={styles.introduce__text__main}>
               <span className={styles.introduce__text__sub}>띵동</span>,
-              회복탄력성이 키워지나요?
+              회복탄력성 키워지나요?
             </p>
             <p className={styles.introduce__text__main}>
-              띵동이 회복탄력성을 키우는 방법
+              {`띵동이 회복탄력성을 
+              키우는 방법`}
             </p>
             <p className={styles.introduce__text__main}>바로 확인해보세요!</p>
           </div>

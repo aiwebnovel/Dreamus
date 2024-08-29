@@ -22,7 +22,6 @@
       align-items: center;
       gap: 150px;
       box-sizing: border-box;
-      padding: 10px;
     }
   }
 
@@ -43,7 +42,8 @@
       line-height: 1.4;
 
       @include mobile {
-        font-size: 30px;
+        font-size: 28px;
+        white-space: pre-line;
         text-wrap: pretty;
         text-align: center;
       }
@@ -108,7 +108,6 @@
     }
   }
 }
-
 
 // .introduce__section {
 //   background: #f0f0f0;

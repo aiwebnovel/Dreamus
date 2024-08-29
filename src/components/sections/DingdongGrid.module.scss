@@ -1,12 +1,14 @@
 .grid {
   &__inner {
-    padding: 100px 0px;
+    padding: 100px 20px;
     min-height: 100vh;
     max-width: 1280px;
     margin: 0 auto;
+    overflow-x: hidden;
 
     @include mobile {
-      max-width: 767px;
+      max-width: 100%;
+      padding: 50px 15px;
     }
   }
 
@@ -17,10 +19,9 @@
     grid-row-gap: 100px;
 
     @include mobile {
-      grid-template-columns: repeat(1, 1fr);
-      grid-row-gap: 150px;
-      padding: 10px;
-      box-sizing: border-box;
+      grid-template-columns: 1fr;
+      grid-row-gap: 100px;
+      width: 100%;
     }
 
     &__text {
@@ -28,10 +29,11 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      padding: 10px 15px;
+      padding: 10px 0;
 
       @include mobile {
         align-items: center;
+        padding: 10px 0;
       }
 
       &__desc {
@@ -40,21 +42,26 @@
         line-height: 1.5;
 
         @include mobile {
-          font-size: 30px;
+          font-size: 24px;
           text-align: center;
-          text-wrap: pretty;
+          word-break: keep-all;
         }
       }
     }
 
     &__imgBox {
-      padding: 0 10px;
+      padding: 0;
       display: flex;
       align-items: center;
       justify-content: center;
 
       &__img {
-        width: 100%;
+        max-width: 100%;
+        height: auto;
+
+        @include mobile {
+          max-width: 100%;
+        }
       }
     }
 
@@ -62,46 +69,49 @@
       position: relative;
       display: flex;
       align-items: center;
+      justify-content: center;
+      height: 300px;
 
       @include mobile {
-        justify-content: center;
-        gap: 20px;
+        height: auto;
+        gap: 0;
       }
     }
 
-    &__firstImg {
-      width: 250px;
-      bottom: 40px;
-      position: absolute;
+    &__firstImg,
+    &__secondImg {
+      width: 45%;
+      max-width: 250px;
       border-radius: 15px;
-      padding: 15px 5px;
+      padding: 10px 5px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    &__firstImg {
+      position: absolute;
+      bottom: 40px;
+      left: 10%;
 
       @include mobile {
         position: static;
+        width: 50%;
         max-width: 200px;
-        width: 180px;
       }
     }
 
     &__secondImg {
-      width: 250px;
       position: absolute;
       top: 40px;
-      left: 250px;
-      border-radius: 15px;
-      padding: 10px 5px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+      right: 10%;
       z-index: 5;
       background: white;
 
       @include mobile {
-        max-width: 200px;
-        width: 180px;
-        transform: rotate(15deg);
         position: relative;
-        top: 0;
-        left: -20px;
+        left: -7%;
+        width: 50%;
+        max-width: 200px;
+        transform: rotate(15deg);
       }
     }
   }
