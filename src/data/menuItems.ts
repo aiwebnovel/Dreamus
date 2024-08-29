@@ -26,7 +26,7 @@ const menuItems: MenuItem[] = [
       },
     ],
   },
-  { title: 'BI', link: '/dreamus/ceomessage' },
+  { title: 'BI', link: '/dreamus/bi' },
   {
     title: '꿈의실현',
     subItems: [

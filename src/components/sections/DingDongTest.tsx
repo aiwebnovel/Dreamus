@@ -9,7 +9,9 @@ function DingDongTest() {
         <div className={styles.test__container}>
           <h3 className={styles.test__title}>
             회복탄력성을 기르는 긍정창의 놀이 - 띵동{' '}
-            <Tinking className={styles.test__icon} />
+            <span>
+              <Tinking className={styles.test__icon} />
+            </span>
           </h3>
           <p className={styles.test__desc}>
             지금 내 아이의 회복탄력성을 분석해보세요.

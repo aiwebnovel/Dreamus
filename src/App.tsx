@@ -27,7 +27,7 @@ function App() {
         <Route path="/dreamus/introduction" element={<Introduction />} />
         <Route path="/dreamus/ceomessage" element={<CeoMessage />} />
 
-        <Route path="/bi" element={<Bi />} />
+        <Route path="/dreamus/bi" element={<Bi />} />
 
         <Route
           path="/realization/singsingq-music"
