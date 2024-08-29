@@ -1,11 +1,16 @@
 .program {
-    margin-top: 50px;
+  margin-top: 50px;
 
-    &__title {
-        font-size: 26px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 20px;
+  &__title {
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    @include mobile {
+      font-size: 18px;
+      word-break: keep-all;
     }
+  }
 }
