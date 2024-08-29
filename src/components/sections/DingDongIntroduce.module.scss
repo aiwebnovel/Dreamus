@@ -2,26 +2,26 @@
   background: #f0f0f0;
 
   &__inner {
-    padding: 100px 0px;
+    padding: 100px 20px;
     min-height: 100vh;
     max-width: 1280px;
     margin: 0 auto;
 
     @include mobile {
-      max-width: 767px;
+      padding: 100px 15px;
     }
   }
 
   &__container {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 40px;
+    gap: 100px;
 
     @include mobile {
       align-items: center;
       gap: 150px;
-      box-sizing: border-box;
     }
   }
 
@@ -32,7 +32,6 @@
     justify-content: center;
 
     @include mobile {
-      width: 100%;
       align-items: center;
     }
 
@@ -43,8 +42,7 @@
 
       @include mobile {
         font-size: 28px;
-        white-space: pre-line;
-        text-wrap: pretty;
+        word-break: keep-all;
         text-align: center;
       }
     }
@@ -58,7 +56,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
+    gap: 40px;
 
     @include mobile {
       width: 100%;
@@ -108,73 +106,3 @@
     }
   }
 }
-
-// .introduce__section {
-//   background: #f0f0f0;
-// }
-
-// .introduce {
-//   padding: 100px 0px;
-//   min-width: 100vh;
-//   max-width: 1280px;
-//   margin: 0 auto;
-
-//   &__container {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     gap: 40px;
-//   }
-
-//   &__text {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     justify-content: center;
-
-//     &__main {
-//       font-size: 40px;
-//       font-weight: bold;
-//       line-height: 1.4;
-//     }
-
-//     &__sub {
-//       color: #ff7c7c;
-//     }
-//   }
-
-//   &__intro {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     margin-top: 30px;
-
-//     &__box {
-//       flex: 1;
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
-//       justify-content: center;
-//       gap: 10px;
-//       cursor: pointer;
-//     }
-
-//     &__text {
-//       font-size: 30px;
-//       font-weight: bold;
-//       line-height: 1.5;
-//     }
-
-//     &__subText {
-//       font-size: 16px;
-//       margin-top: 15px;
-//       color: #978462;
-//       line-height: 1.4;
-//     }
-//   }
-
-//   &__icon {
-//     width: 250px;
-//     height: 250px;
-//   }
-// }
