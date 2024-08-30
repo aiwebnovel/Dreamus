@@ -4,6 +4,10 @@
     max-width: 1280px;
     min-height: 100vh;
     margin: 0 auto;
+
+    @include mobile {
+      padding: 100px 15px;
+    }
   }
 
   &__introduce {
@@ -15,24 +19,44 @@
     align-items: center;
     gap: 15px;
     margin-bottom: 35px;
+
+    @include mobile {
+      gap: 5px;
+    }
   }
 
   &__icon {
     width: 50px;
     height: 50px;
     fill: rgb(190, 155, 161);
+
+    @include mobile {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &__title {
     font-size: 40px;
     font-weight: bold;
     line-height: 1.4;
+    
+    @include mobile {
+      font-size: 24px;
+    }
   }
 
   &__desc {
     font-size: 18px;
     white-space: pre-line;
     line-height: 1.3;
+
+    @include mobile {
+      font-size: 16px;
+      font-weight: 200;
+      word-break: keep-all;
+      white-space: normal;
+    }
   }
 
   &__curriculum {
@@ -45,6 +69,11 @@
       background: #facc77;
       border-radius: 15px;
       margin-bottom: 100px;
+
+      @include mobile {
+        box-sizing: border-box;
+        margin-bottom: 0;
+      }
     }
   }
 

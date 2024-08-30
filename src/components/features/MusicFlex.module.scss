@@ -7,11 +7,26 @@
   margin-bottom: 200px;
   margin-top: 100px;
 
+  @include mobile {
+    gap: 100px;
+  }
+
+  :nth-child(2) {
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+
   &__row {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include mobile {
+      flex-direction: column-reverse;
+    }
 
     &__item {
       flex: 1;
@@ -20,6 +35,10 @@
       justify-content: center;
       min-height: 400px;
       position: relative;
+
+      @include mobile {
+        width: 100%;
+      }
     }
 
     &__reverse {
@@ -28,6 +47,10 @@
       align-items: center;
       justify-content: center;
       flex-direction: row-reverse;
+
+      @include mobile {
+        flex-direction: column-reverse;
+      }
     }
   }
 
@@ -36,6 +59,11 @@
     height: 300px;
     border-radius: 15px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+
+    @include mobile {
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   &__titleContainer {
@@ -49,6 +77,10 @@
       line-height: 1.3;
       color: #9c9cff;
       margin-bottom: 30px;
+
+      @include mobile {
+        font-size: 18px;
+      }
     }
 
     &__desc {
@@ -56,6 +88,10 @@
       font-weight: bold;
       line-height: 1.4;
       white-space: pre-line;
+
+      @include mobile {
+        font-size: 24px;
+      }
     }
   }
 
@@ -70,12 +106,21 @@
       font-size: 24px;
       margin-bottom: 30px;
       color: #a7a7f6;
+
+      @include mobile {
+        font-size: 18px;
+      }
     }
 
     &__item {
       font-size: 40px;
       font-weight: bold;
       line-height: 1.4;
+
+      @include mobile {
+        font-size: 24px;
+        word-break: keep-all;
+      }
     }
   }
 
@@ -87,6 +132,13 @@
     position: absolute;
     top: 0;
     left: 5%;
+
+    @include mobile {
+      max-width: 150px;
+      max-height: 150px;
+      top: 10%;
+      left: 10%;
+    }
   }
 
   &__secondImg {
@@ -97,6 +149,13 @@
     position: absolute;
     top: 0;
     right: 15%;
+
+    @include mobile {
+      max-width: 150px;
+      max-height: 150px;
+      top: 10%;
+      right: 10%;
+    }
   }
 
   &__thirdImg {
@@ -107,6 +166,13 @@
     position: absolute;
     bottom: -5%;
     left: 25%;
+
+    @include mobile {
+      max-width: 150px;
+      max-height: 150px;
+      bottom: 10%;
+      left: 10%;
+    }
   }
 
   &__fourthImg {
@@ -117,6 +183,13 @@
     position: absolute;
     bottom: -5%;
     right: -5%;
+
+    @include mobile {
+      max-width: 150px;
+      max-height: 150px;
+      bottom: 10%;
+      right:  10%;
+    }
   }
 
   &__reverse {
@@ -128,6 +201,13 @@
       position: absolute;
       top: 0;
       left: 5%;
+
+      @include mobile {
+        max-width: 150px;
+        max-height: 150px;
+        top: 10%;
+        left: 10%;
+      }
     }
 
     &__secondImg {
@@ -138,7 +218,13 @@
       position: absolute;
       top: 0;
       right: 15%;
-      transition: all 1s ease-in-out;
+
+      @include mobile {
+        max-width: 150px;
+        max-height: 150px;
+        top: 10%;
+        right: 10%;
+      }
     }
 
     &__thirdImg {
@@ -149,6 +235,13 @@
       position: absolute;
       bottom: -5%;
       left: 25%;
+
+      @include mobile {
+        max-width: 150px;
+        max-height: 150px;
+        bottom: 10%;
+        left: 10%;
+      }
     }
 
     &__fourthImg {
@@ -159,108 +252,13 @@
       position: absolute;
       bottom: -5%;
       right: -5%;
+
+      @include mobile {
+        max-width: 150px;
+        max-height: 150px;
+        bottom: 10%;
+        right: 10%;
+      }
     }
   }
 }
-
-// .musicGrid {
-//   display: grid;
-//   grid-template-columns: repeat(2, 1fr);
-//   gap: 45px;
-
-//   &__item {
-//     box-sizing: border-box;
-//     padding: 20px 25px;
-//     width: 100%;
-//     height: 100%;
-//     min-height: 400px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//   }
-
-//   &__textContainer {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     gap: 10px;
-//   }
-
-//   &__paragraph {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     justify-content: center;
-
-//     :nth-child(1) {
-//       font-size: 24px;
-//       font-weight: bold;
-//       color: rgb(141, 141, 202);
-//       margin-bottom: 30px;
-//     }
-//   }
-
-//   &__title {
-//     font-size: 24px;
-//     font-weight: bold;
-//     line-height: 1.4;
-//     color: rgb(129, 207, 207);
-//     margin-bottom: 15px;
-//   }
-
-//   &__firstDesc {
-//     font-size: 40px;
-//     line-height: 1.4;
-//     font-weight: bold;
-//     white-space: pre-line;
-//   }
-
-//   &__secondDesc {
-//     font-size: 40px;
-//     font-weight: bold;
-//     line-height: 1.4;
-//   }
-
-//   &__logoImg {
-//     width: 250px;
-//     height: 250px;
-//     padding: 20px 10px;
-//     border-radius: 15px;
-//     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-//   }
-
-//   &__imgContainer {
-//     position: relative;
-//   }
-
-//   &__firstImg,
-//   &__secondImg,
-//   &__thirdImg,
-//   &__fourthImg {
-//     width: 250px;
-//     height: 250px;
-//     border-radius: 15px;
-//     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-//     position: absolute;
-//   }
-
-//   &__firstImg {
-//     top: 0;
-//     left: 0;
-//   }
-
-//   &__secondImg {
-//     top: 0;
-//     right: 0;
-//   }
-
-//   &__thirdImg {
-//     bottom: -80px;
-//     left: 80px;
-//   }
-
-//   &__fourthImg {
-//     bottom: -80px;
-//     right: -80px;
-//   }
-// }
