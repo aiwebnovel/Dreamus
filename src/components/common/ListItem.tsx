@@ -12,6 +12,7 @@ import styles from './ListItem.module.scss'
 interface ListItemProps extends MenuItem {
   onToggle?: () => void
   isOpen?: boolean
+  isFooter?: boolean
 }
 
 const ListItem: React.FC<ListItemProps> = ({
@@ -22,7 +23,40 @@ const ListItem: React.FC<ListItemProps> = ({
   subItems,
   onToggle,
   isOpen,
+  isFooter = false,
 }) => {
+  if (isFooter) {
+    return (
+      <li className={styles.footerItem}>
+        <h3 className={styles.footerItem__title}>
+          {subItems ? (
+            `${title}`
+          ) : (
+            <Link className={styles.footerItem__subTitle} to={link as string}>
+              {title}
+            </Link>
+          )}
+        </h3>
+        {subItems && (
+          <ul className={styles.footerItem__subList}>
+            {subItems.map((item: SubItem, index: number) => (
+              <li key={index} className={styles.footerItem__subList__item}>
+                <Link
+                  to={item.link || '#'}
+                  className={styles.footerItem__subList__link}
+                >
+                  <span className={styles.footerItem__subList__title}>
+                    {item.title}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
+    )
+  }
+
   return (
     <li className={styles.listItem}>
       {subItems ? (

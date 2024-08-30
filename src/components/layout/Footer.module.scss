@@ -1,0 +1,86 @@
+.footer {
+  &__inner {
+    padding: 100px 0px;
+    max-width: 1280px;
+    height: auto;
+    margin: 0 auto;
+
+    @include mobile {
+      padding: 100px 15px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+
+  &__address {
+    &__title {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__addressContainer {
+    &__cor {
+      font-size: 14px;
+      font-weight: 200;
+      line-height: 1.3;
+
+      @include mobile {
+        word-break: keep-all;
+      }
+    }
+
+    &__add {
+      font-size: 14px;
+      font-weight: 200;
+      line-height: 1.3;
+
+      @include mobile {
+        word-break: keep-all;
+      }
+    }
+
+    &__number {
+      font-size: 14px;
+      font-weight: 200;
+      line-height: 1.3;
+
+      @include mobile {
+        word-break: keep-all;
+      }
+    }
+  }
+
+  &__copy {
+    width: 100%;
+
+    &__text {
+      text-align: center;
+      font-size: 14px;
+
+      @include mobile {
+        word-break: keep-all;
+      }
+    }
+  }
+}
