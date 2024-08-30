@@ -7,11 +7,20 @@
   gap: 10px;
   padding: 10px 15px;
 
+  @include mobile {
+    width: 100%;
+  }
+
   &__label {
     display: flex;
     flex-direction: column;
     min-width: 400px;
     flex: 1;
+
+    @include mobile {
+      min-width: 0;
+      width: 100%;
+    }
   }
 
   &__title {
@@ -20,6 +29,10 @@
     padding-bottom: 8px;
     line-height: normal;
     font-size: 16px;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__input {
@@ -38,5 +51,10 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: normal;
+
+    @include mobile {
+      width: auto;
+      font-size: 14px;
+    }
   }
 }

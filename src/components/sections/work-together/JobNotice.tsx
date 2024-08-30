@@ -62,7 +62,7 @@ function JobNotice() {
             </div>
             <div className={styles.job__apply}>
               <h2 className={styles.job__apply__title}>교사 신청하기</h2>
-              <div>
+              <div className={styles.job__formContainer}>
                 <form
                   onSubmit={handleSubmit}
                   className={styles.job__apply__form}
