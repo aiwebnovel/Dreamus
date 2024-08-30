@@ -3,7 +3,11 @@ import styles from '@components/sections/DingDongIntroduce.module.scss'
 import Video from '@assets/icon/video.svg?react'
 import Text from '@assets/icon/text.svg?react'
 
+import { useModal } from '@/context/ModalContext'
+
 function DingDongIntroduce() {
+  const { openModal } = useModal()
+
   return (
     <section className={styles.introduce}>
       <div className={styles.introduce__inner}>
@@ -19,7 +23,10 @@ function DingDongIntroduce() {
             <p className={styles.introduce__text__main}>바로 확인해보세요!</p>
           </div>
           <div className={styles.introduce__intro}>
-            <div className={styles.introduce__intro__box}>
+            <div
+              className={styles.introduce__intro__box}
+              onClick={() => openModal('video')}
+            >
               <Video className={styles.introduce__icon} />
               <h4 className={styles.introduce__intro__text}>
                 영상으로 확인하기
@@ -29,7 +36,10 @@ function DingDongIntroduce() {
                 영상으로 확인해 보세요!
               </p>
             </div>
-            <div className={styles.introduce__intro__box}>
+            <div
+              className={styles.introduce__intro__box}
+              onClick={() => openModal('text')}
+            >
               <Text className={styles.introduce__icon} />
               <h4 className={styles.introduce__intro__text}>글로 읽어보기</h4>
               <p className={styles.introduce__intro__subText}>
