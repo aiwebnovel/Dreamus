@@ -15,3 +15,25 @@ body {
   width: 100%;
   height: 100%;
 }
+
+
+/* 스크롤바 전체 */
+::-webkit-scrollbar {
+  width: 12px; /* 스크롤바의 너비 */
+}
+
+/* 스크롤바의 배경 */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* 배경색 */
+}
+
+/* 스크롤바의 핸들 */
+::-webkit-scrollbar-thumb {
+  background: pink; /* 핸들 색 */
+  border-radius: 10px; /* 핸들 모서리 둥글게 */
+}
+
+/* 핸들에 마우스를 올렸을 때 */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* 호버 색 */
+}

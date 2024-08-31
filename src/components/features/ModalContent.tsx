@@ -1,11 +1,11 @@
-import { useModal } from '@/context/ModalContext'
+import { useModal } from '@context/ModalContext'
+
+import Modal from '@components/features/Modal'
 
 import styles from '@components/features/ModalContent.module.scss'
-import Close from '@assets/icon/close.svg?react'
-import Modal from './Modal'
 
 function ModalContent() {
-  const { modalType, closeModal } = useModal()
+  const { modalType } = useModal()
 
   if (!modalType) return null
 
@@ -13,7 +13,6 @@ function ModalContent() {
     <div className={styles.modal}>
       <div className={styles.modal__inner}>
         {modalType === 'text' ? <Modal type="text" /> : <Modal type="video" />}
-        <Close onClick={closeModal} className={styles.modal__close} />
       </div>
     </div>
   )

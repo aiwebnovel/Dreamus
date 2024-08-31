@@ -7,7 +7,7 @@ import { MenuItem, SubItem } from '@models/menu'
 import UpArrow from '@assets/icon/upArrow.svg?react'
 import DownArrow from '@assets/icon/downArrow.svg?react'
 
-import styles from './ListItem.module.scss'
+import styles from '@components/common/ListItem.module.scss'
 
 interface ListItemProps extends MenuItem {
   onToggle?: () => void

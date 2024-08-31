@@ -17,8 +17,18 @@ import WorkTogether from '@pages/work-together/WorkTogether'
 import ClassRegistration from '@pages/class-registration/ClassRegistration'
 
 import ErrorPage from '@pages/error/ErrorPage'
+// import { useEffect } from 'react'
+// import { useModal } from './context/ModalContext'
 
 function App() {
+  // const { modalType } = useModal()
+
+  // useEffect(() => {
+  //   if (modalType) {
+  //     document.body.style.position = 'fixed'
+  //   }
+  // }, [modalType])
+
   return (
     <>
       <Routes>

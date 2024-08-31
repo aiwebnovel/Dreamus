@@ -3,7 +3,7 @@ import styles from '@components/sections/DingDongIntroduce.module.scss'
 import Video from '@assets/icon/video.svg?react'
 import Text from '@assets/icon/text.svg?react'
 
-import { useModal } from '@/context/ModalContext'
+import { useModal } from '@context/ModalContext'
 
 function DingDongIntroduce() {
   const { openModal } = useModal()

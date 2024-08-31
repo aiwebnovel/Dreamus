@@ -1,6 +1,7 @@
-import ModalContent from '@components/features/ModalContent'
 import { createContext, useContext, useState } from 'react'
 import { createPortal } from 'react-dom'
+
+import ModalContent from '@components/features/ModalContent'
 
 type ModalType = 'video' | 'text' | null
 

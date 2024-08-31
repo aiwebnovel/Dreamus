@@ -1,5 +1,6 @@
+import ListItem from '@components/common/ListItem'
+
 import menuItems from '@data/menuItems'
-import ListItem from '../common/ListItem'
 
 import styles from '@components/layout/Footer.module.scss'
 
