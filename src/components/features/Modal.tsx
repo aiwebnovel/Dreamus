@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { useModal } from '@context/ModalContext'
 
 import Close from '@assets/icon/close.svg?react'
@@ -7,10 +8,29 @@ import Check from '@assets/icon/check.svg?react'
 import styles from '@components/features/Modal.module.scss'
 
 function Modal({ type }: { type: string }) {
-  const { closeModal } = useModal()
+  const { closeModal, modalType } = useModal()
+
+  const modalRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const closedal = (e: MouseEvent) => {
+      if (
+        modalType &&
+        modalRef.current &&
+        !modalRef.current.contains(e.target as Node)
+      ) {
+        closeModal()
+      }
+    }
+    document.addEventListener('mousedown', closedal)
+
+    return () => {
+      document.removeEventListener('mousedown', closedal)
+    }
+  }, [modalType])
 
   return (
-    <div className={styles.modalContent}>
+    <div ref={modalRef} className={styles.modalContent}>
       {type === 'text' ? (
         <div className={styles.modalContent__textContainer}>
           <div className={styles.modalContent__titleBox}>

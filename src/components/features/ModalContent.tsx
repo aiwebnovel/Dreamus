@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import { useModal } from '@context/ModalContext'
 
 import Modal from '@components/features/Modal'
@@ -6,6 +8,16 @@ import styles from '@components/features/ModalContent.module.scss'
 
 function ModalContent() {
   const { modalType } = useModal()
+
+  useEffect(() => {
+    if (modalType) {
+      document.body.style.overflow = 'hidden'
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [modalType])
 
   if (!modalType) return null
 
