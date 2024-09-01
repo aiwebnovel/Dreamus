@@ -106,11 +106,56 @@ function PianoClass() {
           </div>
         </div>
 
-        <div>
+        <div className={styles.class__story}>
           <div>
-            <div>
-              <h3>StoryTelling with Character</h3>
-              <p>스토리 텔링을 통한 음악공부</p>
+            <div className={styles.class__storyContainer}>
+              <h3 className={styles.class__story__title}>
+                StoryTelling with Character
+              </h3>
+              <p className={styles.class__story__subTitle}>
+                스토리 텔링을 통한 음악공부
+              </p>
+            </div>
+
+            <div className={styles.class__story__flexContainer}>
+              <div className={styles.class__story__item}>
+                <img className={styles.class__story__img} src={class1} />
+                <p className={styles.class__story__desc}>
+                  코다, 코순이와 같은 캐릭터와 친해져요
+                </p>
+              </div>
+              <div className={styles.class__story__item}>
+                <img className={styles.class__story__img} src={class2} />
+                <p className={styles.class__story__desc}>
+                  무엇을 의미하는지 공부하고 이해해요
+                </p>
+              </div>
+              <div className={styles.class__story__item}>
+                <img className={styles.class__story__img} src={class3} />
+                <p className={styles.class__story__desc}>
+                  자연스럽게 인지하며 역할극 놀이를 해요
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.class__textBook}>
+          <div>
+            <div className={styles.class__container}>
+              <div className={styles.class__imgContainer}>
+                <PianoTeacher className={styles.class__imgContainer__img} />
+              </div>
+              <div className={styles.class__descContainer}>
+                <p>피아노 교재</p>
+                <p>선생님~ 피아노 교재는 뭐에요?</p>
+                <p>
+                  룰루랄라 피아노 교재는 {/* //여기 수정해야할 차례 9월1일 */}
+                  <span className={styles.class__descContainer__highlight}>
+                    신.청.곡
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
