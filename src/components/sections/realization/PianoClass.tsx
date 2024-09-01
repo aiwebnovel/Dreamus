@@ -90,7 +90,7 @@ function PianoClass() {
                   src={class6}
                 />
                 <p className={styles.class__collaboration__desc}>
-                  선생님의 요청에 맞춰 핸드밸을 흔들어요
+                  선생님의 지시에 따라 핸드볼을 준비해요
                 </p>
               </div>
               <div className={styles.class__collaboration__item}>
