@@ -1,0 +1,22 @@
+.gallery {
+  &__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 100px 15px;
+    min-height: 100vh;
+  }
+
+  &__textBox {
+    &__title {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    &__desc {
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+  }
+}

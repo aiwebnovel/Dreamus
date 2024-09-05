@@ -1,0 +1,36 @@
+.card {
+  max-width: 300px;
+  max-height: 500px;
+  width: 250px;
+  height: 300px;
+  border: 1px solid;
+
+  &__imgBox {
+    width: 100%;
+    height: auto;
+
+    &__img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__textBox {
+    margin-top: 10px;
+    text-align: center;
+
+    &__title {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 10px;
+      word-break: keep-all;
+    }
+
+    &__desc {
+      font-size: 14px;
+      font-weight: 200;
+      color: gray;
+    }
+  }
+}

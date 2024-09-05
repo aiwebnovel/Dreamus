@@ -17,18 +17,9 @@ import WorkTogether from '@pages/work-together/WorkTogether'
 import ClassRegistration from '@pages/class-registration/ClassRegistration'
 
 import ErrorPage from '@pages/error/ErrorPage'
-// import { useEffect } from 'react'
-// import { useModal } from './context/ModalContext'
+import DreamusGallery from './pages/gallery/DreamusGallery'
 
 function App() {
-  // const { modalType } = useModal()
-
-  // useEffect(() => {
-  //   if (modalType) {
-  //     document.body.style.position = 'fixed'
-  //   }
-  // }, [modalType])
-
   return (
     <>
       <Routes>
@@ -55,6 +46,13 @@ function App() {
         <Route path="/realization/momfany-music" element={<MomfanyMusic />} />
 
         <Route path="/work-together" element={<WorkTogether />} />
+
+        <Route path="/dreamus-gallery" element={<DreamusGallery />} />
+        <Route path="/dreamus-gallery/:category" element={<DreamusGallery />} />
+        <Route
+          path="/dreamus-gallery/:category/:albumId"
+          element={<div>카테코리 아이</div>}
+        />
 
         <Route path="/class-registration" element={<ClassRegistration />} />
 

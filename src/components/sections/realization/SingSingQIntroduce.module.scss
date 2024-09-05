@@ -40,7 +40,7 @@
     font-size: 40px;
     font-weight: bold;
     line-height: 1.4;
-    
+
     @include mobile {
       font-size: 24px;
     }
@@ -60,6 +60,12 @@
   }
 
   &__curriculum {
+    &__week {
+      :nth-child(1) {
+        margin-top: 0;
+      }
+    }
+
     &__title {
       font-size: 36px;
       font-weight: bold;
@@ -69,10 +75,12 @@
       background: #facc77;
       border-radius: 15px;
       margin-bottom: 100px;
+      text-align: center;
 
       @include mobile {
         box-sizing: border-box;
         margin-bottom: 0;
+        font-size: 30px;
       }
     }
   }

@@ -1,0 +1,158 @@
+{
+  "albums": [
+    {
+      "id": "singsing-1",
+      "title": "씽씽큐 뮤직 앨범 1",
+      "category": "씽씽큐 뮤직",
+      "imageUrl": "https://via.placeholder.com/300x200?text=씽씽큐+뮤직+1",
+      "description": "씽씽큐 뮤직의 첫 번째 앨범입니다."
+    },
+    {
+      "id": "singsing-2",
+      "title": "씽씽큐 뮤직 앨범 2",
+      "category": "씽씽큐 뮤직",
+      "imageUrl": "https://via.placeholder.com/300x200?text=씽씽큐+뮤직+2",
+      "description": "씽씽큐 뮤직의 두 번째 앨범입니다."
+    },
+    {
+      "id": "singsing-3",
+      "title": "씽씽큐 뮤직 앨범 3",
+      "category": "씽씽큐 뮤직",
+      "imageUrl": "https://via.placeholder.com/300x200?text=씽씽큐+뮤직+3",
+      "description": "씽씽큐 뮤직의 두 번째 앨범입니다."
+    },
+    {
+      "id": "singsing-4",
+      "title": "씽씽큐 뮤직 앨범 4",
+      "category": "씽씽큐 뮤직",
+      "imageUrl": "https://via.placeholder.com/300x200?text=씽씽큐+뮤직+4",
+      "description": "씽씽큐 뮤직의 두 번째 앨범입니다."
+    },
+    {
+      "id": "singsing-5",
+      "title": "씽씽큐 뮤직 앨범 5",
+      "category": "씽씽큐 뮤직",
+      "imageUrl": "https://via.placeholder.com/300x200?text=씽씽큐+뮤직+5",
+      "description": "씽씽큐 뮤직의 두 번째 앨범입니다."
+    },
+    {
+      "id": "lulurala-1",
+      "title": "룰루랄라 피아노 앨범 1",
+      "category": "룰루랄라 피아노",
+      "imageUrl": "https://via.placeholder.com/300x200?text=룰루랄라+피아노+1",
+      "description": "룰루랄라 피아노의 첫 번째 앨범입니다."
+    },
+    {
+      "id": "lulurala-2",
+      "title": "룰루랄라 피아노 앨범 2",
+      "category": "룰루랄라 피아노",
+      "imageUrl": "https://via.placeholder.com/300x200?text=룰루랄라+피아노+2",
+      "description": "룰루랄라 피아노의 두 번째 앨범입니다."
+    },
+    {
+      "id": "lulurala-3",
+      "title": "룰루랄라 피아노 앨범 3",
+      "category": "룰루랄라 피아노",
+      "imageUrl": "https://via.placeholder.com/300x200?text=룰루랄라+피아노+3",
+      "description": "룰루랄라 피아노의 두 번째 앨범입니다."
+    },
+    {
+      "id": "lulurala-4",
+      "title": "룰루랄라 피아노 앨범 4",
+      "category": "룰루랄라 피아노",
+      "imageUrl": "https://via.placeholder.com/300x200?text=룰루랄라+피아노+4",
+      "description": "룰루랄라 피아노의 두 번째 앨범입니다."
+    },
+    {
+      "id": "lulurala-5",
+      "title": "룰루랄라 피아노 앨범 5",
+      "category": "룰루랄라 피아노",
+      "imageUrl": "https://via.placeholder.com/300x200?text=룰루랄라+피아노+5",
+      "description": "룰루랄라 피아노의 두 번째 앨범입니다."
+    },
+    {
+      "id": "kungchita-1",
+      "title": "쿵!치!타 드럼,난타,장구 앨범 1",
+      "category": "쿵!치!타 드럼,난타,장구",
+      "imageUrl": "https://via.placeholder.com/300x200?text=쿵!치!타+1",
+      "description": "쿵!치!타 드럼,난타,장구의 첫 번째 앨범입니다."
+    },
+    {
+      "id": "kungchita-2",
+      "title": "쿵!치!타 드럼,난타,장구 앨범 2",
+      "category": "쿵!치!타 드럼,난타,장구",
+      "imageUrl": "https://via.placeholder.com/300x200?text=쿵!치!타+2",
+      "description": "쿵!치!타 드럼,난타,장구의 두 번째 앨범입니다."
+    },
+    {
+      "id": "thinkplay-1",
+      "title": "생각놀이터 띵똥 앨범 1",
+      "category": "생각놀이터 띵똥",
+      "imageUrl": "https://via.placeholder.com/300x200?text=생각놀이터+띵똥+1",
+      "description": "생각놀이터 띵똥의 첫 번째 앨범입니다."
+    },
+    {
+      "id": "thinkplay-2",
+      "title": "생각놀이터 띵똥 앨범 2",
+      "category": "생각놀이터 띵똥",
+      "imageUrl": "https://via.placeholder.com/300x200?text=생각놀이터+띵똥+2",
+      "description": "생각놀이터 띵똥의 두 번째 앨범입니다."
+    },
+    {
+      "id": "thinkplay-3",
+      "title": "생각놀이터 띵똥 앨범 3",
+      "category": "생각놀이터 띵똥",
+      "imageUrl": "https://via.placeholder.com/300x200?text=생각놀이터+띵똥+3",
+      "description": "생각놀이터 띵똥의 두 번째 앨범입니다."
+    },
+    {
+      "id": "thinkplay-4",
+      "title": "생각놀이터 띵똥 앨범 4",
+      "category": "생각놀이터 띵똥",
+      "imageUrl": "https://via.placeholder.com/300x200?text=생각놀이터+띵똥+4",
+      "description": "생각놀이터 띵똥의 두 번째 앨범입니다."
+    },
+    {
+      "id": "thinkplay-5",
+      "title": "생각놀이터 띵똥 앨범 5",
+      "category": "생각놀이터 띵똥",
+      "imageUrl": "https://via.placeholder.com/300x200?text=생각놀이터+띵똥+5",
+      "description": "생각놀이터 띵똥의 두 번째 앨범입니다."
+    },
+    {
+      "id": "mompenny-1",
+      "title": "맘펴니 뮤직 앨범 1",
+      "category": "맘펴니 뮤직",
+      "imageUrl": "https://via.placeholder.com/300x200?text=맘펴니+뮤직+1",
+      "description": "맘펴니 뮤직의 첫 번째 앨범입니다."
+    },
+    {
+      "id": "mompenny-2",
+      "title": "맘펴니 뮤직 앨범 2",
+      "category": "맘펴니 뮤직",
+      "imageUrl": "https://via.placeholder.com/300x200?text=맘펴니+뮤직+2",
+      "description": "맘펴니 뮤직의 두 번째 앨범입니다."
+    },
+    {
+      "id": "mompenny-3",
+      "title": "맘펴니 뮤직 앨범 3",
+      "category": "맘펴니 뮤직",
+      "imageUrl": "https://via.placeholder.com/300x200?text=맘펴니+뮤직+2",
+      "description": "맘펴니 뮤직의 두 번째 앨범입니다."
+    },
+    {
+      "id": "mompenny-4",
+      "title": "맘펴니 뮤직 앨범 4",
+      "category": "맘펴니 뮤직",
+      "imageUrl": "https://via.placeholder.com/300x200?text=맘펴니+뮤직+2",
+      "description": "맘펴니 뮤직의 두 번째 앨범입니다."
+    },
+    {
+      "id": "mompenny-5",
+      "title": "맘펴니 뮤직 앨범 5",
+      "category": "맘펴니 뮤직",
+      "imageUrl": "https://via.placeholder.com/300x200?text=맘펴니+뮤직+2",
+      "description": "맘펴니 뮤직의 두 번째 앨범입니다."
+    }
+  ]
+}
