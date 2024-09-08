@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 
 import GalleryCard from '@components/common/GalleryCard'
+import PageNation from '@components/features/PageNation'
 
 import styles from '@components/sections/gallery/GalleryDreamus.module.scss'
 
@@ -33,25 +34,49 @@ function GalleryDreamus() {
   const [selectedCategory, setSelectedCategory] = useState<string>('전체')
   const [allAlbums, setAllAlbums] = useState<Album[]>([])
   const [filteredAlbums, setFilteredAlbums] = useState<Album[]>([])
+  const [currentPage, setCurrentPage] = useState<number>(1)
+  const [isLoading, setIsLoading] = useState<boolean>(true)
+  const [searchParams, setSearchParams] = useSearchParams()
   const navigate = useNavigate()
   const { category } = useParams<{ category: string }>()
+  const sectionRef = useRef<HTMLElement>(null)
+
+  const itemCountPerPage = 8
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page)
+    searchParams.set('page', page.toString())
+    setSearchParams(searchParams)
+    sectionRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   const handleCategoryChange = (newCategory: string) => {
     setSelectedCategory(newCategory)
+    setCurrentPage(1)
     navigate(`/dreamus-gallery/${categoryMapping[newCategory]}`)
+    sectionRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
 
   useEffect(() => {
-    //백엔드 데이터 가져오기
+    // 백엔드 데이터 가져오기
+    setIsLoading(true)
     fetch('http://localhost:3001/albums')
       .then((res) => res.json())
       .then((res: Album[]) => {
         setAllAlbums(res)
         setFilteredAlbums(res)
+        setIsLoading(false)
+      })
+      .catch((error) => {
+        console.error('Error fetching albums:', error)
+        setIsLoading(false)
       })
   }, [])
 
   useEffect(() => {
+    const page = parseInt(searchParams.get('page') || '1', 10)
+    setCurrentPage(page)
+
     if (selectedCategory === '전체') {
       setFilteredAlbums(allAlbums)
     } else {
@@ -60,7 +85,7 @@ function GalleryDreamus() {
       )
       setFilteredAlbums(filtered)
     }
-  }, [selectedCategory, allAlbums])
+  }, [selectedCategory, allAlbums, searchParams])
 
   useEffect(() => {
     if (category) {
@@ -69,8 +94,21 @@ function GalleryDreamus() {
     }
   }, [category])
 
+  const currentAlbums = filteredAlbums.slice(
+    (currentPage - 1) * itemCountPerPage,
+    currentPage * itemCountPerPage,
+  )
+
+  if (isLoading) {
+    return <div>로딩 중입니다!</div>
+  }
+
+  if (allAlbums.length === 0) {
+    return <div>등록된 앨범이 없습니다.</div>
+  }
+
   return (
-    <section className={styles.gallery}>
+    <section ref={sectionRef} className={styles.gallery}>
       <div className={styles.gallery__inner}>
         <div className={styles.gallery__container}>
           <div className={styles.gallery__textBox}>
@@ -80,7 +118,7 @@ function GalleryDreamus() {
               드림어스의 활동들을 만나보세요
             </p>
           </div>
-          <div>
+          <div className={styles.gallery__menuBtns}>
             {menuItems.map((item, index) => (
               <button
                 onClick={() => handleCategoryChange(item)}
@@ -88,13 +126,14 @@ function GalleryDreamus() {
                 style={{
                   fontWeight: selectedCategory === item ? 'bold' : 'normal',
                 }}
+                className={styles.gallery__menuBtns__btn}
               >
-                {item}
+                <span>{item}</span>
               </button>
             ))}
           </div>
-          <div>
-            {filteredAlbums.map((album, index) => (
+          <div className={styles.gallery__albums}>
+            {currentAlbums.map((album, index) => (
               <GalleryCard
                 id={album.id}
                 category={album.category}
@@ -105,6 +144,13 @@ function GalleryDreamus() {
               />
             ))}
           </div>
+          <PageNation
+            totalItems={filteredAlbums.length}
+            itemCountPerPage={itemCountPerPage}
+            pageCount={5}
+            currentPage={currentPage}
+            onPageChange={handlePageChange}
+          />
         </div>
       </div>
     </section>

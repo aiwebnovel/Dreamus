@@ -19,4 +19,64 @@
       line-height: 1.4;
     }
   }
+
+  &__albums {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    box-sizing: border-box;
+    grid-gap: 20px;
+  }
+
+  &__menuBtns {
+    margin-top: 50px;
+    border-radius: 15px;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    max-width: 600px;
+    width: 90%; 
+    padding: 15px; 
+    display: flex;
+
+    &__btn {
+      outline: none;
+      border: none;
+      cursor: pointer;
+      flex: 1 1 auto;
+      text-align: center;
+      background-color: inherit;
+      font-weight: 200;
+      transition: all 0.2s ease-in;
+
+      &:active {
+        font-weight: 600;
+      }
+
+      span {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        color: rgba(51, 65, 85, 1);
+        transition: font-weight .15s ease-in-out;
+
+        &::after {
+          content: "|";
+          height: 100%;
+          position: relative;
+          right: -10px;
+          display: block;
+          text-align: center;
+        }
+
+        &::after:last-child {
+          display: none;
+        }
+      }
+    }
+  }
 }
+
+
