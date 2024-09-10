@@ -11,6 +11,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tiptap/extension-bold": "^2.6.6",
+    "@tiptap/extension-color": "^2.6.6",
+    "@tiptap/extension-highlight": "^2.6.6",
+    "@tiptap/extension-image": "^2.6.6",
+    "@tiptap/extension-italic": "^2.6.6",
+    "@tiptap/extension-text-style": "^2.6.6",
+    "@tiptap/extension-underline": "^2.6.6",
+    "@tiptap/pm": "^2.6.6",
+    "@tiptap/react": "^2.6.6",
+    "@tiptap/starter-kit": "^2.6.6",
     "framer-motion": "^11.3.27",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

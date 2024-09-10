@@ -23,7 +23,7 @@ cite,
 code,
 del,
 dfn,
-em,
+// em,
 img,
 ins,
 kbd,
@@ -32,7 +32,7 @@ s,
 samp,
 small,
 strike,
-strong,
+// strong,
 sub,
 sup,
 tt,
@@ -76,7 +76,7 @@ ruby,
 section,
 summary,
 time,
-mark,
+// mark,
 audio,
 video {
   margin: 0;
@@ -125,4 +125,11 @@ table {
 a {
   text-decoration: none;
   color: black;
+}
+
+
+mark {
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: #9c9cff;
 }

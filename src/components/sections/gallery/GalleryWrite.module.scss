@@ -1,0 +1,64 @@
+.write {
+    &__inner {
+      padding: 100px 0px;
+      max-width: 1280px;
+      min-height: 100vh;
+      margin: 0 auto;
+    }
+  
+    &__form {
+      &__titleContainer {
+        position: relative;
+        margin: 50px auto;
+        width: 100%;
+      }
+  
+      &__titleBox {
+        position: relative;
+        margin-bottom: 50px;
+      }
+  
+      &__titleInput {
+        font-size: 20px;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #ccc;
+        padding: 5px 0;
+        background-color: transparent;
+        outline: none;
+  
+        &:focus,
+        &:valid {
+          & ~ .write__form__label {
+            top: -20px;
+            font-size: 16px;
+            color: #333;
+          }
+  
+          & ~ .write__form__underline {
+            transform: scaleX(1);
+          }
+        }
+      }
+  
+      &__label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #ccc;
+        transition: all 0.3s ease;
+        pointer-events: none;
+      }
+  
+      &__underline {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #333;
+        transform: scaleX(0);
+        transition: all 0.3s ease;
+      }
+    }
+  }

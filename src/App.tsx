@@ -17,7 +17,8 @@ import WorkTogether from '@pages/work-together/WorkTogether'
 import ClassRegistration from '@pages/class-registration/ClassRegistration'
 
 import ErrorPage from '@pages/error/ErrorPage'
-import DreamusGallery from './pages/gallery/DreamusGallery'
+import DreamusGallery from '@pages/gallery/DreamusGallery'
+import DreamusGalleyWrite from '@pages/gallery/DreamusGalleyWrite'
 
 function App() {
   return (
@@ -52,6 +53,10 @@ function App() {
         <Route
           path="/dreamus-gallery/:category/:albumId"
           element={<div>카테코리 아이</div>}
+        />
+        <Route
+          path="/dreamus-gallery/blog-write"
+          element={<DreamusGalleyWrite />}
         />
 
         <Route path="/class-registration" element={<ClassRegistration />} />
