@@ -11,7 +11,7 @@ import { Color } from '@tiptap/extension-color'
 import TextStyle from '@tiptap/extension-text-style'
 import TextAlign from '@tiptap/extension-text-align'
 
-import EditorToolBar from '@components/features/EditorToolbar'
+import EditorToolBar from '@components/features/EditorToolBar'
 
 import styles from '@components/features/Editor.module.scss'
 
