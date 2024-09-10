@@ -1,19 +1,20 @@
 import Editor from '@components/features/Editor'
 import styles from '@components/sections/gallery/GalleryWrite.module.scss'
-import { useState } from 'react'
+// import { useState } from 'react'
 
-const categories = [
-  '씽씽큐 뮤직',
-  '생각놀이터 띵동',
-  '룰루랄라 피아노',
-  '쿵.치.타 드럼난타.장구',
-  '맘펴니 뮤직',
-]
+// const categories = [
+//   '씽씽큐 뮤직',
+//   '생각놀이터 띵동',
+//   '룰루랄라 피아노',
+//   '쿵.치.타 드럼난타.장구',
+//   '맘펴니 뮤직',
+// ]
 
 function GalleryWrite() {
-  const [title, setTitle] = useState('')
-  const [category, setCategory] = useState('')
-  const [content, setContent] = useState('')
+  // const [title, setTitle] = useState('')
+  // const [category, setCategory] = useState('')
+  // const [content, setContent] = useState('')
+
   return (
     <section className={styles.write}>
       <div className={styles.write__inner}>

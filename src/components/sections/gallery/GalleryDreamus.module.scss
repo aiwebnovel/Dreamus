@@ -34,9 +34,9 @@
     background-color: #f8f8f8;
     box-sizing: border-box;
     box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
-    max-width: 600px;
-    width: 90%; 
-    padding: 15px; 
+    max-width: 700px;
+    width: 90%;
+    padding: 15px;
     display: flex;
 
     &__btn {
@@ -60,23 +60,48 @@
         justify-content: center;
         border: none;
         color: rgba(51, 65, 85, 1);
-        transition: font-weight .15s ease-in-out;
+        transition: font-weight 0.15s ease-in-out;
 
         &::after {
-          content: "|";
+          content: '|';
           height: 100%;
           position: relative;
           right: -10px;
           display: block;
           text-align: center;
         }
-
-        &::after:last-child {
-          display: none;
-        }
       }
+    }
+
+    &__btn:last-child span::after {
+      content: '';
+    }
+  }
+
+  &__noAlbums,
+  &__loading {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &__title {
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 1.4;
+      word-break: keep-all;
+    }
+
+    &__subTitle {
+      margin-top: 10px;
+      font-size: 20px;
+      color: gray;
+      font-weight: 200;
+      line-height: 1.4;
+      word-break: keep-all;
     }
   }
 }
-
-

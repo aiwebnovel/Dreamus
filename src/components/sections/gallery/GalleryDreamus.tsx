@@ -99,14 +99,6 @@ function GalleryDreamus() {
     currentPage * itemCountPerPage,
   )
 
-  if (isLoading) {
-    return <div>로딩 중입니다!</div>
-  }
-
-  if (allAlbums.length === 0) {
-    return <div>등록된 앨범이 없습니다.</div>
-  }
-
   return (
     <section ref={sectionRef} className={styles.gallery}>
       <div className={styles.gallery__inner}>
@@ -132,25 +124,50 @@ function GalleryDreamus() {
               </button>
             ))}
           </div>
-          <div className={styles.gallery__albums}>
-            {currentAlbums.map((album, index) => (
-              <GalleryCard
-                id={album.id}
-                category={album.category}
-                key={index}
-                title={album.title}
-                imageUrl={album.imageUrl}
-                description={album.description}
-              />
-            ))}
-          </div>
-          <PageNation
-            totalItems={filteredAlbums.length}
-            itemCountPerPage={itemCountPerPage}
-            pageCount={5}
-            currentPage={currentPage}
-            onPageChange={handlePageChange}
-          />
+          {isLoading ? (
+            <div className={styles.gallery__loading}>
+              <p className={styles.gallery__loading__title}>로딩 중입니다.</p>
+              <span className={styles.gallery__loading__subTitle}>
+                잠시만 기다려주세요.
+              </span>
+            </div>
+          ) : (
+            <>
+              {currentAlbums.length > 0 ? (
+                <div className={styles.gallery__albums}>
+                  {currentAlbums.map((album, index) => (
+                    <GalleryCard
+                      id={album.id}
+                      category={album.category}
+                      key={index}
+                      title={album.title}
+                      imageUrl={album.imageUrl}
+                      description={album.description}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className={styles.gallery__noAlbums}>
+                  <p className={styles.gallery__noAlbums__title}>
+                    등록된 앨범이 없습니다.
+                  </p>
+                  <span className={styles.gallery__noAlbums__subTitle}>
+                    앨범을 등록해 보세요!
+                  </span>
+                </div>
+              )}
+
+              {currentAlbums.length > 0 ? (
+                <PageNation
+                  totalItems={filteredAlbums.length}
+                  itemCountPerPage={itemCountPerPage}
+                  pageCount={5}
+                  currentPage={currentPage}
+                  onPageChange={handlePageChange}
+                />
+              ) : null}
+            </>
+          )}
         </div>
       </div>
     </section>
