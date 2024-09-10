@@ -1,15 +1,19 @@
+import React, { useCallback } from 'react'
+
 import { EditorContent, useEditor } from '@tiptap/react'
+
+import ImageResize from 'tiptap-extension-resize-image'
+
 import StarterKit from '@tiptap/starter-kit'
-// import Bold from '@tiptap/extension-bold'
-// import Italic from '@tiptap/extension-italic'
 import Highlight from '@tiptap/extension-highlight'
 import Underline from '@tiptap/extension-underline'
 import { Color } from '@tiptap/extension-color'
 import TextStyle from '@tiptap/extension-text-style'
+import TextAlign from '@tiptap/extension-text-align'
+
+import EditorToolBar from '@components/features/EditorToolbar'
 
 import styles from '@components/features/Editor.module.scss'
-
-import * as Icons from '@components/features/EditorIcon'
 
 function Editor() {
   const editor = useEditor({
@@ -19,9 +23,30 @@ function Editor() {
       Underline,
       TextStyle,
       Color,
+      ImageResize,
+      TextAlign.configure({
+        types: ['heading', 'paragraph'],
+      }),
     ],
     content: '<p>블로그 글을 작성하세요...</p>',
   })
+
+  const handleImageUpload = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      const file = event.target.files?.[0]
+      if (file) {
+        const reader = new FileReader()
+        reader.onload = (e) => {
+          const result = e.target?.result
+          if (typeof result === 'string') {
+            editor?.chain().focus().setImage({ src: result }).run()
+          }
+        }
+        reader.readAsDataURL(file)
+      }
+    },
+    [editor],
+  )
 
   if (!editor) {
     return null
@@ -29,43 +54,7 @@ function Editor() {
 
   return (
     <div className={styles.editor}>
-      <div className="control-group">
-        <div className="button-group">
-          <button
-            onClick={() => editor.chain().focus().toggleBold().run()}
-            className={editor.isActive('bold') ? 'is-active' : ''}
-          >
-            <Icons.Bold size={20} color="black" />
-          </button>
-          <button
-            onClick={() => editor.chain().focus().toggleItalic().run()}
-            className={editor.isActive('italic') ? 'is-active' : ''}
-          >
-            <Icons.Italic size={20} color="black" />
-          </button>
-          <button
-            onClick={() => editor.chain().focus().toggleHighlight().run()}
-            className={editor.isActive('highlight') ? 'is-active' : ''}
-          >
-            Toggle highlight
-          </button>
-          <button
-            onClick={() => editor.chain().focus().toggleUnderline().run()}
-            className={editor.isActive('underline') ? 'is-active' : ''}
-          >
-            Toggle underline
-          </button>
-          <input
-            type="color"
-            onInput={(event: React.ChangeEvent<HTMLInputElement>) =>
-              editor.chain().focus().setColor(event.target.value).run()
-            }
-            // value={editor.getAttributes('textStyle').color}
-            value={editor.getAttributes('textStyle').color || '#000000'}
-            data-testid="setColor"
-          />
-        </div>
-      </div>
+      <EditorToolBar editor={editor} onImageUpload={handleImageUpload} />
       <EditorContent editor={editor} />
     </div>
   )

@@ -24,6 +24,7 @@
     align-items: flex-start;
     justify-content: center;
     gap: 10px;
+    list-style: none;
 
     @include mobile {
       flex-direction: column;
