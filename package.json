@@ -19,6 +19,7 @@
     "@tiptap/extension-italic": "^2.6.6",
     "@tiptap/extension-list-item": "^2.6.6",
     "@tiptap/extension-ordered-list": "^2.6.6",
+    "@tiptap/extension-placeholder": "^2.6.6",
     "@tiptap/extension-text-align": "^2.6.6",
     "@tiptap/extension-text-style": "^2.6.6",
     "@tiptap/extension-underline": "^2.6.6",

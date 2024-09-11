@@ -8,26 +8,20 @@ export const ParagraphSize = ({
   color = 'currentColor',
 }: EditorIconProps) => (
   <svg
-    fill="none"
-    height={size}
-    viewBox="0 0 24 24"
-    width={size}
-    stroke={color}
+    aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    stroke={color}
+    fill="none"
+    viewBox="0 0 24 24"
   >
     <path
-      d="M12 6H16M20 6H16M16 6V18"
-      stroke="black"
+      stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="2"
-    />
-    <path
-      d="M4 11H7M10 11H7M7 11V18"
-      stroke="black"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
+      d="M3 6.2V5h11v1.2M8 5v14m-3 0h6m2-6.8V11h8v1.2M17 11v8m-1.5 0h3"
     />
   </svg>
 )
@@ -55,25 +49,27 @@ export const TextRight = ({
   size = 16,
   color = 'currentColor',
 }: EditorIconProps) => (
-  <svg
-    stroke={color}
-    fill="currentColor"
-    height={size}
-    viewBox="0 0 16 16"
-    width={size}
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
-      fillRule="evenodd"
-    />
-  </svg>
-)
-
-export const TextUnset = ({
-  size = 16,
-  color = 'currentColor',
-}: EditorIconProps) => (
+  // <svg
+  //   fill="none"
+  //   height={size}
+  //   viewBox="0 0 20 20"
+  //   width={size}
+  //   stroke={color}
+  //   xmlns="http://www.w3.org/2000/svg"
+  // >
+  //   <path
+  //     d="M6 4.25C6 3.83579 6.33579 3.5 6.75 3.5H17.25C17.6642 3.5 18 3.83579 18 4.25C18 4.66421 17.6642 5 17.25 5H6.75C6.33579 5 6 4.66421 6 4.25Z"
+  //     fill="#212121"
+  //   />
+  //   <path
+  //     d="M2 9.25C2 8.83579 2.33579 8.5 2.75 8.5H17.25C17.6642 8.5 18 8.83579 18 9.25C18 9.66421 17.6642 10 17.25 10H2.75C2.33579 10 2 9.66421 2 9.25Z"
+  //     fill="#212121"
+  //   />
+  //   <path
+  //     d="M9.75 13.5C9.33579 13.5 9 13.8358 9 14.25C9 14.6642 9.33579 15 9.75 15H17.25C17.6642 15 18 14.6642 18 14.25C18 13.8358 17.6642 13.5 17.25 13.5H9.75Z"
+  //     fill="#212121"
+  //   />
+  // </svg>
   <svg
     fill="none"
     height={size}
@@ -83,11 +79,59 @@ export const TextUnset = ({
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M5 6H19M5 10H19M5 14H19M5 18H19"
-      stroke="black"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
+      d="M5 5.75C5 5.33579 5.33579 5 5.75 5H21.25C21.6642 5 22 5.33579 22 5.75C22 6.16421 21.6642 6.5 21.25 6.5H5.75C5.33579 6.5 5 6.16421 5 5.75Z"
+      fill="#212121"
+    />
+    <path
+      d="M10 18.75C10 18.3358 10.3358 18 10.75 18H21.25C21.6642 18 22 18.3358 22 18.75C22 19.1642 21.6642 19.5 21.25 19.5H10.75C10.3358 19.5 10 19.1642 10 18.75Z"
+      fill="#212121"
+    />
+    <path
+      d="M2.75 11.5C2.33579 11.5 2 11.8358 2 12.25C2 12.6642 2.33579 13 2.75 13H21.25C21.6642 13 22 12.6642 22 12.25C22 11.8358 21.6642 11.5 21.25 11.5H2.75Z"
+      fill="#212121"
+    />
+  </svg>
+)
+
+export const TextUnset = ({
+  size = 16,
+  color = 'currentColor',
+}: EditorIconProps) => (
+  // <svg
+  //   aria-hidden="true"
+  //   xmlns="http://www.w3.org/2000/svg"
+  //   width={size}
+  //   height={size}
+  //   stroke={color}
+  //   fill="none"
+  //   viewBox="0 0 24 24"
+  // >
+  //   <path
+  //     stroke="currentColor"
+  //     strokeLinecap="round"
+  //     strokeWidth="2"
+  //     d="M5 7h14M5 12h14M5 17h14"
+  //   />
+  // </svg>
+  <svg
+    fill="none"
+    height={size}
+    viewBox="0 0 24 24"
+    width={size}
+    stroke={color}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M2 5.75C2 5.33579 2.33579 5 2.75 5H21.25C21.6642 5 22 5.33579 22 5.75C22 6.16421 21.6642 6.5 21.25 6.5H2.75C2.33579 6.5 2 6.16421 2 5.75Z"
+      fill="#212121"
+    />
+    <path
+      d="M2 18.75C2 18.3358 2.33579 18 2.75 18H21.25C21.6642 18 22 18.3358 22 18.75C22 19.1642 21.6642 19.5 21.25 19.5H2.75C2.33579 19.5 2 19.1642 2 18.75Z"
+      fill="#212121"
+    />
+    <path
+      d="M2.75 11.5C2.33579 11.5 2 11.8358 2 12.25C2 12.6642 2.33579 13 2.75 13H21.25C21.6642 13 22 12.6642 22 12.25C22 11.8358 21.6642 11.5 21.25 11.5H2.75Z"
+      fill="#212121"
     />
   </svg>
 )
@@ -105,11 +149,16 @@ export const TextCenter = ({
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M5 6H19M7 10H17M5 14H19M9 18H15"
-      stroke="black"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
+      d="M4 5.75C4 5.33579 4.33579 5 4.75 5H19.25C19.6642 5 20 5.33579 20 5.75C20 6.16421 19.6642 6.5 19.25 6.5H4.75C4.33579 6.5 4 6.16421 4 5.75Z"
+      fill="#212121"
+    />
+    <path
+      d="M6 18.75C6 18.3358 6.33579 18 6.75 18H17.25C17.6642 18 18 18.3358 18 18.75C18 19.1642 17.6642 19.5 17.25 19.5H6.75C6.33579 19.5 6 19.1642 6 18.75Z"
+      fill="#212121"
+    />
+    <path
+      d="M2.75 11.5C2.33579 11.5 2 11.8358 2 12.25C2 12.6642 2.33579 13 2.75 13H21.25C21.6642 13 22 12.6642 22 12.25C22 11.8358 21.6642 11.5 21.25 11.5H2.75Z"
+      fill="#212121"
     />
   </svg>
 )
@@ -121,17 +170,22 @@ export const TextLeft = ({
   <svg
     fill="none"
     height={size}
-    stroke={color}
     viewBox="0 0 24 24"
     width={size}
+    stroke={color}
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M5 6H19M5 10H15M5 14H19M5 18H11"
-      stroke="black"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
+      d="M2 5.75C2 5.33579 2.33579 5 2.75 5H18.25C18.6642 5 19 5.33579 19 5.75C19 6.16421 18.6642 6.5 18.25 6.5H2.75C2.33579 6.5 2 6.16421 2 5.75Z"
+      fill="#212121"
+    />
+    <path
+      d="M2 18.75C2 18.3358 2.33579 18 2.75 18H13.25C13.6642 18 14 18.3358 14 18.75C14 19.1642 13.6642 19.5 13.25 19.5H2.75C2.33579 19.5 2 19.1642 2 18.75Z"
+      fill="#212121"
+    />
+    <path
+      d="M2.75 11.5C2.33579 11.5 2 11.8358 2 12.25C2 12.6642 2.33579 13 2.75 13H21.25C21.6642 13 22 12.6642 22 12.25C22 11.8358 21.6642 11.5 21.25 11.5H2.75Z"
+      fill="#212121"
     />
   </svg>
 )
@@ -141,14 +195,22 @@ export const ImageUpload = ({
   color = 'currentColor',
 }: EditorIconProps) => (
   <svg
-    fill="#000000"
+    className="w-6 h-6 text-gray-800 dark:text-white"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     stroke={color}
+    fill="none"
     viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M19,13a1,1,0,0,0-1,1v.38L16.52,12.9a2.79,2.79,0,0,0-3.93,0l-.7.7L9.41,11.12a2.85,2.85,0,0,0-3.93,0L4,12.6V7A1,1,0,0,1,5,6h7a1,1,0,0,0,0-2H5A3,3,0,0,0,2,7V19a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V14A1,1,0,0,0,19,13ZM5,20a1,1,0,0,1-1-1V15.43l2.9-2.9a.79.79,0,0,1,1.09,0l3.17,3.17,0,0L15.46,20Zm13-1a.89.89,0,0,1-.18.53L13.31,15l.7-.7a.77.77,0,0,1,1.1,0L18,17.21ZM22.71,4.29l-3-3a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21l-3,3a1,1,0,0,0,1.42,1.42L18,4.41V10a1,1,0,0,0,2,0V4.41l1.29,1.3a1,1,0,0,0,1.42,0A1,1,0,0,0,22.71,4.29Z" />
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="m3 16 5-7 6 6.5m6.5 2.5L16 13l-4.286 6M14 10h.01M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"
+    />
   </svg>
 )
 
@@ -157,49 +219,53 @@ export const UnOrderedList = ({
   color = 'currentColor',
 }: EditorIconProps) => (
   <svg
-    width={size}
+    fill="none"
     height={size}
+    viewBox="0 0 24 24"
+    width={size}
     stroke={color}
-    viewBox="0 0 256 256"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect fill="none" height="256" width="256" />
-    <line
-      fill="none"
-      stroke="#000"
+    <path
+      d="M11 5H21M11 12H21M11 19H21"
+      stroke="black"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth="16"
-      x1="88"
-      x2="216"
-      y1="64"
-      y2="64"
+      strokeWidth="2"
     />
-    <line
-      fill="none"
-      stroke="#000"
+    <rect
+      height="4"
+      rx="1"
+      stroke="black"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth="16"
-      x1="88"
-      x2="216"
-      y1="128"
-      y2="128"
+      strokeWidth="2"
+      width="4"
+      x="3"
+      y="3"
     />
-    <line
-      fill="none"
-      stroke="#000"
+    <rect
+      height="4"
+      rx="1"
+      stroke="black"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth="16"
-      x1="88"
-      x2="216"
-      y1="192"
-      y2="192"
+      strokeWidth="2"
+      width="4"
+      x="3"
+      y="10"
     />
-    <circle cx="44" cy="64" r="12" />
-    <circle cx="44" cy="128" r="12" />
-    <circle cx="44" cy="192" r="12" />
+    <rect
+      height="4"
+      rx="1"
+      stroke="black"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      width="4"
+      x="3"
+      y="17"
+    />
   </svg>
 )
 
@@ -208,58 +274,21 @@ export const OrderedList = ({
   color = 'currentColor',
 }: EditorIconProps) => (
   <svg
+    className="w-6 h-6 text-gray-800 dark:text-white"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     stroke={color}
-    viewBox="0 0 256 256"
-    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
   >
-    <rect fill="none" height="256" width="256" />
-    <line
-      stroke="#000"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="16"
-      x1="104"
-      x2="216"
-      y1="128"
-      y2="128"
-    />
-    <line
-      stroke="#000"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="16"
-      x1="104"
-      x2="216"
-      y1="64"
-      y2="64"
-    />
-    <line
-      stroke="#000"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="16"
-      x1="104"
-      x2="216"
-      y1="192"
-      y2="192"
-    />
-    <polyline
-      fill="none"
-      points="40 60 56 52 56 108"
-      stroke="#000"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="16"
-    />
     <path
-      d="M41.1,152.6a14,14,0,1,1,24.5,13.2L40,200H68"
-      fill="none"
-      stroke="#000"
+      stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth="16"
+      strokeWidth="2"
+      d="M12 6h8m-8 6h8m-8 6h8M4 16a2 2 0 1 1 3.321 1.5L4 20h5M4 5l2-1v6m-2 0h4"
     />
   </svg>
 )
@@ -269,14 +298,20 @@ export const Blockquote = ({
   color = 'currentColor',
 }: EditorIconProps) => (
   <svg
+    className="w-6 h-6 text-gray-800 dark:text-white"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     stroke={color}
-    viewBox="0 0 16 16"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="#000000"
+    fill="currentColor"
+    viewBox="0 0 24 24"
   >
-    <path d="M2.5 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zm5 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm0 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm-5 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zm.79-5.373c.112-.078.26-.17.444-.275L3.524 6c-.122.074-.272.17-.452.287-.18.117-.35.26-.51.428a2.425 2.425 0 0 0-.398.562c-.11.207-.164.438-.164.692 0 .36.072.65.217.873.144.219.385.328.72.328.215 0 .383-.07.504-.211a.697.697 0 0 0 .188-.463c0-.23-.07-.404-.211-.521-.137-.121-.326-.182-.568-.182h-.282c.024-.203.065-.37.123-.498a1.38 1.38 0 0 1 .252-.37 1.94 1.94 0 0 1 .346-.298zm2.167 0c.113-.078.262-.17.445-.275L5.692 6c-.122.074-.272.17-.452.287-.18.117-.35.26-.51.428a2.425 2.425 0 0 0-.398.562c-.11.207-.164.438-.164.692 0 .36.072.65.217.873.144.219.385.328.72.328.215 0 .383-.07.504-.211a.697.697 0 0 0 .188-.463c0-.23-.07-.404-.211-.521-.137-.121-.326-.182-.568-.182h-.282a1.75 1.75 0 0 1 .118-.492c.058-.13.144-.254.257-.375a1.94 1.94 0 0 1 .346-.3z" />
+    <path
+      fillRule="evenodd"
+      d="M6 6a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a3 3 0 0 1-3 3H5a1 1 0 1 0 0 2h1a5 5 0 0 0 5-5V8a2 2 0 0 0-2-2H6Zm9 0a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a3 3 0 0 1-3 3h-1a1 1 0 1 0 0 2h1a5 5 0 0 0 5-5V8a2 2 0 0 0-2-2h-3Z"
+      clipRule="evenodd"
+    />
   </svg>
 )
 
@@ -285,16 +320,16 @@ export const TextColor = ({
   color = 'currentColor',
 }: EditorIconProps) => (
   <svg
-    fill="#000000"
-    width={size}
+    fill="none"
     height={size}
+    viewBox="0 0 24 24"
+    width={size}
     stroke={color}
-    viewBox="0 0 1920 1920"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="m742.81 1024.051 185.984-512h62.336l186.112 512H742.81Zm605.056 469.888 120.32-43.776-387.328-1066.112H839.194L451.866 1450.163l120.32 43.776 124.16-341.888h527.36l124.16 341.888ZM1792 1728.051c0 35.2-28.672 64-64 64H192c-35.328 0-64-28.8-64-64v-1536c0-35.2 28.672-64 64-64h1536c35.328 0 64 28.8 64 64v1536Zm-64-1728H192c-105.856 0-192 86.144-192 192v1536c0 105.856 86.144 192 192 192h1536c105.856 0 192-86.144 192-192v-1536c0-105.856-86.144-192-192-192Z"
-      fillRule="evenodd"
+      d="M17.75 14.5005C18.9926 14.5005 20 15.5079 20 16.7505V19.7504C20 20.993 18.9926 22.0004 17.75 22.0004H5.25C4.00736 22.0004 3 20.993 3 19.7504V16.7505C3 15.5079 4.00736 14.5005 5.25 14.5005H17.75ZM17.75 16.0005H5.25C4.83579 16.0005 4.5 16.3363 4.5 16.7505V19.7504C4.5 20.1646 4.83579 20.5004 5.25 20.5004H17.75C18.1642 20.5004 18.5 20.1646 18.5 19.7504V16.7505C18.5 16.3363 18.1642 16.0005 17.75 16.0005ZM7.05252 11.9694L10.8061 2.47427C11.0415 1.87883 11.8486 1.84415 12.1508 2.36975L12.2013 2.47487L15.9477 11.9754C16.0997 12.3607 15.9105 12.7962 15.5251 12.9482C15.1719 13.0875 14.7765 12.9401 14.596 12.6178L14.5523 12.5256L13.556 10H9.443L8.44748 12.5209C8.30789 12.874 7.93013 13.0621 7.57143 12.9737L7.47427 12.9426C7.12117 12.803 6.93308 12.4253 7.02147 12.0666L7.05252 11.9694L10.8061 2.47427L7.05252 11.9694ZM11.5027 4.79226L10.036 8.5H12.964L11.5027 4.79226Z"
+      fill="#212121"
     />
   </svg>
 )
@@ -323,16 +358,21 @@ export const Bold = ({
   color = 'currentColor',
 }: EditorIconProps) => (
   <svg
-    fill="none"
-    widths={size}
+    className="w-6 h-6 text-gray-800 dark:text-white"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
     height={size}
     stroke={color}
+    fill="none"
     viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M6.93514 4.43963C7.21647 4.15815 7.59813 4 7.99609 4H12.3795C15.0161 4 16.9995 6.18211 16.9995 8.62541C16.9995 9.60205 16.6828 10.5367 16.1341 11.307C17.211 12.134 17.9995 13.4274 17.9995 15.12C17.9995 18.2315 15.301 20 13.1195 20H7.99951C7.17108 20 6.49951 19.3284 6.49951 18.5L6.49609 5.50082C6.49588 5.10285 6.65382 4.72111 6.93514 4.43963ZM9.49869 10.2499H12.3795C13.2824 10.2499 13.9995 9.49051 13.9995 8.62541C13.9995 7.76 13.2814 7 12.3795 7H9.49691L9.49869 10.2499ZM9.49951 13.2499V17H13.1195C13.9927 17 14.9995 16.2464 14.9995 15.12C14.9995 13.9901 14.0248 13.2499 13.1195 13.2499H9.49951Z"
-      fill="#212121"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M8 5h4.5a3.5 3.5 0 1 1 0 7H8m0-7v7m0-7H6m2 7h6.5a3.5 3.5 0 1 1 0 7H8m0-7v7m0 0H6"
     />
   </svg>
 )
@@ -364,45 +404,21 @@ export const Italic = ({
   color = 'currentColor',
 }: EditorIconProps) => (
   <svg
+    className="w-6 h-6 text-gray-800 dark:text-white"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     stroke={color}
-    viewBox="0 0 256 256"
-    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
   >
-    <rect fill="none" height="256" width="256" />
-    <line
-      fill="none"
-      stroke="#000"
+    <path
+      stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth="24"
-      x1="152"
-      x2="104"
-      y1="56"
-      y2="200"
-    />
-    <line
-      fill="none"
-      stroke="#000"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="24"
-      x1="64"
-      x2="144"
-      y1="200"
-      y2="200"
-    />
-    <line
-      fill="none"
-      stroke="#000"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="24"
-      x1="112"
-      x2="192"
-      y1="56"
-      y2="56"
+      strokeWidth="2"
+      d="m8.874 19 6.143-14M6 19h6.33m-.66-14H18"
     />
   </svg>
 )

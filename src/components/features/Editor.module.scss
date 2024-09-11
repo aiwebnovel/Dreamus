@@ -1,38 +1,50 @@
 .editor {
+  // border: 2px solid #ccc;
+  // border-radius: 5px;
+  // padding: 10px;
+  // margin-top: 20px;
+
+  @include mobile {
+    font-size: 14px;
+    word-break: keep-all;
+  }
+
+  :global {
+    .ProseMirror {
+      mark {
+        color: inherit; // This ensures the text color is not overridden by the highlight
+      }
+    }
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #4a90e2;
+  }
+
+  &__content {
     border: 2px solid #ccc;
     border-radius: 5px;
     padding: 10px;
     margin-top: 20px;
+    min-height: 800px;
+  }
+}
 
-    :global {
-        .ProseMirror {
-          mark {
-            color: inherit;  // This ensures the text color is not overridden by the highlight
-          }
-        }
-      }
+.menuBar {
+  margin-bottom: 10px;
+}
 
-    &:focus {
-        outline: none;
-        border-color: #4a90e2;
-    }
-  }
-  
-  .menuBar {
-    margin-bottom: 10px;
-  }
-  
-  .menuBar button {
-    margin-right: 5px;
-    background-color: #f1f1f1;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 3px;
-  }
-  
-  .menuBar button.is-active {
-    background-color: #4a90e2;
-    color: white;
-  }
+.menuBar button {
+  margin-right: 5px;
+  background-color: #f1f1f1;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
 
+.menuBar button.is-active {
+  background-color: #4a90e2;
+  color: white;
+}
