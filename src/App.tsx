@@ -49,14 +49,15 @@ function App() {
         <Route path="/work-together" element={<WorkTogether />} />
 
         <Route path="/dreamus-gallery" element={<DreamusGallery />} />
+        <Route
+          path="/dreamus-gallery/blog-write"
+          element={<DreamusGalleyWrite />}
+        />
+
         <Route path="/dreamus-gallery/:category" element={<DreamusGallery />} />
         <Route
           path="/dreamus-gallery/:category/:albumId"
           element={<div>카테코리 아이</div>}
-        />
-        <Route
-          path="/dreamus-gallery/blog-write"
-          element={<DreamusGalleyWrite />}
         />
 
         <Route path="/class-registration" element={<ClassRegistration />} />
