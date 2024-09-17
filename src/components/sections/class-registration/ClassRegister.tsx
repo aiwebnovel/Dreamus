@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
+
+import FormTextField from '@components/features/FormTextField'
+
 import Register from '@assets/icon/register.svg?react'
-import FormTextField from '@/components/features/FormTextField'
 
 import styles from '@components/sections/class-registration/ClassRegister.module.scss'
 
