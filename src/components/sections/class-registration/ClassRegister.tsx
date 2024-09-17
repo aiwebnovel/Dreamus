@@ -126,9 +126,9 @@ function ClassRegister() {
               아이들을 위한 Dreamus 수업을 신청하세요.
             </p>
           </div>
-          <div>
-            <h2>수업 신청서</h2>
-            <form>
+          <div className={styles.register__content}>
+            <h2 className={styles.register__content__title}>수업 신청서</h2>
+            <form className={styles.register__content__form}>
               <FormTextField
                 label="이름(자녀)"
                 name="name"
@@ -155,10 +155,12 @@ function ClassRegister() {
                   위 항목은 필수로 입력해주세요
                 </span>
               )}
-              <div>
-                <label>
-                  <p>주소</p>
-                  <div>
+              <div className={styles.register__addressContainer}>
+                <label className={styles.register__addressContainer__label}>
+                  <p className={styles.register__addressContainer__title}>
+                    주소
+                  </p>
+                  <div className={styles.register__addressContainer__search}>
                     <input
                       type="text"
                       placeholder="우편번호"
@@ -175,6 +177,7 @@ function ClassRegister() {
                       placeholder="도로명주소"
                       value={classData.address.roadAddress}
                       readOnly
+                      className={styles.register__addressContainer__address}
                     />
                   </div>
                   <div>
@@ -185,15 +188,23 @@ function ClassRegister() {
                       onChange={(e) =>
                         handleAddressChange('detailAddress', e.target.value)
                       }
+                      className={styles.register__addressContainer__address}
                     />
                   </div>
                 </label>
               </div>
-              <div>
-                <label>
-                  <p>연령(개월 수)</p>
-                  <div>
-                    <div>
+              {classData.address.detailAddress ? null : (
+                <span className={styles.register__required}>
+                  위 항목은 필수로 입력해주세요
+                </span>
+              )}
+              <div className={styles.register__ageContainer}>
+                <label className={styles.register__ageContainer__label}>
+                  <p className={styles.register__ageContainer__title}>
+                    연령(개월 수)
+                  </p>
+                  <div className={styles.register__ageContainer__calc}>
+                    <div className={styles.register__ageContainer__year}>
                       <input
                         type="text"
                         name="year"
@@ -205,7 +216,7 @@ function ClassRegister() {
                       />
                       <span>년</span>
                     </div>
-                    <div>
+                    <div className={styles.register__ageContainer__month}>
                       <input
                         type="text"
                         name="month"
@@ -223,9 +234,15 @@ function ClassRegister() {
                     value={classData.aboutMonth}
                     name="aboutMonth"
                     placeholder="출생연도와 월을 입력하시면 자동으로 계산됩니다."
+                    className={styles.register__ageContainer__result}
                   />
                 </label>
               </div>
+              {classData.aboutMonth ? null : (
+                <span className={styles.register__required}>
+                  위 항목은 필수로 입력해주세요
+                </span>
+              )}
               <FormTextField
                 label="수업 희망 시간"
                 name="time"
@@ -234,6 +251,9 @@ function ClassRegister() {
                 onChange={handleInputChange}
                 value={classData.time}
               />
+              <div className={styles.register__content__submit}>
+                <button>수업 신청하기</button>
+              </div>
             </form>
           </div>
         </div>
