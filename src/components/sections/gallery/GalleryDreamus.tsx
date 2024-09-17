@@ -11,7 +11,7 @@ interface Album {
   id: string
   title: string
   category: string
-  imageUrl: string
+  imageUrls: string[]
   description: string
 }
 
@@ -141,7 +141,7 @@ function GalleryDreamus() {
                       category={album.category}
                       key={index}
                       title={album.title}
-                      imageUrl={album.imageUrl}
+                      imageUrls={album.imageUrls}
                       description={album.description}
                     />
                   ))}
