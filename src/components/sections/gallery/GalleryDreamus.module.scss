@@ -26,6 +26,11 @@
     grid-template-columns: repeat(4, 1fr);
     box-sizing: border-box;
     grid-gap: 20px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      grid-row-gap: 50px;
+    }
   }
 
   &__menuBtns {
@@ -38,6 +43,13 @@
     width: 90%;
     padding: 15px;
     display: flex;
+
+    @include mobile {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
 
     &__btn {
       outline: none;
@@ -62,6 +74,12 @@
         color: rgba(51, 65, 85, 1);
         transition: font-weight 0.15s ease-in-out;
 
+        @include mobile {
+          &:hover {
+            border-bottom: 1px solid;
+          }
+        }
+
         &::after {
           content: '|';
           height: 100%;
@@ -69,6 +87,10 @@
           right: -10px;
           display: block;
           text-align: center;
+
+          @include mobile {
+            content: "";
+          }
         }
       }
     }

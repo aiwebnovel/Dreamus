@@ -26,19 +26,24 @@ function EditorToolBar({ editor, onImageUpload }: ToolBarProps) {
     <div className={styles.toolBar}>
       <div className={styles.toolBar__btns}>
         <button
+          type="button"
           onClick={() => editor.chain().focus().undo().run()}
           disabled={!editor.can().undo()}
         >
           <Icons.RotateLeft size={25} color="black" />
         </button>
         <button
+          type="button"
           onClick={() => editor.chain().focus().redo().run()}
           disabled={!editor.can().redo()}
         >
           <Icons.RotateRight size={25} color="black" />
         </button>
         <div className={styles.toolBar__listContainer}>
-          <button onClick={() => setShowFontSizes(!showFontSizes)}>
+          <button
+            type="button"
+            onClick={() => setShowFontSizes(!showFontSizes)}
+          >
             <Icons.ParagraphSize size={25} color="black" />
           </button>
           {showFontSizes && (
@@ -46,6 +51,7 @@ function EditorToolBar({ editor, onImageUpload }: ToolBarProps) {
               {headingLevels.map((level) => (
                 <li key={level}>
                   <button
+                    type="button"
                     onClick={() => {
                       editor.chain().focus().toggleHeading({ level }).run()
                       setShowFontSizes(!showFontSizes)
@@ -62,24 +68,28 @@ function EditorToolBar({ editor, onImageUpload }: ToolBarProps) {
           )}
         </div>
         <button
+          type="button"
           onClick={() => editor.chain().focus().toggleBold().run()}
           className={editor.isActive('bold') ? 'is-active' : ''}
         >
           <Icons.Bold size={25} color="black" />
         </button>
         <button
+          type="button"
           onClick={() => editor.chain().focus().toggleItalic().run()}
           className={editor.isActive('italic') ? 'is-active' : ''}
         >
           <Icons.Italic size={25} color="black" />
         </button>
         <button
+          type="button"
           onClick={() => editor.chain().focus().toggleUnderline().run()}
           className={editor.isActive('underline') ? 'is-active' : ''}
         >
           <Icons.Underline size={25} color="black" />
         </button>
         <button
+          type="button"
           onClick={() => editor.chain().focus().toggleHighlight().run()}
           className={editor.isActive('highlight') ? 'is-active' : ''}
         >
@@ -100,30 +110,35 @@ function EditorToolBar({ editor, onImageUpload }: ToolBarProps) {
           </label>
         </div>
         <button
+          type="button"
           onClick={() => editor.chain().focus().toggleBlockquote().run()}
           className={editor.isActive('blockquote') ? 'is-active' : ''}
         >
           <Icons.Blockquote size={25} color="black" />
         </button>
         <button
+          type="button"
           onClick={() => editor.chain().focus().toggleOrderedList().run()}
           className={editor.isActive('orderedList') ? 'is-active' : ''}
         >
           <Icons.OrderedList size={25} color="black" />
         </button>
         <button
+          type="button"
           onClick={() => editor.chain().focus().toggleBulletList().run()}
           className={editor.isActive('bulletList') ? 'is-active' : ''}
         >
           <Icons.UnOrderedList size={25} color="black" />
         </button>
         <button
+          type="button"
           onClick={() => editor.chain().focus().setTextAlign('left').run()}
           className={editor.isActive({ textAlign: 'left' }) ? 'is-active' : ''}
         >
           <Icons.TextLeft size={25} color="black" />
         </button>
         <button
+          type="button"
           onClick={() => editor.chain().focus().setTextAlign('center').run()}
           className={
             editor.isActive({ textAlign: 'center' }) ? 'is-active' : ''
@@ -132,12 +147,14 @@ function EditorToolBar({ editor, onImageUpload }: ToolBarProps) {
           <Icons.TextCenter size={25} color="black" />
         </button>
         <button
+          type="button"
           onClick={() => editor.chain().focus().setTextAlign('right').run()}
           className={editor.isActive({ textAlign: 'right' }) ? 'is-active' : ''}
         >
           <Icons.TextRight size={25} color="black" />
         </button>
         <button
+          type="button"
           onClick={() => editor.chain().focus().setTextAlign('justify').run()}
           className={
             editor.isActive({ textAlign: 'justify' }) ? 'is-active' : ''
@@ -146,6 +163,7 @@ function EditorToolBar({ editor, onImageUpload }: ToolBarProps) {
           <Icons.TextUnset size={25} color="black" />
         </button>
         <button
+          type="button"
           onClick={() => editor.chain().focus().setHorizontalRule().run()}
         >
           <Icons.HorizontalLine size={25} color="black" />

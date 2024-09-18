@@ -12,7 +12,6 @@ h4,
 h5,
 h6,
 p,
-// blockquote,
 pre,
 a,
 abbr,
@@ -103,17 +102,12 @@ section {
 body {
   line-height: 1;
 }
-// ol,
-// ul {
-//   list-style: none;
-// }
-// blockquote,
+
 q {
   quotes: none;
 }
 
-// blockquote:before,
-// blockquote:after,
+
 q:before,
 q:after {
   content: '';
@@ -132,6 +126,7 @@ mark {
   padding: 5px 10px;
   border-radius: 15px;
   background-color: #9c9cff;
+  margin-bottom: 5px;
 }
 
 .tiptap {
@@ -148,10 +143,12 @@ mark {
     padding-left: 1rem;
   }
 
+
   ul,
   ol {
     padding: 0 1rem;
     margin: 1.25rem 1rem 1.25rem 0.4rem;
+
 
     li p {
       margin-top: 0.25em;
@@ -207,5 +204,16 @@ mark {
   .menu-button.is-active {
     background-color: #edf1f6;
     color: #242e39;
+  }
+}
+
+
+.add-image {
+  display: block;
+
+  @include mobile {
+    max-width: 100%;
+    width: 80% !important;
+    height: auto;
   }
 }

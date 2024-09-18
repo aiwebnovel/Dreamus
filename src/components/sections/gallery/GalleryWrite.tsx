@@ -142,7 +142,7 @@ function GalleryWrite() {
               content={editorContent}
             />
             <div className={styles.write__form__submit}>
-              <button className={styles.write__form__submit__btn} type="submit">
+              <button type="submit" className={styles.write__form__submit__btn}>
                 게시하기
               </button>
             </div>

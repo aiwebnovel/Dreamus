@@ -11,6 +11,8 @@ import { Color } from '@tiptap/extension-color'
 import TextStyle from '@tiptap/extension-text-style'
 import TextAlign from '@tiptap/extension-text-align'
 import Placeholder from '@tiptap/extension-placeholder'
+import HardBreak from '@tiptap/extension-hard-break'
+import Image from '@tiptap/extension-image'
 
 import EditorToolBar from '@components/features/EditorToolBar'
 
@@ -21,10 +23,25 @@ interface EditorProps {
   content: string
 }
 
+const CustomHardBreak = HardBreak.extend({
+  addKeyboardShortcuts() {
+    return {
+      Enter: () => this.editor.commands.setHardBreak(),
+    }
+  },
+})
+
 function Editor({ onChange, content }: EditorProps) {
   const editor = useEditor({
     extensions: [
       StarterKit,
+      CustomHardBreak,
+      ImageResize,
+      Image.configure({
+        HTMLAttributes: {
+          class: 'add-image',
+        },
+      }),
       Highlight.configure({ multicolor: true }),
       Underline,
       TextStyle,
@@ -32,7 +49,6 @@ function Editor({ onChange, content }: EditorProps) {
         placeholder: '블로그 내용을 입력하세요!',
       }),
       Color,
-      ImageResize,
       TextAlign.configure({
         types: ['heading', 'paragraph'],
       }),

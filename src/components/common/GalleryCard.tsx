@@ -1,5 +1,5 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
+
 import styles from '@components/common/GalleryCard.module.scss'
 
 interface GalleryCardProps {
@@ -20,16 +20,10 @@ function GalleryCard({
   const navigate = useNavigate()
 
   const stringRemove = (str: string) => {
-    if (str.length > 12) {
-      return str.substring(0, 11) + '....'
+    if (str.length > 15) {
+      return str.substring(0, 14) + '....'
     }
     return str
-  }
-
-  const defaultBackgroundStyle = {
-    backgroundColor: 'yellow',
-    width: '100%',
-    height: '100%',
   }
 
   return (
@@ -45,7 +39,9 @@ function GalleryCard({
             alt={title}
           />
         ) : (
-          <div style={defaultBackgroundStyle} />
+          <div className={styles.card__imgBox__noImg}>
+            <span>이미지가 없습니다.</span>
+          </div>
         )}
       </div>
       <div className={styles.card__textBox}>
@@ -53,57 +49,16 @@ function GalleryCard({
         <p className={styles.card__textBox__desc}>
           {stringRemove(description)}
         </p>
+        <button
+          className={styles.card__move}
+          type="button"
+          onClick={() => navigate(`/dreamus-gallery/${category}/${id}`)}
+        >
+          읽어보기
+        </button>
       </div>
     </div>
   )
 }
 
 export default GalleryCard
-
-// import { useNavigate } from 'react-router-dom'
-
-// import styles from '@components/common/GalleryCard.module.scss'
-
-// interface GalleryCardCardProps {
-//   id?: string
-//   category?: string
-//   title: string
-//   imageUrl: string
-//   description: string
-// }
-
-// function GalleryCard({
-//   id,
-//   category,
-//   title,
-//   imageUrl,
-//   description,
-// }: GalleryCardCardProps) {
-//   const navigate = useNavigate()
-
-//   const stringRemove = (str: string) => {
-//     if (str.length > 12) {
-//       return str.substring(0, 11) + '....'
-//     }
-//     return str
-//   }
-
-//   return (
-//     <div
-//       className={styles.card}
-//       onClick={() => navigate(`/dreamus-gallery/${category}/${id}`)}
-//     >
-//       <div className={styles.card__imgBox}>
-//         <img className={styles.card__imgBox__img} src={imageUrl} />
-//       </div>
-//       <div className={styles.card__textBox}>
-//         <h3 className={styles.card__textBox__title}>{title}</h3>
-//         <p className={styles.card__textBox__desc}>
-//           {stringRemove(description)}
-//         </p>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default GalleryCard
