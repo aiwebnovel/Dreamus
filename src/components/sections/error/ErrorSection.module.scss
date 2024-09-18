@@ -1,0 +1,97 @@
+.error {
+    &__inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 100px 0px;
+
+        @include mobile {
+            padding: 100px 15px;
+        }
+    }
+
+    &__container {
+        width: 100%;
+        display: flex;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &__iconContainer,
+    &__textContainer {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__textContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__icon {
+        width: 400px;
+        height: 400px;
+
+        @include mobile {
+            width: 250px;
+            height: 250px;
+        }
+    }
+
+    &__desc {
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 1.4;
+
+        @include mobile {
+            font-size: 28px;
+            word-break: keep-all;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        outline: none;
+        background: inherit;
+        cursor: pointer;
+
+        &__icon {
+            width: 100px;
+            height: 100px;
+            display: block;
+            animation: float 2s ease-in-out infinite;
+
+            @include mobile {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        &__desc {
+            font-size: 20px;
+
+            @include mobile {
+                font-size: 16px;
+                word-break: keep-all;
+            }
+        }
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}

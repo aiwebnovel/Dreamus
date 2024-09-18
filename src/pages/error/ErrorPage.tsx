@@ -1,5 +1,13 @@
+import Layout from '@components/layout/Layout'
+
+import ErrorSection from '@components/sections/error/ErrorSection'
+
 function ErrorPage() {
-  return <div>ErrorPage</div>
+  return (
+    <Layout>
+      <ErrorSection />
+    </Layout>
+  )
 }
 
 export default ErrorPage
