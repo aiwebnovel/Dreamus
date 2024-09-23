@@ -1,8 +1,12 @@
+import { useNavigate } from 'react-router-dom'
+
 import Tinking from '@assets/icon/think.svg?react'
 
 import styles from '@components/sections/DingDongTest.module.scss'
 
 function DingDongTest() {
+  const navigate = useNavigate()
+
   return (
     <section className={styles.test}>
       <div className={styles.test__inner}>
@@ -17,7 +21,10 @@ function DingDongTest() {
             지금 내 아이의 회복탄력성을 분석해보세요.
           </p>
           <div className={styles.test__btnContainer}>
-            <button className={styles.test__btnContainer__btn}>
+            <button
+              onClick={() => navigate('/assessment')}
+              className={styles.test__btnContainer__btn}
+            >
               무료 회복탄력성 분석 검사 바로가기
             </button>
           </div>

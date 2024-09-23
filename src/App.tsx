@@ -20,6 +20,7 @@ import ErrorPage from '@pages/error/ErrorPage'
 import DreamusGallery from '@pages/gallery/DreamusGallery'
 import DreamusGalleyWrite from '@pages/gallery/DreamusGalleyWrite'
 import DetailGallery from '@pages/gallery/DetailGallery'
+import AssessmentPage from '@pages/assessment/AssessmentPage'
 
 function App() {
   return (
@@ -62,6 +63,7 @@ function App() {
         />
 
         <Route path="/class-registration" element={<ClassRegistration />} />
+        <Route path="/assessment" element={<AssessmentPage />} />
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>
