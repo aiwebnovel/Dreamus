@@ -26,11 +26,18 @@ function GalleryCard({
     return str
   }
 
+  const handleNavigation = (e: React.MouseEvent) => {
+    e.preventDefault()
+    navigate(`/dreamus-gallery/${category}/${id}`)
+  }
+
+  const handleReadMore = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation()
+    handleNavigation(e)
+  }
+
   return (
-    <div
-      className={styles.card}
-      onClick={() => navigate(`/dreamus-gallery/${category}/${id}`)}
-    >
+    <div className={styles.card} onClick={handleNavigation}>
       <div className={styles.card__imgBox}>
         {imageUrls?.length > 0 ? (
           <img
@@ -52,7 +59,7 @@ function GalleryCard({
         <button
           className={styles.card__move}
           type="button"
-          onClick={() => navigate(`/dreamus-gallery/${category}/${id}`)}
+          onClick={handleReadMore}
         >
           읽어보기
         </button>

@@ -50,17 +50,18 @@ function DetailAlbum() {
     ADD_TAGS: ['iframe'],
     ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'scrolling'], // iframe에 필요한 속성 허용
   })
+
+  const handleBack = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+    navigate(-1)
+  }
+
   return (
     <section className={styles.detail}>
       <div className={styles.detail__inner}>
         <div className={styles.detail__container}>
           <div className={styles.detail__back}>
-            <button
-              onClick={() => {
-                navigate(-1)
-              }}
-              className={styles.detail__back__btn}
-            >
+            <button onClick={handleBack} className={styles.detail__back__btn}>
               <Back className={styles.detail__back__btn__icon} />
             </button>
           </div>
