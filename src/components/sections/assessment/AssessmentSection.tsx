@@ -73,11 +73,11 @@ function AssessmentSection() {
               총 18개의 문항입니다.
             </p>
             <p className={styles.assessment__scoreContainer__score}>
-              <span>( 0: 전혀 아니다,</span>
+              <span>0: 전혀 아니다,</span>
               <span>1: 거의 아니다,</span>
-              <span>2: 때때로 그렇다,</span>
+              <span>2: 가끔 그렇다,</span>
               <span>3: 자주 그렇다,</span>
-              <span>4: 항상 그렇다 )</span>
+              <span>4: 항상 그렇다</span>
             </p>
           </div>
           <div className={styles.assessment__questionnaire}>
@@ -126,24 +126,40 @@ function AssessmentSection() {
               </button>
             </div>
             {result && (
-              <div>
-                <h3>유아의 회복탄력성 유형은 {result}입니다.</h3>
-                <p>{resultDescriptions[result]?.title}</p>
+              <div className={styles.assessment__result}>
+                <h3 className={styles.assessment__result__title}>
+                  유아의 회복탄력성 유형은 <span>{result}</span>입니다.
+                </h3>
+                <p className={styles.assessment__result__desc}>
+                  {resultDescriptions[result]?.title}
+                </p>
                 <img
                   src={resultDescriptions[result]?.image}
                   alt={resultDescriptions[result]?.character}
+                  className={styles.assessment__result__img}
                 />
-                <p>캐릭터: {resultDescriptions[result]?.character}</p>
-                <p>{resultDescriptions[result]?.description}</p>
-                <h4>지원 방법:</h4>
-                <ul>
+                <p className={styles.assessment__result__character}>
+                  캐릭터: {resultDescriptions[result]?.character}
+                </p>
+                <p className={styles.assessment__result__characterDesc}>
+                  {resultDescriptions[result]?.description}
+                </p>
+                <h4 className={styles.assessment__result__way}>지원 방법:</h4>
+                <ul className={styles.assessment__result__wayList}>
                   {resultDescriptions[result]?.support.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
-                <p>우리 아이의 마음근력을 더 키워주고 싶으신가요?</p>
-                <p>지금 띵동의 티티쌤과 상의하세요.</p>
-                <button onClick={() => navigate('/class-registration')}>
+                <p className={styles.assessment__result__desc}>
+                  우리 아이의 마음근력을 더 키워주고 싶으신가요?
+                </p>
+                <p className={styles.assessment__result__desc}>
+                  지금 띵동의 티티쌤과 상의하세요.
+                </p>
+                <button
+                  className={styles.assessment__result__btn}
+                  onClick={() => navigate('/class-registration')}
+                >
                   띵동 신청하기
                 </button>
               </div>

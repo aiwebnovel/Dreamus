@@ -1,5 +1,22 @@
 import { ResultDescription } from '@models/menu'
 
+import aladdin from '@assets/character/aladdin.webp'
+import alice from '@assets/character/alice.webp'
+import charlieBrown from '@assets/character/charlieBrown.webp'
+import cinderella from '@assets/character/cinderella.webp'
+import elsa from '@assets/character/elsa.webp'
+import harryPotter from '@assets/character/harryPotter.webp'
+import hulk from '@assets/character/hulk.webp'
+import ironMan from '@assets/character/ironMan.webp'
+import jamesBond from '@assets/character/jamesBond.webp'
+import joy from '@assets/character/joy.webp'
+import littleRedRidingHood from '@assets/character/littleRedRidingHood.webp'
+import moana from '@assets/character/moana.webp'
+import peterpan from '@assets/character/peterpan.webp'
+import sherlockHomes from '@assets/character/sherlockHomes.webp'
+import spiderMan from '@assets/character/spiderMan.webp'
+import tinkerBell from '@assets/character/tinkerBell.webp'
+
 export type ResultType =
   | 'ESPA'
   | 'ESPa'
@@ -26,7 +43,7 @@ export const resultDescriptions: ResultDescription = {
       '강점 강화: 다양한 문제 해결 활동과 모험적인 놀이를 제공하여 아이의 탐구심과 자기주도성을 더욱 키워줍니다.',
       '보완점: 지속적인 긍정적 강화와 지지적인 환경을 유지해주면 됩니다.',
     ],
-    image: 'images/character/jamesBond.webp',
+    image: jamesBond,
   },
   ESPa: {
     title: '사회적 수호자 (Social Solver)',
@@ -37,7 +54,7 @@ export const resultDescriptions: ResultDescription = {
       '자기주도성: 작은 목표를 설정하고 성취할 수 있도록 도와줍니다.',
       '강점 강화: 사회적 상호작용과 문제 해결 과제를 통해 성취감을 느낄 수 있도록 합니다.',
     ],
-    image: 'images/character/harryPotter.webp',
+    image: harryPotter,
   },
   ESpa: {
     title: '사회적 탐구자 (Social Explorer)',
@@ -49,7 +66,7 @@ export const resultDescriptions: ResultDescription = {
       '자기주도성: 작은 목표를 설정하고 성취할 수 있도록 도와줍니다.',
       '강점 강화: 사회적 활동에서 리더십 역할을 맡길 수 있는 기회를 줍니다.',
     ],
-    image: 'images/character/littleRedRidingHood.webp',
+    image: littleRedRidingHood,
   },
   EsPa: {
     title: '차분한 문제 해결사 (Calm Solver)',
@@ -61,7 +78,7 @@ export const resultDescriptions: ResultDescription = {
       '자기주도성: 작은 목표를 설정하고 성취할 수 있도록 도와줍니다.',
       '강점 강화: 문제 해결 과제를 통해 성취감을 느낄 수 있도록 합니다.',
     ],
-    image: 'images/character/alice.webp',
+    image: alice,
   },
   EspA: {
     title: '차분한 지도자 (Calm Leader)',
@@ -73,7 +90,7 @@ export const resultDescriptions: ResultDescription = {
       '사회성: 친구들과의 상호작용을 촉진하는 활동을 제공합니다.',
       '강점 강화: 자기주도적인 프로젝트를 통해 리더십을 키워줍니다.',
     ],
-    image: 'images/character/elsa.webp',
+    image: elsa,
   },
   Espa: {
     title: '차분한 탐구자 (Calm Explorer)',
@@ -86,7 +103,7 @@ export const resultDescriptions: ResultDescription = {
       '자기주도성: 작은 목표를 설정하고 성취할 수 있도록 도와줍니다.',
       '강점 강화: 감정 조절 능력을 유지하면서 다른 영역에서의 지원을 강화합니다.',
     ],
-    image: 'images/character/tinkerBell.webp',
+    image: tinkerBell,
   },
   ESpA: {
     title: '도전적인 탐구자 (Challenging Explorer)',
@@ -97,7 +114,7 @@ export const resultDescriptions: ResultDescription = {
       '문제 해결: 문제 해결 전략을 단계적으로 가르칩니다.',
       '강점 강화: 사회적 리더십을 발휘할 수 있는 활동에 참여시킵니다.',
     ],
-    image: 'images/character/moana.webp',
+    image: moana,
   },
   EsPA: {
     title: '독립적인 사색가 (Independent Thinker)',
@@ -108,7 +125,7 @@ export const resultDescriptions: ResultDescription = {
       '사회성: 그룹 놀이와 사회적 활동에 참여하도록 독려하고, 친구들과의 상호작용을 촉진하는 환경을 마련해줍니다.',
       '강점 강화: 아이가 혼자서도 성취감을 느낄 수 있는 창의적인 활동을 제공합니다.',
     ],
-    image: 'images/character/sherlockHomes.webp',
+    image: sherlockHomes,
   },
   espa: {
     title: '전반적인 지원이 필요한 아이 (Child in Need of Support)',
@@ -122,7 +139,7 @@ export const resultDescriptions: ResultDescription = {
       '자기주도성: 작은 목표를 설정하고 성취할 수 있도록 도와줍니다.',
       '전반적인 지원: 지속적인 지지와 긍정적인 강화, 다양한 활동을 통해 전반적인 능력을 키웁니다.',
     ],
-    image: 'images/character/charlieBrown.webp',
+    image: charlieBrown,
   },
   eSPA: {
     title: '도전적인 해결사 (Challenging Solver)',
@@ -133,7 +150,7 @@ export const resultDescriptions: ResultDescription = {
       '감정 조절: 감정을 표현할 수 있는 다양한 방법을 가르치고, 차분하게 할 수 있는 활동(예: 명상, 심호흡)을 가르칩니다.',
       '강점 강화: 문제 해결 활동에서 성공 경험을 많이 쌓을 수 있도록 도와줍니다.',
     ],
-    image: 'images/character/peterpen.webp',
+    image: peterpan,
   },
   esPA: {
     title: '독립적인 해결사 (Independent Solver)',
@@ -145,7 +162,7 @@ export const resultDescriptions: ResultDescription = {
       '사회성: 협동 놀이와 그룹 활동을 통해 사회적 기술을 키웁니다.',
       '강점 강화: 독립적인 문제 해결 활동을 통해 성취감을 느낄 수 있도록 합니다.',
     ],
-    image: 'images/character/ironMan.webp',
+    image: ironMan,
   },
   espA: {
     title: '조용한 지도자 (Quiet Leader)',
@@ -158,7 +175,7 @@ export const resultDescriptions: ResultDescription = {
       '문제 해결: 문제 해결 전략을 단계적으로 가르칩니다.',
       '사회성: 사회적 기술을 키우기 위한 활동에 참여시킵니다.',
     ],
-    image: 'images/character/cinderella.webp',
+    image: cinderella,
   },
   esPa: {
     title: '내향적 해결사 (Quiet Solver)',
@@ -171,7 +188,7 @@ export const resultDescriptions: ResultDescription = {
       '자기주도성: 자기주도적으로 목표를 설정하고 성취할 수 있는 기회를 줍니다.',
       '강점 강화: 다양한 문제 해결 활동을 통해 성취감을 느낄 수 있도록 합니다.',
     ],
-    image: 'images/character/hulk.webp',
+    image: hulk,
   },
   eSpa: {
     title: '사회적 협력자',
@@ -184,7 +201,7 @@ export const resultDescriptions: ResultDescription = {
       '자기주도성: 작은 목표를 설정하고 성취할 수 있도록 도와줍니다.',
       '강점 강화: 사회적 활동에서 상호작용을 하며 리더십을 기를 수 있도록 도와줍니다.',
     ],
-    image: 'images/character/mowgli.webp',
+    image: joy,
   },
   eSPa: {
     title: '사교적 해결사',
@@ -196,7 +213,7 @@ export const resultDescriptions: ResultDescription = {
       '자기주도성: 작은 목표를 설정하고 성취할 수 있도록 도와줍니다.',
       '강점 강화: 사회적 상호작용과 문제 해결 과제를 통해 성취감을 느낄 수 있도록 합니다.',
     ],
-    image: 'images/character/spiderMan.webp',
+    image: spiderMan,
   },
   eSpA: {
     title: '사교적인 도전가 (Social Challenger)',
@@ -208,6 +225,6 @@ export const resultDescriptions: ResultDescription = {
       '문제 해결: 논리적 사고를 촉진하는 놀이와 활동을 제공합니다.',
       '강점 강화: 사회적 리더십을 발휘할 수 있는 활동에 참여시킵니다.',
     ],
-    image: 'images/character/aladdin.webp',
+    image: aladdin,
   },
 }
