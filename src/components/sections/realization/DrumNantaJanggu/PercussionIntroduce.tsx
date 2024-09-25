@@ -44,17 +44,21 @@ function PercussionIntroduce() {
           </div>
           <div className={styles.percussion__introduce}>
             <h3 className={styles.percussion__introduce__title}>
-              우리의 사용할 타악기는요!
+              우리는 이런 악기를 사용해요.
             </h3>
             <div className={styles.percussion__introduce__container}>
               {percussion.map((item, index) => (
-                <div key={index}>
-                  <div>
-                    <img src={item.src} width={50} />
-                    <div>
-                      <h4>{item.name}</h4>
-                      <p>{item.desc}</p>
-                      <p>
+                <div className={styles.percussion__card} key={index}>
+                  <div className={styles.percussion__card__content}>
+                    <img src={item.src} />
+                    <div className={styles.percussion__card__text}>
+                      <h4 className={styles.percussion__card__title}>
+                        {item.name}
+                      </h4>
+                      <p className={styles.percussion__card__desc}>
+                        {item.desc}
+                      </p>
+                      <p className={styles.percussion__card__tag}>
                         {item.tag.map((tag, index) => (
                           <span key={index}>#{tag}</span>
                         ))}
