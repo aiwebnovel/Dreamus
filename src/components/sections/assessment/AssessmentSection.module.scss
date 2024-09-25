@@ -95,7 +95,7 @@
 
     &__container {
       margin-top: 20px;
-      padding: 15px 10px;
+      padding: 20px 40px;
       border-radius: 10px;
       box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
@@ -160,12 +160,23 @@
       span {
         color: #ff6464;
       }
+
+      @include mobile {
+        font-size: 28px;
+        word-break: keep-all;
+      }
     }
 
     &__desc {
       font-size: 30px;
       font-weight: 300;
       line-height: 1.4;
+
+      @include mobile {
+        font-size: 20px;
+        word-break: keep-all;
+        text-wrap: balance;
+      }
     }
 
     &__img {
@@ -181,6 +192,10 @@
       font-size: 18px;
       font-weight: 300;
       line-height: 1.4;
+
+      @include mobile {
+        font-size: 16px;
+      }
     }
 
     &__characterDesc {
@@ -189,6 +204,10 @@
       font-weight: 300;
       line-height: 1.4;
       word-break: keep-all;
+      
+      @include mobile {
+        font-size: 16px;
+      }
     }
 
     &__way {
@@ -206,6 +225,10 @@
         font-size: 18px;
         font-weight: 300;
         line-height: 1.4;
+
+        @include mobile {
+          font-size: 14px;
+        }
       }
 
       :last-child {
@@ -221,6 +244,12 @@
       outline: none;
       border-radius: 15px;
       cursor: pointer;
+
+      @include mobile {
+        width: 100px;
+        height: 40px;
+        font-size: 12px;
+      }
     }
   }
 }
