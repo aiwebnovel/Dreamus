@@ -67,4 +67,33 @@
       border-radius: 15px;
     }
   }
+
+  &__move {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 50px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      border-radius: 15px;
+      background: #a3a3ff;
+      color: white;
+      cursor: pointer;
+      transition: all 0.2 ease-in;
+    }
+
+    &__icon {
+      width: 35px;
+      height: 35px;
+      fill: white;
+    }
+  }
 }

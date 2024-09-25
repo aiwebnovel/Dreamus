@@ -1,8 +1,11 @@
 import styles from '@components/sections/realization/DrumNantaJanggu/PercussionCurriculum.module.scss'
 
+import RightArrow from '@assets/icon/rightArrow.svg?react'
+
 import class1 from '@assets/image/class1.jpg'
 import class2 from '@assets/image/class2.jpg'
 import class3 from '@assets/image/class3.jpg'
+import { useNavigate } from 'react-router-dom'
 
 const curriculum = [
   {
@@ -40,6 +43,8 @@ const curriculum = [
 ]
 
 function PercussionCurriculum() {
+  const navigate = useNavigate()
+
   return (
     <section className={styles.percussionCurriculum}>
       <div className={styles.percussionCurriculum__inner}>
@@ -64,13 +69,24 @@ function PercussionCurriculum() {
                       </p>
                     </div>
                   </div>
-                  <div className={styles.percussionCurriculum__imgContainer}>
+                  {/* <div className={styles.percussionCurriculum__imgContainer}>
                     {step.imgSrc.map((img, index) => (
                       <img src={img} alt="아이들 사진" key={index} />
                     ))}
-                  </div>
+                  </div> */}
                 </div>
               ))}
+              <div className={styles.percussionCurriculum__move}>
+                <button
+                  onClick={() => navigate('/dreamus-gallery/kungchita')}
+                  className={styles.percussionCurriculum__move__btn}
+                >
+                  <span>커리큘럼 사진 보기</span>
+                  <RightArrow
+                    className={styles.percussionCurriculum__move__icon}
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </div>
