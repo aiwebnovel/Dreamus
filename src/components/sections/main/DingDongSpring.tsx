@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import springin from '@assets/image/springIn.png'
 import springOut from '@assets/image/springOut.png'
 
-import styles from '@components/sections/DingDongSpring.module.scss'
+import styles from '@components/sections/main/DingDongSpring.module.scss'
 
 const item = {
   hidden: { opacity: 0, y: -20 },

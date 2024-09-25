@@ -2,7 +2,7 @@ import titi from '@assets/image/titi.png'
 import firstChild from '@assets/image/child1.png'
 import secondChild from '@assets/image/child2.png'
 
-import styles from '@components/sections/DingdongGrid.module.scss'
+import styles from '@components/sections/main/DingdongGrid.module.scss'
 
 function DingdongGrid() {
   return (

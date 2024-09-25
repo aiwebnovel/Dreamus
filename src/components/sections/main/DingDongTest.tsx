@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 
 import Tinking from '@assets/icon/think.svg?react'
 
-import styles from '@components/sections/DingDongTest.module.scss'
+import styles from '@components/sections/main/DingDongTest.module.scss'
 
 function DingDongTest() {
   const navigate = useNavigate()

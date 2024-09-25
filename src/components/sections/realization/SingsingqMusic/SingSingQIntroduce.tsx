@@ -6,7 +6,7 @@ import thinkingData from '@data/thinkingData'
 
 import Music from '@assets/icon/music.svg?react'
 
-import styles from '@components/sections/realization/SingSingQIntroduce.module.scss'
+import styles from '@components/sections/realization/SingsingqMusic/SingSingQIntroduce.module.scss'
 
 function SingSingQIntroduce() {
   return (

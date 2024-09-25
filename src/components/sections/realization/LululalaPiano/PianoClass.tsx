@@ -9,7 +9,7 @@ import class5 from '@assets/image/class5.png'
 import class6 from '@assets/image/class6.png'
 import class7 from '@assets/image/class7.png'
 
-import styles from '@components/sections/realization/PianoClass.module.scss'
+import styles from '@components/sections/realization/LululalaPiano/PianoClass.module.scss'
 
 function PianoClass() {
   return (

@@ -1,7 +1,7 @@
 import Piano from '@assets/icon/piano.svg?react'
 import Up from '@assets/icon/up.svg?react'
 
-import styles from '@components/sections/realization/PianoIntro.module.scss'
+import styles from '@components/sections/realization/LululalaPiano/PianoIntro.module.scss'
 
 function PianoIntro() {
   return (

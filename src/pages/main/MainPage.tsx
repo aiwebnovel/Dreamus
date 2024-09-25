@@ -1,9 +1,9 @@
 import Layout from '@components/layout/Layout'
 
-import DingDongSpring from '@components/sections/DingDongSpring'
-import DingDongTest from '@components/sections/DingDongTest'
-import DingDongIntroduce from '@components/sections/DingDongIntroduce'
-import DingdongGrid from '@components/sections/DingdongGrid'
+import DingDongSpring from '@components/sections/main/DingDongSpring'
+import DingDongTest from '@components/sections/main/DingDongTest'
+import DingDongIntroduce from '@components/sections/main/DingDongIntroduce'
+import DingdongGrid from '@components/sections/main/DingdongGrid'
 
 function MainPage() {
   return (
