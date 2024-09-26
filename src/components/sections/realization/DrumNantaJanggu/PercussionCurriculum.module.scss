@@ -3,6 +3,10 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 100px 0px;
+
+    @include mobile {
+      padding: 100px 15px;
+    }
   }
 
   &__title {
@@ -10,9 +14,21 @@
     font-weight: 300;
     line-height: 1.4;
     color: #a3a3ff;
+
+    @include mobile {
+      font-size: 20px;
+      font-weight: 500;
+      word-break: keep-all;
+    }
   }
 
   &__step {
+    margin-top: 10px;
+
+    @include mobile {
+      margin-top: 20px;
+    }
+
     &__card {
       padding: 24px;
       border-radius: 8px;
@@ -34,6 +50,12 @@
       font-size: 20px;
       font-weight: bold;
       margin-right: 16px;
+
+      @include mobile {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+      }
     }
 
     &__title {
@@ -41,6 +63,10 @@
       font-weight: 600;
       line-height: 1.4;
       color: #a3a3ff;
+
+      @include mobile {
+        font-size: 18px;
+      }
     }
 
     &__desc {
@@ -48,16 +74,25 @@
       line-height: 1.4;
       word-break: keep-all;
       text-wrap: balance;
+
+      @include mobile {
+        font-size: 14px;
+      }
     }
   }
 
   &__imgContainer {
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     box-sizing: border-box;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 50px;
+    }
 
     img {
       max-width: 350px;
@@ -65,6 +100,15 @@
       height: 100%;
       object-fit: cover;
       border-radius: 15px;
+
+      @include mobile {
+        width: 300px;
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: 14px;
     }
   }
 
@@ -88,12 +132,31 @@
       color: white;
       cursor: pointer;
       transition: all 0.2 ease-in;
+
+      &:hover {
+        color: #a3a3ff;
+        background-color: white;
+
+        svg {
+          fill: #a3a3ff;
+        }
+      }
+
+      @include mobile {
+        width: 150px;
+        font-size: 14px;
+      }
     }
 
     &__icon {
       width: 35px;
       height: 35px;
       fill: white;
+
+      @include mobile {
+        width: 25px;
+        height: 25px;
+      }
     }
   }
 }
