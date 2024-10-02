@@ -63,7 +63,7 @@ function GalleryDreamus() {
     fetch('http://localhost:3001/albums')
       .then((res) => res.json())
       .then((res: Album[]) => {
-        setAllAlbums(res)
+        setAllAlbums(res.reverse())
         setFilteredAlbums(res)
         setIsLoading(false)
       })
