@@ -1,0 +1,50 @@
+.accordion {
+  &__item {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(177, 177, 177);
+  }
+
+  &__question {
+    font-size: 16px;
+    line-height: 1.4;
+
+    @include mobile {
+      font-size: 14px;
+      word-break: keep-all;
+    }
+  }
+
+  &__btn {
+    border: none;
+    outline: none;
+    background: inherit;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+
+    @include mobile {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__answer {
+    padding: 10px 15px;
+
+    p {
+      font-size: 16px;
+      line-height: 1.4;
+
+      @include mobile {
+        font-size: 14px;
+        word-break: keep-all;
+      }
+    }
+  }
+}

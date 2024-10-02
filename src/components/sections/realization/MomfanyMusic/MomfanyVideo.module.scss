@@ -32,8 +32,73 @@
     }
   }
 
-  &__container {
+  &__gridContainer {
     margin-top: 50px;
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__item {
+      padding: 20px 15px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @include mobile {
+        gap: 10px;
+      }
+
+      p {
+        font-size: 24px;
+        font-weight: 500;
+
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &__icon {
+      width: 50px;
+      height: 50px;
+      fill: #a3a3ff;
+
+      @include mobile {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    &__desc {
+      font-size: 16px;
+      font-weight: 300;
+      margin-top: 10px;
+
+      @include mobile {
+        font-size: 14px;
+        word-break: keep-all;
+      }
+    }
+  }
+
+  &__container {
+    margin-top: 100px;
   }
 
   // 비디오 들어오면 삭제

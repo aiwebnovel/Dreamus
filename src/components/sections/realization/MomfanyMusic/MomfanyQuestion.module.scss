@@ -1,0 +1,91 @@
+.question {
+  &__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 100px 0px;
+
+    @include mobile {
+      padding: 100px 15px;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.4;
+
+    @include mobile {
+      font-size: 24px;
+      word-break: keep-all;
+    }
+  }
+
+  &__accordian {
+    margin-top: 20px;
+  }
+
+  &__move {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__btn {
+      border: none;
+      outline: none;
+      width: 180px;
+      height: 50px;
+      border-radius: 15px;
+      background: #a3a3ff;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      @include mobile {
+        width: 130px;
+        font-size: 14px;
+      }
+
+      &:hover {
+        color: #a3a3ff;
+        background: white;
+      }
+    }
+  }
+}
+
+// .accordion {
+//   width: 100%;
+
+//   .accordion-item {
+//     border: 1px solid #ddd;
+//     margin-bottom: 5px;
+
+//     &.open {
+//       .accordion-trigger {
+//         background-color: #f1f1f1;
+//       }
+//     }
+
+//     .accordion-trigger {
+//       width: 100%;
+//       padding: 15px;
+//       background-color: #fff;
+//       border: none;
+//       text-align: left;
+//       cursor: pointer;
+//       transition: background-color 0.3s ease;
+
+//       &:hover {
+//         background-color: #f9f9f9;
+//       }
+//     }
+
+//     .accordion-content {
+//       padding: 15px;
+//       background-color: #fff;
+//     }
+//   }
+// }
