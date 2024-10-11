@@ -1,6 +1,3 @@
-import storyImg1 from '@assets/image/storyImg1.jpg'
-import storyImg2 from '@assets/image/storyImg2.jpg'
-import storyImg4 from '@assets/image/storyImg4.jpg'
 import happyBridge from '@assets/image/happyBridge.png'
 import disinfection from '@assets/image/disinfection.png'
 import jack from '@assets/image/jack.jpg'

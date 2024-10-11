@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion'
 
-import springin from '@assets/image/child1.png'
-
 import styles from '@components/sections/main/DingDongSpring.module.scss'
 import { useNavigate } from 'react-router-dom'
 

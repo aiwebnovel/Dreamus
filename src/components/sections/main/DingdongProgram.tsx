@@ -1,9 +1,4 @@
 import styles from '@components/sections/main/DingdongProgram.module.scss'
-
-import program1 from '@assets/image/program1.jpg'
-import program2 from '@assets/image/program2.jpg'
-import programChar1 from '@assets/image/programChar.png'
-import programChar2 from '@assets/image/programChar2.png'
 import programImg from '@assets/image/programImg.png'
 
 function DingdongProgram() {

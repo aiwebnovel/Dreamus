@@ -1,7 +1,3 @@
-import ListItem from '@components/common/ListItem'
-
-import menuItems from '@data/menuItems'
-
 import styles from '@components/layout/Footer.module.scss'
 
 function Footer() {
