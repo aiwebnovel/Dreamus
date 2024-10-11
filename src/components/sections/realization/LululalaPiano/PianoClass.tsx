@@ -156,7 +156,7 @@ function PianoClass() {
                 </p>
                 <p className={styles.class__textBook__secondDesc}>
                   룰루랄라 피아노 교재는
-                  <span>신.청.곡</span>
+                  <span> 신.청.곡</span>
                 </p>
               </div>
             </div>

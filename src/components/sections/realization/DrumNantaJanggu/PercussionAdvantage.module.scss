@@ -89,15 +89,15 @@
       outline: none;
       border-radius: 15px;
       color: white;
-      background: #a3a3ff;
+      background: #16bbc5;
       cursor: pointer;
       font-weight: 700;
       transition: all 0.2s ease-in-out;
 
-      &:hover {
-        color: #a3a3ff;
-        background-color: white;
-      }
+      // &:hover {
+      //   color: #a3a3ff;
+      // background-color: white;
+      // }
 
       @include mobile {
         font-size: 14px;

@@ -14,13 +14,13 @@ function DingDongIntroduce() {
         <div className={styles.introduce__container}>
           <div className={styles.introduce__text}>
             <p className={styles.introduce__text__main}>
-              <span className={styles.introduce__text__sub}>띵동</span>,
-              회복탄력성 키워지나요?
+              좌절을 딛고 회복탄력성 상위
+              <span className={styles.introduce__text__sub}> 0.01%</span> 가 된
+              개발자!
             </p>
             <p className={styles.introduce__text__main}>
-              띵동이 회복탄력성을 키우는 방법
+              생각놀이터 띵동 대표 인터뷰
             </p>
-            <p className={styles.introduce__text__main}>바로 확인해보세요!</p>
           </div>
           <div className={styles.introduce__intro}>
             <div
@@ -32,11 +32,10 @@ function DingDongIntroduce() {
                 영상으로 확인하기
               </h4>
               <p className={styles.introduce__intro__subText}>
-                띵동이 회복탄력성을 만들어내는 방법 <br />
-                영상으로 확인해 보세요!
+                생각놀이터 띵동 대표 인터뷰
               </p>
             </div>
-            <div
+            {/* <div
               className={styles.introduce__intro__box}
               onClick={() => openModal('text')}
             >
@@ -46,7 +45,7 @@ function DingDongIntroduce() {
                 띵동이 회복탄력성을 만들어내는 방법 <br />잘 정리된 글을
                 읽어보세요!
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

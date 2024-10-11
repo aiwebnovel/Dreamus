@@ -32,10 +32,10 @@ body {
   border-radius: 10px; /* 핸들 모서리 둥글게 */
 }
 
-/* 핸들에 마우스를 올렸을 때 */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; /* 호버 색 */
-}
+// /* 핸들에 마우스를 올렸을 때 */
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #555; /* 호버 색 */
+// }
 
 .button.is-active,
 .menu-button:hover,

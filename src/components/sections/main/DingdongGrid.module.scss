@@ -1,48 +1,51 @@
 .grid {
   &__inner {
     padding: 100px 20px;
-    min-height: 100vh;
+    // min-height: 100vh;
     max-width: 1280px;
     margin: 0 auto;
     overflow-x: hidden;
 
     @include mobile {
       max-width: 100%;
-      padding: 100px 15px;
+      padding: 50px 15px;
     }
   }
 
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    // gap: 20px;
     grid-row-gap: 100px;
 
     @include mobile {
       grid-template-columns: 1fr;
-      grid-row-gap: 100px;
+      grid-row-gap: 30px;
       width: 100%;
     }
 
     &__text {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      // align-items: center;
       justify-content: center;
       padding: 10px 0;
+      color: #000000;
 
       @include mobile {
-        align-items: center;
         padding: 10px 0;
+        // word-break: keep-all;
+        // text-align: start;
       }
 
       &__desc {
-        font-size: 40px;
-        font-weight: bold;
+        font-size: 18px;
+        font-weight: 00;
         line-height: 1.5;
+        text-align: center;
 
         @include mobile {
-          font-size: 24px;
+          font-size: 17px;
           text-align: center;
           word-break: keep-all;
         }
@@ -56,11 +59,15 @@
       justify-content: center;
 
       &__img {
-        max-width: 100%;
+        max-width: 400px;
         height: auto;
+        border-radius: 70%;
+        overflow: hidden;
+        opacity: 0.7;
 
         @include mobile {
-          max-width: 100%;
+          max-width: 300px;
+          border-radius: 50%;
         }
       }
     }
@@ -116,7 +123,42 @@
     }
   }
 
+  &__container1 {
+    @include mobile {
+      order: 1;
+    }
+  }
+  &__container2 {
+    @include mobile {
+      order: 2;
+    }
+  }
+
   &__emphasize {
-    color: #ff8d8d;
+    // font-size: 19px;
+    font-weight: 600;
+    // color: #c65d7b;
+    color: #16bbc5;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+  &__emphasize2 {
+    font-size: 25px;
+    font-weight: 700;
+
+    @include mobile {
+      font-size: 23px;
+    }
+  }
+  &__emphasize3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+
+    @include mobile {
+      font-size: 22px;
+    }
   }
 }

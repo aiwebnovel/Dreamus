@@ -3,7 +3,7 @@
 
   &__inner {
     padding: 100px 20px;
-    min-height: 100vh;
+    // min-height: 100vh;
     max-width: 1280px;
     margin: 0 auto;
 
@@ -13,7 +13,7 @@
   }
 
   &__container {
-    margin-top: 50px;
+    // margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,22 +21,23 @@
 
     @include mobile {
       align-items: center;
-      gap: 150px;
+      gap: 100px;
     }
   }
 
   &__text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    // align-items: flex-start;
     justify-content: center;
+    text-align: center;
 
     @include mobile {
       align-items: center;
     }
 
     &__main {
-      font-size: 40px;
+      font-size: 38px;
       font-weight: bold;
       line-height: 1.4;
 
@@ -48,7 +49,7 @@
     }
 
     &__sub {
-      color: #ff7c7c;
+      color: #16bbc5;
     }
   }
 

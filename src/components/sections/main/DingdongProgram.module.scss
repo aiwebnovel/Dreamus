@@ -1,0 +1,49 @@
+.program {
+  //   background: hsl(0, 0%, 94%);
+
+  &__inner {
+    // padding: 100px 50px;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    @include mobile {
+      //   padding: 100px 15px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    @include mobile {
+      align-items: center;
+      gap: 0;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 0.4fr 2.5fr 2fr;
+    align-items: center;
+
+    &__charImage {
+      width: 50px;
+    }
+
+    &__image {
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      overflow: hidden;
+    }
+  }
+}

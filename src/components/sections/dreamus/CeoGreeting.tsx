@@ -8,10 +8,10 @@ function CeoGreeting() {
           <h1 className={styles.greeting__title}>CEO 인사말</h1>
           <hr className={styles.greeting__line} />
           <p className={styles.greeting__quote}>
-            <q>
+            <p>
               교육은 그대의 머리속에 씨앗을 심어주는 것이 아니라 그대의 씨앗들이
               자라나게 해 주는 것이다. - 칼릴 지브란
-            </q>
+            </p>
           </p>
           <p className={styles.greeting__speak}>
             안녕하세요. 드림어스 대표 최비결입니다.

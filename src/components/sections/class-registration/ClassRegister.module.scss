@@ -6,7 +6,7 @@
     margin: 0 auto;
 
     @include mobile {
-      padding: 100px 15px;
+      padding: 50px 15px;
     }
   }
 
@@ -78,7 +78,7 @@
         outline: none;
         border-radius: 15px;
         font-weight: 700;
-        background-color: rgb(162, 162, 231);
+        background-color: #16bbc5;
         color: white;
         cursor: pointer;
 
@@ -162,7 +162,7 @@
         outline: none;
         border-radius: 15px;
         font-weight: 700;
-        background-color: rgb(162, 162, 231);
+        background-color: #16bbc5;
         color: white;
         cursor: pointer;
 

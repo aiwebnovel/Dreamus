@@ -1,8 +1,8 @@
 // DingDongSpring Styles
 .spring {
   &__inner {
-    padding: 0px 20px;
-    min-height: 100vh;
+    padding: 100px 20px;
+    // min-height: 100vh;
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
@@ -27,54 +27,83 @@
   }
 
   &__img {
-    display: flex;
-    gap: 30px;
-
-    &__box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-
-    &__spring {
-      width: clamp(150px, 30vw, 250px);
-      border-radius: 15px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    }
-
-    &__springIn,
-    &__springOut {
-      font-size: 14px;
-      text-align: center;
-
-      @include mobile {
-        font-size: 12px;
-        word-break: keep-all;
-      }
-    }
-
-    &__springIn {
-      color: red;
-    }
-
-    &__springOut {
-      color: blue;
-    }
+    margin: 20px 0px;
+    width: 70%;
   }
+
+  // &__img {
+  //   display: flex;
+  //   gap: 30px;
+
+  //   &__box {
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: center;
+  //     gap: 15px;
+  //   }
+
+  //   &__spring {
+  //     width: clamp(150px, 30vw, 250px);
+  //     border-radius: 15px;
+  //     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  //   }
+
+  //   &__springIn,
+  //   &__springOut {
+  //     font-size: 14px;
+  //     text-align: center;
+
+  //     @include mobile {
+  //       font-size: 12px;
+  //       word-break: keep-all;
+  //     }
+  //   }
+
+  //   &__springIn {
+  //     color: red;
+  //   }
+
+  //   &__springOut {
+  //     color: blue;
+  //   }
+  // }
 
   &__text {
     flex: 1;
     text-align: center;
 
     &__main {
-      font-size: clamp(24px, 5vw, 40px);
+      font-size: 25px;
       font-weight: bold;
       line-height: 1.4;
     }
 
     &__sub {
       color: #ff7c7c;
+    }
+  }
+
+  &__btnContainer {
+    margin-top: 30px;
+
+    &__btn {
+      padding: 15px 10px;
+      border: none;
+      outline: none;
+      border-radius: 15px;
+      // background: hwb(0 84% 2%);
+      background: #16bbc5;
+      color: white;
+      // font-weight: bold;
+      font-size: 17px;
+
+      @include mobile {
+        padding: 10px 5px;
+        word-break: keep-all;
+        white-space: pre-line;
+        font-size: 16px;
+        font-weight: 400;
+      }
     }
   }
 }

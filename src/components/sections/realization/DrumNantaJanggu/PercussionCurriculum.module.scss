@@ -128,19 +128,19 @@
       border: none;
       outline: none;
       border-radius: 15px;
-      background: #a3a3ff;
+      background: #16bbc5;
       color: white;
       cursor: pointer;
       transition: all 0.2 ease-in;
 
-      &:hover {
-        color: #a3a3ff;
-        background-color: white;
+      // &:hover {
+      //   color: #a3a3ff;
+      //   background-color: white;
 
-        svg {
-          fill: #a3a3ff;
-        }
-      }
+      //   svg {
+      //     fill: #a3a3ff;
+      //   }
+      // }
 
       @include mobile {
         width: 150px;

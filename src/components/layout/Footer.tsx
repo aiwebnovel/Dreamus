@@ -9,14 +9,14 @@ function Footer() {
     <footer className={styles.footer}>
       <div className={styles.footer__inner}>
         <div className={styles.footer__container}>
-          <ul className={styles.footer__list}>
+          {/* <ul className={styles.footer__list}>
             {menuItems.map((menu, index) => (
               <ListItem key={index} {...menu} isFooter={true} />
             ))}
-          </ul>
+          </ul> */}
 
           <address className={styles.footer__address}>
-            <p className={styles.footer__address__title}>Dreamuse</p>
+            {/* <p className={styles.footer__address__title}>Dreamus</p> */}
             <div className={styles.footer__addressContainer}>
               <p className={styles.footer__addressContainer__cor}>
                 사업자 등록번호 : 234-12-31244 | 대표 : 최비결

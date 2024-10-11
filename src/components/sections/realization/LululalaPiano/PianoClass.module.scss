@@ -67,6 +67,7 @@
       font-size: 40px;
       font-weight: 700;
       line-height: 1.4;
+      color: #16bbc5;
 
       @include mobile {
         font-size: 24px;
@@ -129,6 +130,7 @@
       font-size: 40px;
       font-weight: 700;
       line-height: 1.4;
+      color: #16bbc5;
 
       @include mobile {
         font-size: 24px;
@@ -190,6 +192,7 @@
       font-size: 40px;
       font-weight: 700;
       line-height: 1.4;
+      color: #16bbc5;
     }
 
     &__subTitle {
@@ -289,7 +292,7 @@
 
       span {
         font-size: 55px;
-        color: rgb(139, 139, 255);
+        color: #16bbc5;
 
         @include mobile {
           font-size: 36px;
@@ -369,7 +372,7 @@
       }
 
       span {
-        color: #a1a1fa;
+        color: #16bbc5;
       }
     }
 
@@ -383,8 +386,9 @@
       border-radius: 15px;
       font-size: 20px;
       font-weight: 700;
-      color: orange;
+      color: white;
       cursor: pointer;
+      background-color: #16bbc5;
 
       @include mobile {
         max-width: 200px;

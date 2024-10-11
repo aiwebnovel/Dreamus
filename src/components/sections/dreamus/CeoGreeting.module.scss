@@ -6,7 +6,7 @@
     margin: 0 auto;
 
     @include mobile {
-      padding: 100px 15px;
+      padding: 50px 15px;
     }
   }
 
@@ -35,9 +35,10 @@
     padding: 25px 10px;
     text-align: center;
     font-size: 26px;
-    color: gray;
+    color: #16bbc5;
     font-style: italic;
     margin-bottom: 30px;
+    font-weight: 600;
 
     @include mobile {
       font-size: 20px;

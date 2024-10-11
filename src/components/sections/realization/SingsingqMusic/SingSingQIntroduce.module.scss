@@ -6,7 +6,7 @@
     margin: 0 auto;
 
     @include mobile {
-      padding: 100px 15px;
+      padding: 50px 15px;
     }
   }
 
@@ -28,7 +28,7 @@
   &__icon {
     width: 50px;
     height: 50px;
-    fill: rgb(190, 155, 161);
+    fill: #f3afba;
 
     @include mobile {
       width: 24px;
@@ -72,10 +72,11 @@
       line-height: 1.4;
       padding: 10px;
       width: 100%;
-      background: #facc77;
+      background: hsla(183, 83%, 43%, 0.526);
       border-radius: 15px;
       margin-bottom: 100px;
       text-align: center;
+      color: black;
 
       @include mobile {
         box-sizing: border-box;
