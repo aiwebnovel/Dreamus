@@ -56,7 +56,7 @@ const menuItems: MenuItem[] = [
       },
       {
         title: '꿈노리 별노리',
-        link: '/realization/momfany-music',
+        link: '/realization/dreamStar',
         icon: Mom,
         description: '꿈노리 별노리에 대한 설명입니다.',
       },
