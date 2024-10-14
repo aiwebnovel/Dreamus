@@ -46,7 +46,7 @@ function App() {
           path="/realization/think-playground-dingdong"
           element={<MainPage />}
         />
-        <Route path="/realization/momfany-music" element={<MomfanyMusic />} />
+        <Route path="/realization/dreamStar" element={<MomfanyMusic />} />
 
         <Route path="/work-together" element={<WorkTogether />} />
 
