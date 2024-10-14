@@ -32,7 +32,7 @@
     line-height: 1.5;
 
     @include mobile {
-      font-size: 22px;
+      font-size: 21px;
       text-align: center;
       word-break: keep-all;
       display: block;
@@ -47,23 +47,23 @@
 
     @include mobile {
       text-align: center;
-      font-size: 22px;
+      font-size: 21px;
       word-break: keep-all;
       margin-top: 10px;
     }
   }
 
   &__titleText {
-    font-size: 25px;
+    font-size: 28px;
     margin-top: 50px;
     width: 100%;
     text-align: start;
     padding: 10px;
-    color: #000000;
+    font-weight: 600;
     // background-color: #ffb2b2;
 
     @include mobile {
-      font-size: 20px;
+      font-size: 23px;
     }
   }
 
@@ -74,6 +74,7 @@
       max-width: 1280px;
       margin: 0 auto;
       overflow-x: hidden;
+      place-items: center;
 
       @include mobile {
         max-width: 100%;
@@ -131,20 +132,20 @@
         }
 
         &__desc {
-          font-size: 20px;
+          font-size: 25px;
           font-weight: 600;
           line-height: 1.7;
           text-align: center;
 
           @include mobile {
-            font-size: 17px;
+            font-size: 19px;
             text-align: center;
             word-break: keep-all;
           }
 
           &__point {
             color: #16bbc5;
-            font-size: 21px;
+            font-size: 25px;
             word-break: keep-all;
 
             @include mobile {
