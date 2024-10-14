@@ -26,7 +26,7 @@
     &__noImg {
       width: 100%;
       height: 200px;
-      background-color: rgb(134, 134, 236);
+      background-color: #16bbc5;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -34,7 +34,7 @@
       span {
         font-size: 16px;
         word-break: keep-all;
-        color: rgb(172, 172, 172);
+        color: #ffffff;
 
         @include mobile {
           font-size: 14px;
@@ -76,18 +76,18 @@
   &__move {
     padding: 5px 10px;
     font-size: 12px;
-    font-weight: 200;
+    font-weight: 400;
     border: none;
     outline: none;
     cursor: pointer;
     border-radius: 5px;
-    background: rgb(134, 134, 236);
+    background: #16bbc5;
     color: white;
     transition: all 0.2s ease-in-out;
 
     &:hover {
       background: white;
-      color: rgb(134, 134, 236);
+      color: #16bbc5;
     }
   }
 }
