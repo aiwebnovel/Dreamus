@@ -33,7 +33,7 @@ const programInfo = [
     title: '유아기관 대여수업 (악기, 교구, 영상)',
     programs: [
       {
-        name: '맘펴니 뮤직',
+        name: '꿈노리 별노리',
         age: '3 ~ 7세',
       },
     ],

@@ -21,7 +21,7 @@ const categoryMapping: { [key: string]: string } = {
   '룰루랄라 피아노': 'lulurala',
   '쿵!치!타 드럼,난타,장구': 'kungchita',
   '생각놀이터 띵똥': 'thinkplay',
-  '맘펴니 뮤직': 'mompenny',
+  '꿈노리 별노리': 'mompenny',
 }
 
 const reverseCategoryMapping: { [key: string]: string } = Object.fromEntries(

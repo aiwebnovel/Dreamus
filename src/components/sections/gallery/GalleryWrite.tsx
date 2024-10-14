@@ -8,7 +8,7 @@ const categories = [
   '생각놀이터 띵동',
   '룰루랄라 피아노',
   '쿵.치.타 드럼난타.장구',
-  '맘펴니 뮤직',
+  '꿈노리 별노리',
 ] as const
 
 type Category = (typeof categories)[number]

@@ -1,8 +1,9 @@
 import happyBridge from '@assets/image/happyBridge.png'
 import disinfection from '@assets/image/disinfection.png'
-import jack from '@assets/image/jack.jpg'
+import jack from '@assets/image/jack.jpeg'
 import five from '@assets/image/five.png'
-import four from '@assets/image/four.png'
+import four_1 from '@assets/image/four_1.png'
+import four_2 from '@assets/image/four_2.png'
 
 import styles from '@components/sections/main/DingDongTest.module.scss'
 
@@ -102,7 +103,8 @@ function DingDongTest() {
               </div>
             </div>
           </div> */}
-          <img src={four} width={'100%'} />
+          <img src={four_1} width={'100%'} />
+          <img src={four_2} width={'100%'} />
 
           <p className={styles.test__titleText}>3. 스토리 연결의 차별화</p>
           <img src={happyBridge} width={'100%'} />

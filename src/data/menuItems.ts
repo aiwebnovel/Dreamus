@@ -55,10 +55,10 @@ const menuItems: MenuItem[] = [
         description: '생각놀이터 띵동 프로그램에 대한 설명입니다.',
       },
       {
-        title: '맘펴니 뮤직',
+        title: '꿈노리 별노리',
         link: '/realization/momfany-music',
         icon: Mom,
-        description: '맘펴니 뮤직에 대한 설명입니다.',
+        description: '꿈노리 별노리에 대한 설명입니다.',
       },
     ],
   },

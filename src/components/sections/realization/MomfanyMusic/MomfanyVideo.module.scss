@@ -1,4 +1,4 @@
-.video {
+.star {
   &__inner {
     max-width: 1280px;
     margin: 0 auto;
@@ -11,14 +11,19 @@
     }
   }
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__title {
     font-size: 50px;
     font-weight: 700;
     line-height: 1.4;
-    color: #16bbc5;
+    text-align: start;
 
     @include mobile {
-      font-size: 40px;
+      font-size: 20px;
     }
   }
 
@@ -26,145 +31,29 @@
     font-size: 28px;
     font-weight: 300;
     line-height: 1.4;
+    margin-bottom: 100px;
 
     @include mobile {
-      font-size: 24px;
+      font-size: 18px;
+      margin-bottom: 50px;
       word-break: keep-all;
     }
   }
 
-  &__gridContainer {
-    margin-top: 50px;
-
-    &__grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-
-      @include mobile {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    &__item {
-      padding: 20px 15px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-      border-radius: 5px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    &__title {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-
-      @include mobile {
-        gap: 10px;
-      }
-
-      p {
-        font-size: 24px;
-        font-weight: 500;
-
-        @include mobile {
-          font-size: 20px;
-        }
-      }
-    }
-
-    &__icon {
-      width: 50px;
-      height: 50px;
-      fill: #a3a3ff;
-
-      @include mobile {
-        width: 35px;
-        height: 35px;
-      }
-    }
-
-    &__desc {
-      font-size: 16px;
-      font-weight: 300;
-      margin-top: 10px;
-
-      @include mobile {
-        font-size: 14px;
-        word-break: keep-all;
-      }
-    }
+  &__imgContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
-  &__container {
-    margin-top: 100px;
-  }
-
-  // 비디오 들어오면 삭제
-  &__fake {
-    width: 80%;
-    height: 500px;
-    background: orange;
-    margin: 0 auto;
-    border-radius: 15px;
+  &__img {
+    max-width: 1000px;
+    margin-bottom: 100px;
 
     @include mobile {
-      width: 100%;
-      height: 250px;
-    }
-  }
-
-  &__play {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &__btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      border: none;
-      outline: none;
-      width: 180px;
-      height: 50px;
-      border-radius: 15px;
-      background: #16bbc5;
-      color: white;
-      font-size: 16px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
-
-      // &:hover {
-      //   background: white;
-      //   color: #a3a3ff;
-
-      //   svg {
-      //     fill: #a3a3ff;
-      //   }
-      // }
-
-      @include mobile {
-        font-size: 14px;
-        width: 150px;
-        gap: 5px;
-        height: 45px;
-      }
-    }
-
-    &__icon {
-      width: 35px;
-      height: 35px;
-      fill: white;
-
-      @include mobile {
-        width: 25px;
-        height: 25px;
-      }
+      margin-bottom: 30px;
     }
   }
 }
