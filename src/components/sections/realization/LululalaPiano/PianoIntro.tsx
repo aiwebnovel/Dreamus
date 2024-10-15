@@ -1,5 +1,5 @@
 // import Piano from '@assets/icon/piano.svg?react'
-import Up from '@assets/icon/up.svg?react'
+// import Up from '@assets/icon/up.svg?react'
 
 import piano_1 from '@assets/image/piano_1.jpg'
 
