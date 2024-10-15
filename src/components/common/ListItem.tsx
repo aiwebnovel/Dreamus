@@ -24,7 +24,6 @@ const ListItem: React.FC<ListItemProps> = ({
   onToggle,
   isOpen,
   isFooter = false,
-  logo,
 }) => {
   if (isFooter) {
     return (

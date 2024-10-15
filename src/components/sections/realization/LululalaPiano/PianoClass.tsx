@@ -1,5 +1,5 @@
 import PianoTeacher from '@assets/icon/pianoTeacher.svg?react'
-import Up from '@assets/icon/up.svg?react'
+// import Up from '@assets/icon/up.svg?react'
 import class1 from '@assets/image/class1.jpg'
 import class2 from '@assets/image/class2.jpg'
 import class3 from '@assets/image/class3.jpg'

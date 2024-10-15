@@ -32,7 +32,7 @@ const educationalBenefits = [
 ]
 
 function PercussionAdvantage() {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   return (
     <section className={styles.advantage}>
