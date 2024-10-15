@@ -1,19 +1,19 @@
 import styles from '@components/sections/realization/DrumNantaJanggu/PercussionIntroduce.module.scss'
 
-import drum from '@assets/icon/drum1.svg'
-import janggu from '@assets/icon/janggu.svg'
-import nanta from '@assets/icon/nanta.svg'
+import drum from '@assets/image/drum.jpg'
+import janggu from '@assets/image/janggu.jpg'
+import nanta from '@assets/image/nanta.jpg'
 
 const percussion = [
   {
     name: '드럼',
-    desc: '주로 비트와 리듬을 담당하는 악기로 타격을 통해 소리를 냅니다.',
+    desc: '다양한 음악을 연주하며 성취감을 느끼고 스트레스 해소까지!',
     src: drum,
     tag: ['리듬 감각 향상', '신체 발달', '감정 표현'],
   },
   {
     name: '난타',
-    desc: '전통적인 한국의 타악기로 여러개의 타악기를 사용합니다.',
+    desc: '연주하며 스트레스를 해소하고 하나된 퍼포먼스로 우리를 표현합니다.',
     src: nanta,
     tag: ['협동심', '문화 이해', '스트레스 해소'],
   },

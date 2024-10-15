@@ -18,8 +18,8 @@ const educationalBenefits = [
     desc: '음악을 통해 감정을 표현하고 스트레스를 해소하는 데 도움을 줍니다.',
   },
   {
-    title: '집중력 향상',
-    desc: '연주에 집중하면서 집중력과 인내심을 기를 수 있습니다.',
+    title: '사회성 발달',
+    desc: '친구들과 같이 만들어내는 음악! 함께라서 가능한 성취감은 사회성 발달을 도모합니다.',
   },
   {
     title: '사회성 발달',
@@ -40,7 +40,7 @@ function PercussionAdvantage() {
         <div>
           <div>
             <h3 className={styles.advantage__title}>
-              우리의 교육은 이런 강점이 있어요.
+              씽씽큐 타악기 수업! 이래서 좋아요.
             </h3>
             <div className={styles.advantage__benefit}>
               {educationalBenefits.map((benefit, index) => (
