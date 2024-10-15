@@ -1,5 +1,7 @@
-import Piano from '@assets/icon/piano.svg?react'
+// import Piano from '@assets/icon/piano.svg?react'
 import Up from '@assets/icon/up.svg?react'
+
+import piano_1 from '@assets/image/piano_1.jpg'
 
 import styles from '@components/sections/realization/LululalaPiano/PianoIntro.module.scss'
 
@@ -15,7 +17,7 @@ function PianoIntro() {
               <p>룰루랄라 피아노를 경험해보세요!</p>
             </div>
             <div className={styles.piano__introduce__img}>
-              <Piano className={styles.piano__introduce__icon} />
+              <img src={piano_1} width={'100%'} />
             </div>
           </div>
 
@@ -28,8 +30,9 @@ function PianoIntro() {
               <div className={styles.piano__reason__descContainer}>
                 <div>
                   <p className={styles.piano__reason__descContainer__title}>
-                    아이들의 음악적 관심도
-                    <Up className={styles.piano__reason__descContainer__icon} />
+                    아이들의 음악적{' '}
+                    <span className={styles.piano__pointText1}>관심도</span> UP!
+                    {/* <Up className={styles.piano__reason__descContainer__icon} /> */}
                   </p>
                   <span
                     className={styles.piano__reason__descContainer__subTitle}
@@ -39,8 +42,9 @@ function PianoIntro() {
                 </div>
                 <div>
                   <p className={styles.piano__reason__descContainer__title}>
-                    아이들의 생각의 깊이도
-                    <Up className={styles.piano__reason__descContainer__icon} />
+                    아이들의 생각의{' '}
+                    <span className={styles.piano__pointText2}>깊이도</span> UP!
+                    {/* <Up className={styles.piano__reason__descContainer__icon} /> */}
                   </p>
                   <p className={styles.piano__reason__descContainer__subTitle}>
                     악보를 보며 아이들의 생각에 깊이를 더해요
@@ -48,8 +52,9 @@ function PianoIntro() {
                 </div>
                 <div>
                   <p className={styles.piano__reason__descContainer__title}>
-                    아이들의 집중력 향상도
-                    <Up className={styles.piano__reason__descContainer__icon} />
+                    아이들의 집중력{' '}
+                    <span className={styles.piano__pointText3}>향상도</span> UP!
+                    {/* <Up className={styles.piano__reason__descContainer__icon} /> */}
                   </p>
                   <p className={styles.piano__reason__descContainer__subTitle}>
                     스토리텔링을 통한 집중력을 향상시켜요

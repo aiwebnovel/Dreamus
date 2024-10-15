@@ -8,6 +8,13 @@ import Music from '@assets/icon/music.svg?react'
 
 import styles from '@components/sections/realization/SingsingqMusic/SingSingQIntroduce.module.scss'
 
+import singsingq_1 from '@assets/image/singsingq_1.png'
+import singsingq_2 from '@assets/image/singsingq_2.png'
+import singsingq_3 from '@assets/image/singsingq_3.png'
+import singsingq_4 from '@assets/image/singsingq_4.png'
+import singsingq_5 from '@assets/image/singsingq_5.png'
+import singsingq_6 from '@assets/image/singsingq_6.png'
+
 function SingSingQIntroduce() {
   return (
     <section className={styles.singsingq}>
@@ -20,9 +27,8 @@ function SingSingQIntroduce() {
             </div>
             <p
               className={styles.singsingq__desc}
-            >{`에밀자크 달크로즈의 유아음악이론을 재해석한 씽씽큐 뮤직은
-            현재 아이들에게 맞춘 200여종의 악기와 교규가 함께하는 교육프로그램 입니다.
-            스스로 노래하고 신체로 표현하며 자연스럽게 음악적 역량을 키웁니다.
+            >{`에밀자크 달크로즈의 음악이론 + 하워드 가느너 다중지능이론 + 긍정창의놀이를 결합하여 재해석 하였습니다. 
+            현재의 아이들에게 맞춘 수업진행과 300여종의 악기, 교구가 함께 합니다.
             `}</p>
           </div>
           <div className={styles.singsingq__curriculum}>
@@ -46,6 +52,25 @@ function SingSingQIntroduce() {
                   ) : null}
                 </React.Fragment>
               ))}
+            </div>
+            <div>
+              {/* <h2 className={styles.singsingq__curriculum__title}>
+                3, 4세 노리뮤직
+              </h2> */}
+              <img src={singsingq_1} width={'100%'} />
+              <img
+                src={singsingq_2}
+                width={'100%'}
+                className={styles.singsingq__img}
+              />
+              <img src={singsingq_3} width={'100%'} />
+              <img
+                src={singsingq_4}
+                width={'100%'}
+                className={styles.singsingq__img}
+              />
+              <img src={singsingq_5} width={'100%'} />
+              <img src={singsingq_6} width={'100%'} />
             </div>
           </div>
         </div>

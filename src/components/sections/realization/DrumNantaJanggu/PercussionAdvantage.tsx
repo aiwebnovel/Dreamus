@@ -22,8 +22,8 @@ const educationalBenefits = [
     desc: '연주에 집중하면서 집중력과 인내심을 기를 수 있습니다.',
   },
   {
-    title: '문화 이해',
-    desc: '다양한 타악기를 배우면서 한국 전통 음악뿐만 아니라 세계의 다양한 음악 문화를 접할 수 있습니다.',
+    title: '사회성 발달',
+    desc: '친구들과 같이 만들어내는 음악! 함께라서 가능한 성취감은 사회성 발달을 도모합니다.',
   },
   {
     title: '자신감 증진',
@@ -58,11 +58,11 @@ function PercussionAdvantage() {
               ))}
             </div>
           </div>
-          <div className={styles.advantage__move}>
+          {/* <div className={styles.advantage__move}>
             <button onClick={() => navigate('/class-registration')}>
               수업 신청하기
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

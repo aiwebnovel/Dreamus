@@ -9,6 +9,10 @@ import class5 from '@assets/image/class5.png'
 import class6 from '@assets/image/class6.png'
 import class7 from '@assets/image/class7.png'
 
+import piano_char from '@assets/image/piano_char.png'
+import piano_char1 from '@assets/image/piano_char1.jpeg'
+import piano_char2 from '@assets/image/piano_char2.png'
+
 import styles from '@components/sections/realization/LululalaPiano/PianoClass.module.scss'
 
 function PianoClass() {
@@ -40,25 +44,25 @@ function PianoClass() {
               <div>
                 <img className={styles.class__activity__img} src={class1} />
                 <p className={styles.class__activity__desc}>
-                  짝꿍과 손을 잡고 노래에 맞춰 춤을 추고 있어요
+                  짝꿍과 손을 잡고 노래에 맞춰 춤을 추고 있어요.
                 </p>
               </div>
               <div>
                 <img className={styles.class__activity__img} src={class2} />
                 <p className={styles.class__activity__desc}>
-                  음계를 듣고 음계를 연주해보고 있어요
+                  "도" 소리가 나오면 듣고 도를 연주해요.
                 </p>
               </div>
               <div>
                 <img className={styles.class__activity__img} src={class3} />
                 <p className={styles.class__activity__desc}>
-                  다시 음악이 나오면 음악에 맞춰 율동을 해요
+                  다시 음악이 나오면 음악에 맞춰 율동을 해요.
                 </p>
               </div>
               <div>
                 <img className={styles.class__activity__img} src={class4} />
                 <p className={styles.class__activity__desc}>
-                  불협화음 독수리가 나오면 숨어야 해요
+                  불협화음 독수리가 나오면 숨어야 해요!
                 </p>
               </div>
             </div>
@@ -82,7 +86,7 @@ function PianoClass() {
                   src={class5}
                 />
                 <p className={styles.class__collaboration__desc}>
-                  핸드볼과 피아노의 콜라보 연주를 준비해요
+                  핸드벨과 피아노의 콜라보 연주를 준비해요
                 </p>
               </div>
               <div className={styles.class__collaboration__item}>
@@ -91,7 +95,7 @@ function PianoClass() {
                   src={class6}
                 />
                 <p className={styles.class__collaboration__desc}>
-                  선생님의 지시에 따라 핸드볼을 준비해요
+                  선생님의 지시에 따라 핸드벨을 준비해요
                 </p>
               </div>
               <div className={styles.class__collaboration__item}>
@@ -100,7 +104,7 @@ function PianoClass() {
                   src={class7}
                 />
                 <p className={styles.class__collaboration__desc}>
-                  친구들과 핸드볼을 이용해 화음을 만들어요
+                  친구들과 핸드벨을 이용해 화음을 만들어요
                 </p>
               </div>
             </div>
@@ -120,21 +124,19 @@ function PianoClass() {
 
             <div className={styles.class__story__flexContainer}>
               <div className={styles.class__story__item}>
-                <img className={styles.class__story__img} src={class1} />
+                <img className={styles.class__story__img} src={piano_char} />
+                <p className={styles.class__story__desc}>음악기호의 캐릭터화</p>
+              </div>
+              <div className={styles.class__story__item}>
+                <img className={styles.class__story__img} src={piano_char1} />
                 <p className={styles.class__story__desc}>
-                  코다, 코순이와 같은 캐릭터와 친해져요
+                  동화를 이용한 스토리텔링
                 </p>
               </div>
               <div className={styles.class__story__item}>
-                <img className={styles.class__story__img} src={class2} />
+                <img className={styles.class__story__img} src={piano_char2} />
                 <p className={styles.class__story__desc}>
-                  무엇을 의미하는지 공부하고 이해해요
-                </p>
-              </div>
-              <div className={styles.class__story__item}>
-                <img className={styles.class__story__img} src={class3} />
-                <p className={styles.class__story__desc}>
-                  자연스럽게 인지하며 역할극 놀이를 해요
+                  창작음원으로 재미있는 연주
                 </p>
               </div>
             </div>
@@ -177,12 +179,12 @@ function PianoClass() {
                   아이가 좋아하는 곡으로,
                 </p>
                 <p className={styles.class__register__text}>
-                  아이의 성취감도
-                  <Up className={styles.class__register__icon} />
+                  아이의 성취감도 UP!
+                  {/* <Up className={styles.class__register__icon} /> */}
                 </p>
                 <p className={styles.class__register__text}>
-                  아이의 만족도도
-                  <Up className={styles.class__register__icon} />
+                  아이의 만족도도 UP!
+                  {/* <Up className={styles.class__register__icon} /> */}
                 </p>
               </div>
             </div>
@@ -191,9 +193,9 @@ function PianoClass() {
                 <span>신</span>나게, <span>청</span>해주렴,
                 <br /> 너희가 연주하고 싶은 <span>곡</span>
               </p>
-              <button className={styles.class__register__btn}>
+              {/* <button className={styles.class__register__btn}>
                 수업 신청하기
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

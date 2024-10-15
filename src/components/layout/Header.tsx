@@ -6,7 +6,8 @@ import ListItem from '@components/common/ListItem'
 
 import menuItems from '@data/menuItems'
 
-import Logo from '@assets/icon/logo.svg?react'
+// import Logo from '@assets/icon/logo.svg?react'
+import dreamusLogo from '@assets/image/dreamusLogo.png'
 import Hamburger from '@assets/icon/hamburger.svg?react'
 import Close from '@assets/icon/close.svg?react'
 
@@ -57,8 +58,9 @@ function Header() {
       <div className={styles.header__inner}>
         <h2 className={styles.header__logo}>
           <Link className={styles.header__logo__link} to="/">
-            <Logo className={styles.header__logo__icon} />
-            <span className={styles.header__logo__title}>Dreamus</span>
+            {/* <Logo className={styles.header__logo__icon} />
+            <span className={styles.header__logo__title}>Dreamus</span> */}
+            <img src={dreamusLogo} className={styles.header__logo__icon} />
           </Link>
         </h2>
 

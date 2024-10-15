@@ -2,6 +2,7 @@ export interface SubItem {
   title: string
   link: string
   icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>
+  logo?: string
   description?: string
 }
 
@@ -10,6 +11,7 @@ export interface MenuItem {
   link?: string
   icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>
   description?: string
+  logo?: string
   subItems?: SubItem[]
 }
 

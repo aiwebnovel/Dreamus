@@ -2,7 +2,7 @@ import ProgramItem from '@components/features/ProgramItem'
 
 import programInfo from '@data/programInfo'
 
-import Logo from '@assets/icon/logo.svg?react'
+// import Logo from '@assets/icon/logo.svg?react'
 import Program from '@assets/icon/program.svg?react'
 
 import styles from '@components/sections/dreamus/Introduce.module.scss'
@@ -14,7 +14,7 @@ function Introduce() {
         <div>
           <div className={styles.introduce__titleContainer}>
             <h1 className={styles.introduce__title}>
-              <Logo className={styles.introduce__title__icon} />
+              {/* <Logo className={styles.introduce__title__icon} /> */}
               Dreamus 소개
             </h1>
             <p className={styles.introduce__title__desc}>

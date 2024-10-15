@@ -24,6 +24,7 @@ const ListItem: React.FC<ListItemProps> = ({
   onToggle,
   isOpen,
   isFooter = false,
+  logo,
 }) => {
   if (isFooter) {
     return (
@@ -84,8 +85,14 @@ const ListItem: React.FC<ListItemProps> = ({
                       className={styles.listItem__subItem__link}
                       to={item.link}
                     >
-                      {item.icon && (
+                      {/* {item.icon && (
                         <item.icon className={styles.listItem__subItem__icon} />
+                      )} */}
+                      {item.logo && (
+                        <img
+                          src={item.logo}
+                          className={styles.listItem__subItem__icon}
+                        />
                       )}
                       <div className={styles.listItem__subItem__text}>
                         <span className={styles.listItem__subItem__title}>
