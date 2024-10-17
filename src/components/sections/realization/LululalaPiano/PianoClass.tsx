@@ -44,25 +44,29 @@ function PianoClass() {
               <div>
                 <img className={styles.class__activity__img} src={class1} />
                 <p className={styles.class__activity__desc}>
-                  짝꿍과 손을 잡고 노래에 맞춰 춤을 추고 있어요.
+                  짝꿍과 손을 잡고 노래에 맞춰 <br />
+                  춤을 추고 있어요.
                 </p>
               </div>
               <div>
                 <img className={styles.class__activity__img} src={class2} />
                 <p className={styles.class__activity__desc}>
-                  "도" 소리가 나오면 듣고 도를 연주해요.
+                  "도" 소리가 나오면 듣고 <br />
+                  도를 연주해요.
                 </p>
               </div>
               <div>
                 <img className={styles.class__activity__img} src={class3} />
                 <p className={styles.class__activity__desc}>
-                  다시 음악이 나오면 음악에 맞춰 율동을 해요.
+                  다시 음악이 나오면 음악에 맞춰 <br />
+                  율동을 해요.
                 </p>
               </div>
               <div>
                 <img className={styles.class__activity__img} src={class4} />
                 <p className={styles.class__activity__desc}>
-                  불협화음 독수리가 나오면 숨어야 해요!
+                  불협화음 독수리가 나오면 <br />
+                  숨어야 해요!
                 </p>
               </div>
             </div>
@@ -192,6 +196,7 @@ function PianoClass() {
               <p className={styles.class__register__btnText}>
                 <span>신</span>나게, <span>청</span>해주렴,
                 <br /> 너희가 연주하고 싶은 <span>곡</span>
+                <p>룰루랄라 피아노</p>
               </p>
               {/* <button className={styles.class__register__btn}>
                 수업 신청하기

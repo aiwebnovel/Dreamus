@@ -39,8 +39,8 @@ function DingDongTest() {
               </div>
               <div className={styles.test__grid__youtubeContainer__youtube}>
                 <iframe
-                  width="100%"
-                  height="100%"
+                  // width="100%"
+                  // height="100%"
                   src="https://www.youtube.com/embed/zvIxQ0W8TUo"
                   title="띵동이와 바다마녀/ 환경동화 / 뮤지컬동화 / 분리수거 동화"
                   // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -50,7 +50,7 @@ function PercussionIntroduce() {
               {percussion.map((item, index) => (
                 <div className={styles.percussion__card} key={index}>
                   <div className={styles.percussion__card__content}>
-                    <img src={item.src} />
+                    <img src={item.src} width={'100%'} />
                     <div className={styles.percussion__card__text}>
                       <h4 className={styles.percussion__card__title}>
                         {item.name}

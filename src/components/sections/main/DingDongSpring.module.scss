@@ -81,6 +81,15 @@
     &__sub {
       color: #ff7c7c;
     }
+
+    &__subText {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    span {
+      color: #ff7c7c;
+    }
   }
 
   &__btnContainer {
@@ -96,9 +105,10 @@
       color: white;
       // font-weight: bold;
       font-size: 17px;
+      margin-bottom: 30px;
 
       @include mobile {
-        padding: 10px 5px;
+        padding: 18px;
         word-break: keep-all;
         white-space: pre-line;
         font-size: 16px;

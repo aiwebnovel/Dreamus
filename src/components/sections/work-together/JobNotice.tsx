@@ -51,9 +51,12 @@ function JobNotice() {
             </div>
             <p
               className={styles.job__desc__text}
-            >{`아이를 보면 웃음이 절로 나오시나요? 가끔은 혀가 짧아지기도 하시나요?
-            그렇다면 Dreamus에 합류하세요. 아이를 사랑하는 마음. 그 마음 하나라면
-            당신은 이미 충분합니다. Dreamus와 함께 아이의 마음성장을 도와주세요.
+            >{`아이를 보면 웃음이 절로 나오시나요? 
+            가끔은 혀가 짧아지기도 하시나요?
+            그렇다면 Dreamus에 합류하세요. 아이를 사랑하는 마음. 
+            그 마음 하나라면
+            당신은 이미 충분합니다. 
+            Dreamus와 함께 아이의 마음성장을 도와주세요.
             `}</p>
           </div>
           <div className={styles.job__notice}>

@@ -48,20 +48,25 @@ function DingDongSpring() {
           </div> */}
           <div className={styles.spring__text}>
             <p className={styles.spring__text__main}>
-              지금 우리 아이의 회복탄력성을 테스트해보세요. <br />
-              (띵동 자체개발 특허출원중)
+              지금 우리 아이의 <span>회복탄력성을</span> <br />
+              테스트해보세요.
               <br />
               <br />
-              동화 캐릭터로 보는 회복탄력분석도구 바로가기
+              동화 캐릭터로 보는 <br />
+              유아회복탄력성 테스트
             </p>
             <div className={styles.spring__btnContainer}>
               <button
                 onClick={() => navigate('/assessment')}
                 className={styles.spring__btnContainer__btn}
               >
-                무료 회복탄력성 분석 검사 바로가기
+                ESPA 바로가기
               </button>
             </div>
+            <p className={styles.spring__text__subText}>
+              띵동을 하면 회복탄력성이 생기나요? <br />
+              다른 프로그램이랑....
+            </p>
             {/* <p className={styles.spring__text__main}>
               화면 속에서 아이의 총명함이 흐려질까 봐 걱정되시나요?
               <br />

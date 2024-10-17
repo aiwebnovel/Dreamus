@@ -124,8 +124,8 @@
   }
 
   &__firstImg {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -133,68 +133,68 @@
     left: 5%;
 
     @include mobile {
-      max-width: 150px;
-      max-height: 150px;
-      top: 10%;
-      left: 10%;
+      max-width: 180px;
+      max-height: 180px;
+      top: 0%;
+      left: 5%;
     }
   }
 
   &__secondImg {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     position: absolute;
-    top: 0;
+    top: 5%;
     right: 15%;
 
     @include mobile {
-      max-width: 150px;
-      max-height: 150px;
-      top: 10%;
-      right: 10%;
+      max-width: 180px;
+      max-height: 180px;
+      top: 0%;
+      right: 5%;
     }
   }
 
   &__thirdImg {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     position: absolute;
-    bottom: -5%;
+    bottom: -40%;
     left: 25%;
 
     @include mobile {
-      max-width: 150px;
-      max-height: 150px;
+      max-width: 180px;
+      max-height: 180px;
       bottom: 10%;
-      left: 10%;
+      left: 5%;
     }
   }
 
   &__fourthImg {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     position: absolute;
-    bottom: -5%;
+    bottom: -40%;
     right: -5%;
 
     @include mobile {
-      max-width: 150px;
-      max-height: 150px;
+      max-width: 180px;
+      max-height: 180px;
       bottom: 10%;
-      right: 10%;
+      right: 5%;
     }
   }
 
   &__reverse {
     &__firstImg {
-      width: 250px;
-      height: 250px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
       position: absolute;
@@ -202,16 +202,16 @@
       left: 5%;
 
       @include mobile {
-        max-width: 150px;
-        max-height: 150px;
-        top: 10%;
-        left: 10%;
+        max-width: 180px;
+        max-height: 180px;
+        top: 0%;
+        left: 5%;
       }
     }
 
     &__secondImg {
-      width: 250px;
-      height: 250px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
       position: absolute;
@@ -219,44 +219,44 @@
       right: 15%;
 
       @include mobile {
-        max-width: 150px;
-        max-height: 150px;
-        top: 10%;
-        right: 10%;
+        max-width: 180px;
+        max-height: 180px;
+        top: 0%;
+        right: 5%;
       }
     }
 
     &__thirdImg {
-      width: 250px;
-      height: 250px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
       position: absolute;
-      bottom: -5%;
+      bottom: -40%;
       left: 25%;
 
       @include mobile {
-        max-width: 150px;
-        max-height: 150px;
+        max-width: 180px;
+        max-height: 180px;
         bottom: 10%;
-        left: 10%;
+        left: 5%;
       }
     }
 
     &__fourthImg {
-      width: 250px;
-      height: 250px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
       position: absolute;
-      bottom: -5%;
+      bottom: -40%;
       right: -5%;
 
       @include mobile {
-        max-width: 150px;
-        max-height: 150px;
+        max-width: 180px;
+        max-height: 180px;
         bottom: 10%;
-        right: 10%;
+        right: 5%;
       }
     }
   }
