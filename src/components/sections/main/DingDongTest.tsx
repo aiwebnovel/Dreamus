@@ -107,12 +107,18 @@ function DingDongTest() {
           <img src={four_2} width={'100%'} />
 
           <p className={styles.test__titleText}>3. 스토리 연결의 차별화</p>
-          <img src={happyBridge} width={'100%'} />
+          <div className={styles.test__fiveSixImg}>
+            {' '}
+            <img src={happyBridge} width={'100%'} />
+          </div>
 
           <p className={styles.test__titleText}>4. 보호자와 소통의 차별화</p>
           <div className={styles.test__grid__inner}>
             <div className={styles.test__grid__fourContainer}>
-              <img src={jack} width={'100%'} />
+              <div className={styles.test__grid__jack}>
+                <img src={jack} width={'100%'} />
+              </div>
+
               <div className={styles.test__grid__youtubeContainer__text}>
                 <p className={styles.test__grid__youtubeContainer__text__desc}>
                   <p
@@ -131,11 +137,18 @@ function DingDongTest() {
           </div>
 
           <p className={styles.test__titleText}>5. 강사 교육의 차별화</p>
-          <img src={five} width={'100%'} />
+          <div className={styles.test__fiveSixImg}>
+            <img src={five} width={'100%'} />
+          </div>
+
           <p className={styles.test__titleText}>6. 교구 관리의 차별화</p>
           <div className={styles.test__grid__inner}>
             <div className={styles.test__grid__fourContainer}>
-              <img src={disinfection} width={'100%'} />
+              <img
+                src={disinfection}
+                width={'100%'}
+                // className={styles.test__fiveSixImg}
+              />
               <div className={styles.test__grid__youtubeContainer__text}>
                 <p className={styles.test__grid__youtubeContainer__text__desc}>
                   <p

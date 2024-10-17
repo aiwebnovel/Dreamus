@@ -197,4 +197,12 @@
       max-width: 300px;
     }
   }
+
+  &__fiveSixImg {
+    width: 1100px;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
 }
