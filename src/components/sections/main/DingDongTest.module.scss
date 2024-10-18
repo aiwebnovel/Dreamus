@@ -90,7 +90,7 @@
 
       @include mobile {
         grid-template-columns: 1fr;
-        width: 180px;
+        width: 300px;
       }
     }
 
@@ -191,7 +191,7 @@
   }
 
   &__jack {
-    max-width: 500px;
+    max-width: 600px;
 
     @include mobile {
       max-width: 300px;
