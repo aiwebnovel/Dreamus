@@ -115,7 +115,7 @@ function DingDongTest() {
           <p className={styles.test__titleText}>4. 보호자와 소통의 차별화</p>
           <div className={styles.test__grid__inner}>
             <div className={styles.test__grid__fourContainer}>
-              <div className={styles.test__fiveSixImg}>
+              <div className={styles.test__jack}>
                 <img src={jack} width={'100%'} />
               </div>
 
