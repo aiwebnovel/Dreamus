@@ -182,7 +182,9 @@ function AssessmentSection() {
                 </p>
                 <button
                   className={styles.assessment__result__btn}
-                  onClick={() => navigate('/class-registration')}
+                  onClick={() =>
+                    navigate('/class-registration', { state: result })
+                  }
                 >
                   띵동 신청하기
                 </button>

@@ -6,6 +6,7 @@ import Register from '@assets/icon/register.svg?react'
 
 import styles from '@components/sections/class-registration/ClassRegister.module.scss'
 
+import { useLocation } from 'react-router'
 declare global {
   interface Window {
     daum: any
@@ -28,6 +29,7 @@ interface RegisterClass {
 }
 
 function ClassRegister() {
+  const { state } = useLocation()
   const [classData, setClassData] = useState<RegisterClass>({
     name: '',
     phone: '',
@@ -130,6 +132,11 @@ function ClassRegister() {
           </div>
           <div className={styles.register__content}>
             <h2 className={styles.register__content__title}>수업 신청서</h2>
+            {state ? (
+              <h2 className={styles.register__content__desc}>
+                회복탄력성 유형 결과: {state}
+              </h2>
+            ) : null}
             <form className={styles.register__content__form}>
               <FormTextField
                 label="이름(자녀)"

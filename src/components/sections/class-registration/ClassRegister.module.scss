@@ -62,6 +62,14 @@
       }
     }
 
+    &__desc {
+      font-size: 22px;
+      color: #16bbc5;
+      margin-left: 10px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
     &__form {
       display: flex;
       flex-direction: column;
