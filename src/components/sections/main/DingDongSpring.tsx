@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 import styles from '@components/sections/main/DingDongSpring.module.scss'
 import { useNavigate } from 'react-router-dom'
 
+import espa from '@assets/image/espa.png'
+
 const item = {
   hidden: { opacity: 0, y: -20 },
   visible: {
@@ -63,10 +65,7 @@ function DingDongSpring() {
                 ESPA 바로가기
               </button>
             </div>
-            <p className={styles.spring__text__subText}>
-              띵동을 하면 회복탄력성이 생기나요? <br />
-              다른 프로그램이랑....
-            </p>
+            <img src={espa} width={'100%'} />
             {/* <p className={styles.spring__text__main}>
               화면 속에서 아이의 총명함이 흐려질까 봐 걱정되시나요?
               <br />
