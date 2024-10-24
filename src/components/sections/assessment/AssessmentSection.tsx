@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { questions } from '@data/questions'
 import { useNavigate } from 'react-router-dom'
 import { resultDescriptions, ResultType } from '@data/resultDescriptions'
@@ -54,7 +54,6 @@ function AssessmentSection() {
       return
     }
 
-    onMoveToElement()
     const erType = getCategoryType(answers, 0, 3, 'E', 'e')
     const scType = getCategoryType(answers, 4, 8, 'S', 's')
     const psType = getCategoryType(answers, 9, 12, 'P', 'p')
@@ -63,6 +62,10 @@ function AssessmentSection() {
     const resilienceType = `${erType}${scType}${psType}${saType}` as ResultType
     setResult(resilienceType)
   }
+
+  useEffect(() => {
+    onMoveToElement()
+  }, [handleSubmit])
 
   return (
     <section className={styles.assessment}>
