@@ -3,6 +3,8 @@ import { questions } from '@data/questions'
 import { useNavigate } from 'react-router-dom'
 import { resultDescriptions, ResultType } from '@data/resultDescriptions'
 import styles from '@components/sections/assessment/AssessmentSection.module.scss'
+import espa from '@assets/image/espa.png'
+import { useRef } from 'react'
 
 const getCategoryType = (
   answers: string[],
@@ -22,7 +24,16 @@ const getCategoryType = (
   return countHigh > countLow ? highType : lowType
 }
 
+export function useMoveScrool() {
+  const element = useRef<HTMLDivElement>(null)
+  const onMoveToElement = () => {
+    element.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+  return { element, onMoveToElement }
+}
+
 function AssessmentSection() {
+  const { element, onMoveToElement } = useMoveScrool()
   const [answers, setAnswers] = useState<string[]>(
     Array(questions.length).fill(''),
   )
@@ -43,6 +54,7 @@ function AssessmentSection() {
       return
     }
 
+    onMoveToElement()
     const erType = getCategoryType(answers, 0, 3, 'E', 'e')
     const scType = getCategoryType(answers, 4, 8, 'S', 's')
     const psType = getCategoryType(answers, 9, 12, 'P', 'p')
@@ -81,9 +93,9 @@ function AssessmentSection() {
             </p>
           </div>
           <div className={styles.assessment__questionnaire}>
-            <h3 className={styles.assessment__questionnaire__title}>
+            {/* <h3 className={styles.assessment__questionnaire__title}>
               회복탄력성 검사
-            </h3>
+            </h3> */}
             <div className={styles.assessment__questionnaire__container}>
               {questions.map((question, index) => (
                 <div
@@ -109,10 +121,17 @@ function AssessmentSection() {
                             handleAnswerChange(index, e.target.value)
                           }
                         />
-                        <label htmlFor={`q${index}-${num}`}>{num}</label>
+                        <label htmlFor={`q${index}-${num}`}> {num}</label>
                       </div>
                     ))}
                   </div>
+                  {index === 3 || index === 8 || index === 12 ? (
+                    <>
+                      <br />
+                      <br />
+                      <br />
+                    </>
+                  ) : null}
                 </div>
               ))}
             </div>
@@ -126,9 +145,9 @@ function AssessmentSection() {
               </button>
             </div>
             {result && (
-              <div className={styles.assessment__result}>
+              <div className={styles.assessment__result} ref={element}>
                 <h3 className={styles.assessment__result__title}>
-                  유아의 회복탄력성 유형은 <span>{result}</span>입니다.
+                  유아의 회복탄력성 유형은 <span>{result}</span> 입니다.
                 </h3>
                 <p className={styles.assessment__result__desc}>
                   {resultDescriptions[result]?.title}
@@ -144,17 +163,19 @@ function AssessmentSection() {
                 <p className={styles.assessment__result__characterDesc}>
                   {resultDescriptions[result]?.description}
                 </p>
-                <h4 className={styles.assessment__result__way}>지원 방법:</h4>
+                <h4 className={styles.assessment__result__way}>지원 방법</h4>
                 <ul className={styles.assessment__result__wayList}>
                   {resultDescriptions[result]?.support.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
+                <img
+                  src={espa}
+                  width={'100%'}
+                  className={styles.assessment__result__image}
+                />
                 <p className={styles.assessment__result__desc}>
-                  우리 아이의 마음근력을 더 키워주고 싶으신가요?
-                </p>
-                <p className={styles.assessment__result__desc}>
-                  지금 띵동의 티티쌤과 상의하세요.
+                  {`우리 아이의 마음근력을 더 키워주고 싶으신가요?\n지금 띵동의 티티쌤과 상의하세요.`}
                 </p>
                 <button
                   className={styles.assessment__result__btn}

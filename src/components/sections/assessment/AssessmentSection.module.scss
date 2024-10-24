@@ -4,9 +4,10 @@
     margin: 0 auto;
     padding: 100px 0px;
     min-height: 100vh;
+    text-align: center;
 
     @include mobile {
-      padding: 100px 15px;
+      padding: 50px 15px;
     }
   }
 
@@ -15,6 +16,7 @@
     font-weight: 700;
     line-height: 1.4;
     word-break: keep-all;
+    color: #16bbc5;
 
     @include mobile {
       font-size: 40px;
@@ -38,75 +40,86 @@
     margin-top: 50px;
 
     &__desc {
-      font-size: 20px;
-      font-weight: 300;
+      font-size: 25px;
+      font-weight: 400;
       line-height: 1.4;
       word-break: keep-all;
 
       @include mobile {
-        font-size: 18px;
-        font-weight: 200;
+        font-size: 20px;
+        font-weight: 400;
       }
     }
 
     &__count {
-      font-size: 20px;
-      font-weight: 300;
+      font-size: 23px;
+      font-weight: 400;
       line-height: 1.4;
       word-break: keep-all;
-      color: #ff6464;
+      color: #16bbc5;
 
       @include mobile {
-        font-size: 18px;
+        font-size: 20px;
         margin-top: 5px;
+        font-weight: 400;
       }
     }
 
     &__score {
-      font-size: 16px;
+      font-size: 24px;
       font-weight: 200;
       line-height: 1.4;
       word-break: keep-all;
       margin-top: 20px;
       display: flex;
-      align-items: center;
+      justify-content: center;
+
       gap: 20px;
 
       @include mobile {
-        font-size: 13px;
+        font-size: 18px;
       }
     }
   }
 
   &__questionnaire {
-    margin-top: 50px;
+    margin: 50px 0px;
 
-    &__title {
-      font-size: 30px;
-      font-weight: 700;
-      line-height: 1.4;
-      word-break: keep-all;
+    // &__title {
+    //   font-size: 35px;
+    //   font-weight: 700;
+    //   line-height: 1.4;
+    //   word-break: keep-all;
+    //   white-space: pre-wrap;
+    //   word-wrap: break-word;
+
+    //   @include mobile {
+    //     font-size: 28px;
+    //     font-weight: 600;
+    //   }
+    // }
+
+    &__container {
+      // margin-top: 20px;
+      padding: 40px 0px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      font-size: 23px;
 
       @include mobile {
-        font-size: 28px;
-        font-weight: 600;
+        padding: 5px 20px;
+        font-size: 20px;
       }
     }
 
-    &__container {
-      margin-top: 20px;
-      padding: 20px 40px;
-      border-radius: 10px;
-      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    }
-
     &__item {
-      margin-top: 20px;
+      margin: 50px 0px;
 
       p {
         @include mobile {
-          font-size: 14px;
+          font-size: 18px;
           line-height: 1.4;
+          word-break: keep-all;
         }
       }
     }
@@ -116,6 +129,7 @@
       display: flex;
       align-items: center;
       gap: 25px;
+      justify-content: center;
 
       @include mobile {
         gap: 20px;
@@ -124,74 +138,103 @@
       div {
         @include mobile {
           font-size: 14px;
+          word-break: keep-all;
         }
       }
+    }
+    @include mobile {
+      margin: 30px 0px;
     }
   }
 
   &__btnContainer {
-    margin-top: 50px;
+    margin: 80px 0px 150px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
 
     &__btn {
       width: 150px;
-      height: 50px;
+      height: 60px;
       border-radius: 15px;
       border: none;
       outline: none;
       cursor: pointer;
+      font-size: 20px;
+      background-color: #16bbc5;
+      color: white;
+      font-weight: 600;
     }
   }
 
   &__result {
-    margin-top: 50px;
-    padding: 15px 10px;
+    padding: 100px 10px;
     border-radius: 10px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     text-align: center;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: keep-all;
 
     &__title {
+      margin-top: 110px;
       font-size: 40px;
       font-weight: 700;
       line-height: 1.4;
-
-      span {
-        color: #ff6464;
-      }
+      word-break: keep-all;
 
       @include mobile {
         font-size: 28px;
-        word-break: keep-all;
+        margin-top: 20px;
+      }
+
+      span {
+        color: #16bbc5;
+        font-size: 40px;
       }
     }
 
     &__desc {
-      font-size: 30px;
+      font-size: 33px;
       font-weight: 300;
       line-height: 1.4;
 
       @include mobile {
-        font-size: 20px;
+        font-size: 21px;
         word-break: keep-all;
         text-wrap: balance;
+        margin: 20px 0px;
       }
     }
 
     &__img {
-      max-width: 300px;
-      height: 300px;
+      max-width: 400px;
+      height: 400px;
       width: 100%;
       object-fit: cover;
-      margin-top: 10px;
+      margin-top: 50px;
+
+      @include mobile {
+        width: 300px;
+        height: 300px;
+        margin-top: 0px;
+      }
+    }
+
+    &__image {
+      margin-bottom: 120px;
+
+      @include mobile {
+        margin-bottom: 40px;
+      }
     }
 
     &__character {
-      margin-top: 10px;
-      font-size: 18px;
-      font-weight: 300;
+      margin-top: 50px;
+      font-size: 22px;
+      font-weight: 600;
       line-height: 1.4;
+      color: #16bbc5;
 
       @include mobile {
         font-size: 16px;
@@ -200,55 +243,81 @@
 
     &__characterDesc {
       margin-top: 10px;
-      font-size: 18px;
-      font-weight: 300;
+      font-size: 22px;
+      font-weight: 400;
       line-height: 1.4;
       word-break: keep-all;
-      
+
       @include mobile {
         font-size: 16px;
       }
     }
 
     &__way {
-      margin-top: 10px;
+      margin-top: 110px;
       font-weight: 700;
       line-height: 1.4;
+      font-size: 30px;
+      color: #16bbc5;
+
+      @include mobile {
+        margin-top: 40px;
+        font-size: 23px;
+      }
     }
 
     &__wayList {
-      margin-top: 5px;
+      margin-top: 30px;
+      // margin-left: 100px;
       list-style: none;
+      // text-align: start;
 
       li {
         margin-top: 10px;
-        font-size: 18px;
+        margin-bottom: 40px;
+        font-size: 23px;
         font-weight: 300;
         line-height: 1.4;
 
         @include mobile {
-          font-size: 14px;
+          font-size: 16px;
+          margin-left: 0px;
+          margin-bottom: 30px;
+          text-align: center;
         }
       }
 
       :last-child {
-        margin-bottom: 10px;
+        margin-bottom: 100px;
+
+        @include mobile {
+          margin-bottom: 50px;
+        }
+      }
+
+      @include mobile {
+        margin-left: 10px;
+        word-break: keep-all;
       }
     }
 
     &__btn {
-      margin-top: 10px;
       width: 150px;
-      height: 50px;
+      height: 60px;
       border: none;
       outline: none;
       border-radius: 15px;
       cursor: pointer;
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 50px;
+      background-color: #16bbc5;
+      color: white;
 
       @include mobile {
-        width: 100px;
-        height: 40px;
-        font-size: 12px;
+        width: 150px;
+        height: 50px;
+        font-size: 18px;
       }
     }
   }
