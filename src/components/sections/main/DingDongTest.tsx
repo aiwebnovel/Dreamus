@@ -13,8 +13,10 @@ function DingDongTest() {
       <div className={styles.test__inner}>
         <div className={styles.test__container}>
           <p className={styles.test__title}>
-            Q. 띵동을 하면 회복탄력성이 생기나요? 다른 프로그램이랑 뭐가
+            Q.띵동을 하면 회복탄력성이 생기나요? <br /> 다른 프로그램이랑 뭐가
             다른데요?
+            <br />
+            <br />
           </p>
           <p className={styles.test__desc}>
             A. 네! 띵동은 이렇게 차별화 했습니다.

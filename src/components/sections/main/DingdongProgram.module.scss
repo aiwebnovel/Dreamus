@@ -7,7 +7,7 @@
     margin: 0 auto;
 
     @include mobile {
-      //   padding: 100px 15px;
+      // padding: 50px 15px;
     }
   }
 
@@ -24,26 +24,25 @@
     }
   }
 
-  &__title {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
+  &__btn {
+    width: 150px;
+    height: 60px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 50px;
+    background-color: #16bbc5;
+    color: white;
+    margin-bottom: 110px;
 
-  &__grid {
-    display: grid;
-    grid-template-columns: 0.4fr 2.5fr 2fr;
-    align-items: center;
-
-    &__charImage {
-      width: 50px;
-    }
-
-    &__image {
-      width: 200px;
-      height: 200px;
-      border-radius: 100%;
-      overflow: hidden;
+    @include mobile {
+      width: 130px;
+      height: 50px;
+      font-size: 15px;
+      margin-bottom: 50px;
     }
   }
 }

@@ -1,7 +1,9 @@
 import styles from '@components/sections/main/DingdongProgram.module.scss'
 import programImg from '@assets/image/programImg.png'
+import { useNavigate } from 'react-router-dom'
 
 function DingdongProgram() {
+  const navigate = useNavigate()
   return (
     <section className={styles.program}>
       <div className={styles.program__inner}>
@@ -40,6 +42,12 @@ function DingdongProgram() {
             </div>
           </div> */}
           <img src={programImg} width={'100%'} />
+          <button
+            className={styles.program__btn}
+            onClick={() => navigate('/class-registration')}
+          >
+            수업 신청하기
+          </button>
         </div>
       </div>
     </section>
