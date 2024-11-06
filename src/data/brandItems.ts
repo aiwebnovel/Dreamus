@@ -1,13 +1,19 @@
-import Logo from '@assets/icon/logo.svg?react'
-import Thinking from '@assets/icon/think.svg?react'
-import Piano from '@assets/icon/piano.svg?react'
-import Drum from '@assets/icon/drum.svg?react'
-import Music from '@assets/icon/music.svg?react'
-import Mom from '@assets/icon/mom.svg?react'
+// import Logo from '@assets/icon/logo.svg?react'
+// import Thinking from '@assets/icon/think.svg?react'
+// import Piano from '@assets/icon/piano.svg?react'
+// import Drum from '@assets/icon/drum.svg?react'
+// import Music from '@assets/icon/music.svg?react'
+// import Mom from '@assets/icon/mom.svg?react'
+import drum from '@assets/image/drum.png'
+import singsingq from '@assets/image/singsingq.png'
+import pianoLogo from '@assets/image/pianoLogo.png'
+import dreamusLogo from '@assets/image/dreamusLogo.png'
+import thingdongLogo from '@assets/image/thingdongLogo.png'
+import nori from '@assets/image/nori.png'
 
 const brandItems = [
   {
-    Icon: Logo,
+    Icon: dreamusLogo,
     title: 'Dreamus',
     desc: `Dreamus의 각 프로그램은 아이들이 음악을 통해 자신만의 꿈과 재능을 발견하고,
     풍부한 감성과 창의성을 키울 수 있도록 설계되었습니다.
@@ -18,7 +24,7 @@ const brandItems = [
     `,
   },
   {
-    Icon: Music,
+    Icon: singsingq,
     title: '씽씽큐 뮤직',
     desc: `노래와 움직임의 조화로운 세상
     씽씽큐 뮤직은 아이들의 목소리와 몸짓을 통해 음악의 즐거움을 발견하게 합니다.
@@ -26,7 +32,7 @@ const brandItems = [
     `,
   },
   {
-    Icon: Drum,
+    Icon: drum,
     title: '쿵.치.타! 드럼, 난타, 장구',
     desc: `리듬의 힘을 느끼는 타악기의 세계
     쿵, 치, 타!는 다양한 타악기를 통해 아이들의 리듬 감각과 협동심을 키웁니다.
@@ -34,7 +40,7 @@ const brandItems = [
     `,
   },
   {
-    Icon: Piano,
+    Icon: pianoLogo,
     title: '룰루랄라 피아노',
     desc: `피아노로 만나는 즐거운 음악 여행
     룰루랄라 피아노는 아이들이 피아노를 통해 음악의 기초를 즐겁게 배울 수 있도록 설계되었습니다.
@@ -42,7 +48,7 @@ const brandItems = [
     `,
   },
   {
-    Icon: Thinking,
+    Icon: thingdongLogo,
     title: '생각놀이터 띵동',
     desc: `동화작가인 대표의 발상의 전환 동화, 긍정창의동화가 다중지능놀이, 음악과 만났습니다.
     이 과정은 회복탄력성을 위한 긍정창의력을 키워줍니다. 
@@ -51,7 +57,7 @@ const brandItems = [
     `,
   },
   {
-    Icon: Mom,
+    Icon: nori,
     title: '꿈노리 별노리: 별 찾으러 함께 가요',
     desc: `보이지 않는 곳에, 재능의 별이 잠자고 있는 아이들이 있습니다. 
     누군가 그 별을 꺼내주길 기다리고 있는 아이들에게 드림어스는 작은 반딧불이 되고자 합니다. 

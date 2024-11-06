@@ -10,7 +10,7 @@ import dreamusLogo from '@assets/image/dreamusLogo.png'
 
 const menuItems: MenuItem[] = [
   {
-    title: '드림어스',
+    title: '드리머스',
     subItems: [
       {
         title: 'Dreamus 소개',
