@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom'
-
 import styles from '@components/common/GalleryCard.module.scss'
 
 interface GalleryCardProps {
@@ -20,20 +19,11 @@ function GalleryCard({
   const navigate = useNavigate()
 
   const stringRemove = (str: string) => {
-    if (str.length > 15) {
-      return str.substring(0, 14) + '....'
-    }
-    return str
+    return str.length > 15 ? str.substring(0, 14) + '...' : str
   }
 
-  const handleNavigation = (e: React.MouseEvent) => {
-    e.preventDefault()
-    navigate(`/dreamus-gallery/${category}/${id}`)
-  }
-
-  const handleReadMore = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation()
-    handleNavigation(e)
+  const handleNavigation = () => {
+    navigate(`/dreamus-gallery/${encodeURIComponent(category)}/${id}`)
   }
 
   return (
@@ -43,7 +33,7 @@ function GalleryCard({
           <img
             className={styles.card__imgBox__img}
             src={imageUrls[0]}
-            alt={title}
+            alt={`${title} - 앨범 이미지`}
           />
         ) : (
           <div className={styles.card__imgBox__noImg}>
@@ -59,7 +49,11 @@ function GalleryCard({
         <button
           className={styles.card__move}
           type="button"
-          onClick={handleReadMore}
+          onClick={(e) => {
+            e.stopPropagation()
+            handleNavigation()
+          }}
+          aria-label={`${title} 읽어보기`}
         >
           읽어보기
         </button>

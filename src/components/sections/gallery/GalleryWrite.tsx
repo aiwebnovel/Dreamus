@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router-dom'
 
 const categories = [
   '씽씽큐 뮤직',
-  '생각놀이터 띵동',
   '룰루랄라 피아노',
-  '쿵.치.타 드럼난타.장구',
+  '쿵!치!타 드럼,난타,장구',
+  '생각놀이터 띵동',
   '꿈노리 별노리',
 ] as const
 
@@ -19,17 +19,16 @@ function GalleryWrite() {
   const [description, setDescription] = useState('')
   const [editorContent, setEditorContent] = useState('')
   const [imageUrls, setImageUrls] = useState<string[]>([])
-
   const navigate = useNavigate()
+
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 
   const formatDate = (date: Date): string => {
     const year = date.getFullYear()
     const month = String(date.getMonth() + 1).padStart(2, '0')
     const day = String(date.getDate()).padStart(2, '0')
-    const hours = String(date.getHours()).padStart(2, '0')
-    const minutes = String(date.getMinutes()).padStart(2, '0')
 
-    return `작성일: ${year}년 ${month}월 ${day}일 ${hours}시 ${minutes}분`
+    return `작성일: ${year}년 ${month}월 ${day}일`
   }
 
   useEffect(() => {
@@ -44,24 +43,65 @@ function GalleryWrite() {
     setImageUrls(urls)
   }, [editorContent])
 
+  const uploadImageToS3 = async (imageUrl: string): Promise<string | null> => {
+    try {
+      // Pre-signed URL 요청
+      const response = await fetch(`${API_BASE_URL}/app/presigned-url`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ fileName: imageUrl, expiresIn: 180 }),
+      })
+
+      if (!response.ok) {
+        console.error('Failed to generate presigned URL:', response.statusText)
+        return null
+      }
+
+      // 응답을 텍스트로 받아서 presignedUrl로 사용
+      const presignedUrl = await response.text()
+
+      // Pre-signed URL을 통해 S3에 이미지 업로드
+      const uploadResponse = await fetch(presignedUrl, {
+        method: 'PUT',
+        body: await fetch(imageUrl).then((res) => res.blob()),
+      })
+
+      if (!uploadResponse.ok) {
+        console.error('Failed to upload to S3:', uploadResponse.statusText)
+        return null
+      }
+
+      // presignedUrl을 통해 업로드된 S3 URL 반환
+      return presignedUrl.split('?')[0] // URL의 쿼리 문자열 제거
+    } catch (error) {
+      console.error('Error in uploadImageToS3:', error)
+      return null
+    }
+  }
+
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     const createdAt = formatDate(new Date())
-    const id = Date.now().toString()
+
+    // 이미지 업로드 후 성공한 URL만 필터링하여 `imageUrls`에 포함
+    const s3Urls = (await Promise.all(imageUrls.map(uploadImageToS3))).filter(
+      (url): url is string => url !== null,
+    )
 
     const postData = {
-      id,
       title,
       category,
       description,
       content: editorContent,
-      imageUrls,
+      imageUrls: s3Urls, // 성공한 URL만 포함
       createdAt,
     }
 
     try {
-      const response = await fetch('http://localhost:3001/albums', {
+      const response = await fetch(`${API_BASE_URL}/albums`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -70,14 +110,21 @@ function GalleryWrite() {
       })
 
       if (response.ok) {
-        console.log('앨범이 성공적으로 생성되었습니다.')
-        console.log(response)
+        // 서버로부터 생성된 앨범 데이터를 받아옴
+        const responseData = await response.json()
+        const newId = responseData._id || responseData.id // 생성된 앨범의 ID를 받아서 저장
+
+        console.log('앨범이 성공적으로 생성되었습니다.', newId)
+
+        // 생성된 앨범 ID로 상세 페이지로 이동
+        navigate(`/dreamus-gallery/${category}/${newId}`)
+
+        // 입력 필드 초기화
         setTitle('')
         setDescription('')
         setCategory('')
         setEditorContent('')
         setImageUrls([])
-        navigate(`/dreamus-gallery/${category}/${id}`)
       } else {
         console.error('앨범 생성에 실패했습니다.')
       }

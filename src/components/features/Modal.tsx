@@ -71,7 +71,7 @@ function Modal({ type }: { type: string }) {
               </ul>
               <p className={styles.modalContent__descBox__desc}>
                 마법의 동화처럼, 우리 아이들의 마음도 튼튼해질 거예요! 그럼
-                헬스와 띵똥을 비교해 볼까요?
+                헬스와 띵동을 비교해 볼까요?
               </p>
             </div>
             <div className={styles.modalContent__tableContainer}>
@@ -79,7 +79,7 @@ function Modal({ type }: { type: string }) {
                 <thead>
                   <tr>
                     <td>헬스</td>
-                    <td>띵똥 마음근력 만들기</td>
+                    <td>띵동 마음근력 만들기</td>
                   </tr>
                 </thead>
                 <tbody>

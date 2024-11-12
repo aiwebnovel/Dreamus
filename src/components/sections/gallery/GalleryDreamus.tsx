@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from 'react'
-
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 
 import GalleryCard from '@components/common/GalleryCard'
@@ -17,11 +16,11 @@ interface Album {
 
 const categoryMapping: { [key: string]: string } = {
   전체: 'all',
-  '씽씽큐 뮤직': 'singsing',
-  '룰루랄라 피아노': 'lulurala',
-  '쿵!치!타 드럼,난타,장구': 'kungchita',
-  '생각놀이터 띵똥': 'thinkplay',
-  '꿈노리 별노리': 'mompenny',
+  '씽씽큐 뮤직': '씽씽큐 뮤직',
+  '룰루랄라 피아노': '룰루랄라 피아노',
+  '쿵!치!타 드럼,난타,장구': '쿵!치!타 드럼,난타,장구',
+  '생각놀이터 띵동': '생각놀이터 띵동',
+  '꿈노리 별노리': '꿈노리 별노리',
 }
 
 const reverseCategoryMapping: { [key: string]: string } = Object.fromEntries(
@@ -40,6 +39,8 @@ function GalleryDreamus() {
   const navigate = useNavigate()
   const { category } = useParams<{ category: string }>()
   const sectionRef = useRef<HTMLElement>(null)
+
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 
   const itemCountPerPage = 8
 
@@ -60,7 +61,7 @@ function GalleryDreamus() {
   useEffect(() => {
     // 백엔드 데이터 가져오기
     setIsLoading(true)
-    fetch('http://localhost:3001/albums')
+    fetch(`${API_BASE_URL}/albums/list`)
       .then((res) => res.json())
       .then((res: Album[]) => {
         setAllAlbums(res.reverse())
