@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
+import emailjs from 'emailjs-com' // EmailJS 라이브러리 import
 
 import FormTextField from '@components/features/FormTextField'
-
 import Register from '@assets/icon/register.svg?react'
-
 import styles from '@components/sections/class-registration/ClassRegister.module.scss'
 
 import { useLocation } from 'react-router'
+
 declare global {
   interface Window {
     daum: any
@@ -115,6 +115,34 @@ function ClassRegister() {
       },
     }).open()
   }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    // EmailJS 템플릿에 보낼 데이터
+    const templateParams = {
+      name: classData.name,
+      phone: classData.phone,
+      age: classData.aboutMonth,
+      time: classData.time,
+      postCode: classData.address.postCode,
+      roadAddress: classData.address.roadAddress,
+      detailAddress: classData.address.detailAddress,
+    }
+
+    try {
+      const serviceID = 'service_9x6os8b' // 제공된 Service ID
+      const templateID = 'template_tdmm54a' // 제공된 Template ID
+      const userID = '5PUIiaSdlQ6tflkch' // 제공된 User ID
+
+      await emailjs.send(serviceID, templateID, templateParams, userID)
+      alert('수업 신청이 성공적으로 완료되었습니다!')
+    } catch (error) {
+      console.error('이메일 전송 실패:', error)
+      alert('수업 신청 중 문제가 발생했습니다. 다시 시도해주세요.')
+    }
+  }
+
   return (
     <section className={styles.register}>
       <div className={styles.register__inner}>
@@ -137,7 +165,10 @@ function ClassRegister() {
                 회복탄력성 유형 결과: {state}
               </h2>
             ) : null}
-            <form className={styles.register__content__form}>
+            <form
+              onSubmit={handleSubmit}
+              className={styles.register__content__form}
+            >
               <FormTextField
                 label="이름(자녀)"
                 name="name"
@@ -146,11 +177,6 @@ function ClassRegister() {
                 onChange={handleInputChange}
                 value={classData.name}
               />
-              {classData.name ? null : (
-                <span className={styles.register__required}>
-                  위 항목은 필수로 입력해주세요
-                </span>
-              )}
               <FormTextField
                 label="핸드폰번호"
                 name="phone"
@@ -159,11 +185,6 @@ function ClassRegister() {
                 onChange={handleInputChange}
                 value={classData.phone}
               />
-              {classData.phone ? null : (
-                <span className={styles.register__required}>
-                  위 항목은 필수로 입력해주세요
-                </span>
-              )}
               <div className={styles.register__addressContainer}>
                 <label className={styles.register__addressContainer__label}>
                   <p className={styles.register__addressContainer__title}>
@@ -180,33 +201,24 @@ function ClassRegister() {
                       우편번호 찾기
                     </button>
                   </div>
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="도로명주소"
-                      value={classData.address.roadAddress}
-                      readOnly
-                      className={styles.register__addressContainer__address}
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="상세주소"
-                      value={classData.address.detailAddress}
-                      onChange={(e) =>
-                        handleAddressChange('detailAddress', e.target.value)
-                      }
-                      className={styles.register__addressContainer__address}
-                    />
-                  </div>
+                  <input
+                    type="text"
+                    placeholder="도로명주소"
+                    value={classData.address.roadAddress}
+                    readOnly
+                    className={styles.register__addressContainer__address}
+                  />
+                  <input
+                    type="text"
+                    placeholder="상세주소"
+                    value={classData.address.detailAddress}
+                    onChange={(e) =>
+                      handleAddressChange('detailAddress', e.target.value)
+                    }
+                    className={styles.register__addressContainer__address}
+                  />
                 </label>
               </div>
-              {classData.address.detailAddress ? null : (
-                <span className={styles.register__required}>
-                  위 항목은 필수로 입력해주세요
-                </span>
-              )}
               <div className={styles.register__ageContainer}>
                 <label className={styles.register__ageContainer__label}>
                   <p className={styles.register__ageContainer__title}>
@@ -247,11 +259,6 @@ function ClassRegister() {
                   />
                 </label>
               </div>
-              {classData.aboutMonth ? null : (
-                <span className={styles.register__required}>
-                  위 항목은 필수로 입력해주세요
-                </span>
-              )}
               <FormTextField
                 label="수업 희망 시간"
                 name="time"
@@ -261,7 +268,7 @@ function ClassRegister() {
                 value={classData.time}
               />
               <div className={styles.register__content__submit}>
-                <button>수업 신청하기</button>
+                <button type="submit">수업 신청하기</button>
               </div>
             </form>
           </div>
