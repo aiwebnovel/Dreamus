@@ -24,7 +24,7 @@ function JobNotice() {
     resume: null,
   })
 
-  const API_BASE_URL = 'http://43.200.244.25:8080' // API 기본 URL
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 
   const handleInputChange = (name: string, value: string | File | null) => {
     setFormData((prev) => ({
