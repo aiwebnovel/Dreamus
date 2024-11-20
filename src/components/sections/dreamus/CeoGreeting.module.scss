@@ -16,9 +16,10 @@
     line-height: 1.4;
     margin-bottom: 30px;
     text-align: center;
+    color: #16bbc5;
 
     @include mobile {
-      font-size: 24px;
+      font-size: 25px;
     }
   }
 
@@ -32,28 +33,29 @@
   }
 
   &__quote {
-    padding: 25px 10px;
-    text-align: center;
-    font-size: 26px;
+    // padding: 25px 10px;
+    // text-align: center;
+    font-size: 21px;
     color: #16bbc5;
-    font-style: italic;
+    // font-style: italic;
     margin-bottom: 30px;
     font-weight: 600;
 
     @include mobile {
-      font-size: 20px;
+      font-size: 18px;
       word-break: keep-all;
+      font-weight: 500;
     }
   }
 
   &__speak {
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 1.2;
+    font-size: 19px;
+    line-height: 1.4;
+    text-align: center;
 
     @include mobile {
-      font-size: 16px;
-      font-weight: 200;
+      font-size: 15px;
+      // font-weight: 300;
       word-break: keep-all;
     }
   }
