@@ -59,25 +59,29 @@ function GalleryDreamus() {
     sectionRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
 
-  useEffect(() => {
-    // 백엔드 데이터 가져오기
+  // 앨범 데이터 가져오기
+  const fetchAlbums = async () => {
     setIsLoading(true)
-    fetch(`${API_BASE_URL}/albums/list`)
-      .then((res) => res.json())
-      .then((res: Album[]) => {
-        // createdAt 기준 오름차순 정렬
-        const sortedAlbums = res.sort(
-          (a, b) =>
-            new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
-        )
-        setAllAlbums(sortedAlbums)
-        setFilteredAlbums(sortedAlbums)
-        setIsLoading(false)
-      })
-      .catch((error) => {
-        console.error('Error fetching albums:', error)
-        setIsLoading(false)
-      })
+    try {
+      const response = await fetch(`${API_BASE_URL}/albums/list`)
+      const albums: Album[] = await response.json()
+
+      // 최신 순으로 정렬
+      const sortedAlbums = albums.sort(
+        (a, b) =>
+          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+      )
+      setAllAlbums(sortedAlbums)
+      setFilteredAlbums(sortedAlbums)
+      setIsLoading(false)
+    } catch (error) {
+      console.error('Error fetching albums:', error)
+      setIsLoading(false)
+    }
+  }
+
+  useEffect(() => {
+    fetchAlbums()
   }, [])
 
   useEffect(() => {
@@ -105,27 +109,6 @@ function GalleryDreamus() {
     (currentPage - 1) * itemCountPerPage,
     currentPage * itemCountPerPage,
   )
-
-  useEffect(() => {
-    // 백엔드 데이터 가져오기
-    setIsLoading(true)
-    fetch(`${API_BASE_URL}/albums/list`)
-      .then((res) => res.json())
-      .then((res: Album[]) => {
-        // 최신 순으로 정렬: createdAt을 기준으로 내림차순 정렬
-        const sortedAlbums = res.sort(
-          (a, b) =>
-            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
-        )
-        setAllAlbums(sortedAlbums) // 정렬된 데이터를 상태에 설정
-        setFilteredAlbums(sortedAlbums) // 정렬된 데이터를 필터링 상태에도 설정
-        setIsLoading(false)
-      })
-      .catch((error) => {
-        console.error('Error fetching albums:', error)
-        setIsLoading(false)
-      })
-  }, [])
 
   return (
     <section ref={sectionRef} className={styles.gallery}>
@@ -169,7 +152,7 @@ function GalleryDreamus() {
                       category={album.category}
                       key={index}
                       title={album.title}
-                      imageUrls={album.imageUrls}
+                      imageUrls={album.imageUrls} // 빈 배열 처리 그대로 유지
                       description={album.description}
                     />
                   ))}

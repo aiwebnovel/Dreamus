@@ -93,6 +93,17 @@ function DetailAlbum() {
     ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'scrolling'],
   })
 
+  // 콘텐츠에서 이미 렌더링된 이미지 URL 추출
+  const parser = new DOMParser()
+  const contentDoc = parser.parseFromString(album.content, 'text/html')
+  const renderedImageUrls = Array.from(
+    contentDoc.getElementsByTagName('img'),
+  ).map((img) => img.src)
+
+  // imageUrls에서 중복된 URL 제거
+  const uniqueImageUrls =
+    album.imageUrls?.filter((url) => !renderedImageUrls.includes(url)) || []
+
   return (
     <section className={styles.detail}>
       <div className={styles.detail__inner}>
@@ -119,9 +130,9 @@ function DetailAlbum() {
               dangerouslySetInnerHTML={{ __html: sanitizedContent }}
             />
           </div>
-          {album.imageUrls && album.imageUrls.length > 0 && (
+          {uniqueImageUrls.length > 0 && (
             <div className={styles.detail__images}>
-              {album.imageUrls.map((url, index) => (
+              {uniqueImageUrls.map((url, index) => (
                 <img
                   key={index}
                   src={url}
