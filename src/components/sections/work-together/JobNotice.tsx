@@ -92,9 +92,9 @@ function JobNotice() {
     console.log('templateParams to be sent to emailJs:', templateParams)
 
     try {
-      const serviceID = 'service_9x6os8b'
-      const templateID = 'template_cobmnp9'
-      const userID = '5PUIiaSdlQ6tflkch'
+      const serviceID = 'service_35qhf55'
+      const templateID = 'template_wtumhcd'
+      const userID = 'rhAvZFF55IWi3omld'
 
       await emailjs.send(serviceID, templateID, templateParams, userID)
       alert('지원서가 성공적으로 제출되었습니다!')

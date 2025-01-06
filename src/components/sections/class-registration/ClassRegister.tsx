@@ -131,9 +131,9 @@ function ClassRegister() {
     }
 
     try {
-      const serviceID = 'service_9x6os8b' // 제공된 Service ID
-      const templateID = 'template_tdmm54a' // 제공된 Template ID
-      const userID = '5PUIiaSdlQ6tflkch' // 제공된 User ID
+      const serviceID = 'service_35qhf55' // 제공된 Service ID
+      const templateID = 'template_d37txld' // 제공된 Template ID
+      const userID = 'rhAvZFF55IWi3omld' // 제공된 User ID
 
       await emailjs.send(serviceID, templateID, templateParams, userID)
       alert('수업 신청이 성공적으로 완료되었습니다!')
