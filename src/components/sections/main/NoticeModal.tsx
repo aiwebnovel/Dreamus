@@ -19,7 +19,15 @@ const NoticeModal: React.FC<NoticeModalProps> = ({
   return (
     <div className={styles.popupOverlay}>
       <div className={styles.popup}>
-        <img src={imageUrl} alt="공지사항" className={styles.noticeImage} />
+        {/* ✅ 이미지 클릭 시 특정 페이지로 이동 */}
+        <a
+          href="https://dingdong.kids/dreamus-gallery"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={imageUrl} alt="공지사항" className={styles.noticeImage} />
+        </a>
+
         <div className={styles.buttonContainer}>
           <button onClick={onClose} className={styles.closeButton}>
             닫기
