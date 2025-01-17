@@ -115,7 +115,7 @@ function GalleryDreamus() {
       <div className={styles.gallery__inner}>
         <div className={styles.gallery__container}>
           <div className={styles.gallery__textBox}>
-            <h2 className={styles.gallery__textBox__title}>듣.보.드</h2>
+            <h2 className={styles.gallery__textBox__title}>드리머스활동</h2>
             <p className={styles.gallery__textBox__desc}>듣고 보는 드리머스</p>
             <p className={styles.gallery__textBox__desc}>
               드리머스의 활동들을 만나보세요

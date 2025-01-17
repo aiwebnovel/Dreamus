@@ -70,7 +70,7 @@ const menuItems: MenuItem[] = [
     ],
   },
   { title: '함께일해요', link: '/work-together' },
-  { title: '듣.보.드', link: '/dreamus-gallery' },
+  { title: '드리머스활동', link: '/dreamus-gallery' },
   { title: '수업신청', link: '/class-registration' },
 ]
 
